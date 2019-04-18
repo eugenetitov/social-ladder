@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendRequestsTableHeaderView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="FriendRequestsTableHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <rect key="contentStretch" x="0.0" y="0.0" width="1" height="1"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="6471" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="0.0" y="257.5" width="414" height="405"/>
+                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4312" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="20.5" y="450" width="373" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="9804" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="0.0" y="662.5" width="414" height="73.5"/>
+                    <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                </view>
+            </subviews>
+            <connections>
+                <outlet property="Title" destination="4312" id="name-outlet-4312"/>
+            </connections>
+            <constraints>
+                <constraint id="6473" firstItem="6471" firstAttribute="centerX" secondItem="1" secondAttribute="centerX"/>
+                <constraint id="6475" firstItem="6471" firstAttribute="width" secondItem="1" secondAttribute="width"/>
+                <constraint id="6476" firstItem="6471" firstAttribute="height" secondItem="1" secondAttribute="height" multiplier="0.55"/>
+                <constraint id="6477" firstItem="6471" firstAttribute="centerY" secondItem="4312" secondAttribute="centerY"/>
+                <constraint id="6478" firstItem="4312" firstAttribute="width" secondItem="6471" secondAttribute="width" multiplier="0.9"/>
+                <constraint id="6479" firstItem="4312" firstAttribute="centerX" secondItem="6471" secondAttribute="centerX"/>
+                <constraint id="10095" firstItem="1" firstAttribute="bottom" secondItem="9804" secondAttribute="bottom"/>
+                <constraint id="10154" firstItem="9804" firstAttribute="centerX" secondItem="1" secondAttribute="centerX"/>
+                <constraint id="10213" firstItem="9804" firstAttribute="width" secondItem="1" secondAttribute="width"/>
+                <constraint id="10446" firstItem="9804" firstAttribute="top" secondItem="6471" secondAttribute="bottom"/>
+                <constraint id="10737" firstItem="9804" firstAttribute="height" secondItem="1" secondAttribute="height" multiplier="0.1"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

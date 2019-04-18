@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <dimen name="nullDp">0dp</dimen>
+  <dimen name="drawer_width">240dp</dimen>
+  <dimen name="intro4progress">10dp</dimen>
+  <dimen name="introActivity_progress">15dp</dimen>
+  <dimen name="intro_circleRadius">120dp</dimen>
+  <dimen name="areas_margin">5dp</dimen>
+  <dimen name="areas_indicator_size">10dp</dimen>
+  <dimen name="areas_join_margin">10dp</dimen>
+  <dimen name="areas_popup_margin_top">6dp</dimen>
+  <dimen name="areas_description_close_button">20dp</dimen>
+  <dimen name="points_chart_margin">5dp</dimen>
+  <dimen name="points_margin">10dp</dimen>
+  <dimen name="feed_icon_margin">2dp</dimen>
+  <dimen name="button_left_padding">7dp</dimen>
+  <dimen name="toolbar_height">70dp</dimen>
+  <dimen name="tabbar_height">52dp</dimen>
+  <dimen name="areas_view_height">140dp</dimen>
+  <dimen name="areas_view_width">100dp</dimen>
+  <dimen name="areas_view_width_margin">18dp</dimen>
+  <dimen name="areas_current_view_width">125dp</dimen>
+  <dimen name="areas_current_score_image_width">50dp</dimen>
+  <dimen name="points_tabs_height">45dp</dimen>
+  <dimen name="main_tabs_shield">99dp</dimen>
+  <dimen name="points_tab_line_height">1.5dp</dimen>
+  <dimen name="leaderboard_image_margin">2dp</dimen>
+  <dimen name="points_background_height">120dp</dimen>
+  <dimen name="divider_height">1dp</dimen>
+  <dimen name="leaderboard_item_height">60dp</dimen>
+  <dimen name="challenge_complete_text_margin">10dp</dimen>
+  <dimen name="challenge_bottom_margin">150dp</dimen>
+  <dimen name="user_profile_view_height">150dp</dimen>
+
+  <dimen name="challenges_collection_unselected_side">23dp</dimen>
+  <dimen name="challenges_collection_unselected_top">33dp</dimen>
+  <dimen name="challenges_collection_selected">15dp</dimen>
+
+  <dimen name="notifications_item_image_size">30dp</dimen>
+  
+
+  <dimen name="introBottomText">18sp</dimen>
+  <dimen name="intro3_textSize">11sp</dimen>
+  <dimen name="intro2_textSize">18sp</dimen>
+  <dimen name="intro_textSize33">33sp</dimen>
+  <dimen name="intro_textSize40">40sp</dimen>
+  <dimen name="login_button_textSize">16sp</dimen>
+  <dimen name="areas_top_text">20sp</dimen>
+  <dimen name="areas_bottom_text">14sp</dimen>
+  <dimen name="areas_section_text">12sp</dimen>  
+  <dimen name="areas_description_title">22sp</dimen>
+  <dimen name="itb_descriptionSize">18sp</dimen>
+  
+</resources>

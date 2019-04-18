@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="ChallengeCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsJ-hw-tr1">
+                        <rect key="frame" x="8" y="8" width="144" height="144"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="526">
+                                <rect key="frame" x="50.5" y="50.5" width="43" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="526" secondAttribute="height" multiplier="1:1" id="80607"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-d7-1gw">
+                                <rect key="frame" x="58.5" y="16" width="72" height="5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" red="0.62674060880829008" green="0.62674060880829008" blue="0.62674060880829008" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram Challenges" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="434">
+                                <rect key="frame" x="13" y="123.5" width="118" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSr-ci-UuG">
+                                <rect key="frame" x="13.5" y="21" width="117" height="22.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54429">
+                                <rect key="frame" x="131" y="0.0" width="13" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81654">
+                                <rect key="frame" x="0.0" y="135.5" width="13" height="8.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="136421">
+                                <rect key="frame" x="95.5" y="43.5" width="5" height="5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="136421" secondAttribute="height" multiplier="1:1" id="145993"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74117647058823533" green="0.29803921568627451" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GLj-d7-1gw" firstAttribute="width" secondItem="bsJ-hw-tr1" secondAttribute="width" multiplier="0.5" id="3795"/>
+                            <constraint firstItem="54429" firstAttribute="top" secondItem="bsJ-hw-tr1" secondAttribute="top" id="57056"/>
+                            <constraint firstAttribute="trailing" secondItem="54429" secondAttribute="trailing" id="57580"/>
+                            <constraint firstItem="54429" firstAttribute="width" secondItem="bsJ-hw-tr1" secondAttribute="width" multiplier="0.095" id="59673"/>
+                            <constraint firstItem="54429" firstAttribute="height" secondItem="bsJ-hw-tr1" secondAttribute="height" multiplier="0.11" id="60720"/>
+                            <constraint firstItem="54429" firstAttribute="leading" secondItem="GLj-d7-1gw" secondAttribute="trailing" id="63860"/>
+                            <constraint firstItem="54429" firstAttribute="bottom" secondItem="GLj-d7-1gw" secondAttribute="top" id="64907"/>
+                            <constraint firstItem="TSr-ci-UuG" firstAttribute="top" secondItem="GLj-d7-1gw" secondAttribute="bottom" id="69616"/>
+                            <constraint firstItem="GLj-d7-1gw" firstAttribute="trailing" secondItem="TSr-ci-UuG" secondAttribute="trailing" id="70663"/>
+                            <constraint firstItem="GLj-d7-1gw" firstAttribute="height" secondItem="526" secondAttribute="height" multiplier="0.11" id="75897"/>
+                            <constraint firstItem="526" firstAttribute="width" secondItem="bsJ-hw-tr1" secondAttribute="width" multiplier="0.3" id="78513"/>
+                            <constraint firstItem="81654" firstAttribute="leading" secondItem="bsJ-hw-tr1" secondAttribute="leading" id="83224"/>
+                            <constraint firstAttribute="bottom" secondItem="81654" secondAttribute="bottom" id="84271"/>
+                            <constraint firstItem="81654" firstAttribute="height" secondItem="54429" secondAttribute="height" multiplier="0.5" id="85318"/>
+                            <constraint firstItem="81654" firstAttribute="width" secondItem="54429" secondAttribute="width" id="85842"/>
+                            <constraint firstItem="434" firstAttribute="leading" secondItem="81654" secondAttribute="trailing" id="88981"/>
+                            <constraint firstItem="81654" firstAttribute="top" secondItem="434" secondAttribute="bottom" id="90028"/>
+                            <constraint firstItem="54429" firstAttribute="leading" secondItem="434" secondAttribute="trailing" id="92121"/>
+                            <constraint firstItem="TSr-ci-UuG" firstAttribute="leading" secondItem="81654" secondAttribute="trailing" id="93691"/>
+                            <constraint firstItem="136421" firstAttribute="leading" secondItem="526" secondAttribute="trailing" constant="2" id="139765"/>
+                            <constraint firstItem="136421" firstAttribute="bottom" secondItem="526" secondAttribute="top" constant="-2" id="141322"/>
+                            <constraint firstItem="136421" firstAttribute="width" secondItem="526" secondAttribute="width" multiplier="0.11" id="144436"/>
+                            <constraint firstItem="434" firstAttribute="height" relation="lessThanOrEqual" secondItem="526" secondAttribute="height" id="167936"/>
+                            <constraint firstItem="136421" firstAttribute="top" secondItem="TSr-ci-UuG" secondAttribute="bottom" id="181948"/>
+                            <constraint firstItem="526" firstAttribute="centerY" secondItem="bsJ-hw-tr1" secondAttribute="centerY" id="jSd-Tq-tzY"/>
+                            <constraint firstItem="526" firstAttribute="centerX" secondItem="bsJ-hw-tr1" secondAttribute="centerX" id="kVa-wn-GdC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="bsJ-hw-tr1" firstAttribute="width" secondItem="cZE-iV-UFb" secondAttribute="width" multiplier="0.9" id="37025"/>
+                <constraint firstItem="bsJ-hw-tr1" firstAttribute="height" secondItem="cZE-iV-UFb" secondAttribute="height" multiplier="0.9" id="38126"/>
+                <constraint firstItem="bsJ-hw-tr1" firstAttribute="centerX" secondItem="cZE-iV-UFb" secondAttribute="centerX" id="42876"/>
+                <constraint firstAttribute="centerY" secondItem="bsJ-hw-tr1" secondAttribute="centerY" id="43967"/>
+            </constraints>
+            <size key="customSize" width="228" height="225"/>
+            <connections>
+                <outlet property="Background" destination="bsJ-hw-tr1" id="name-outlet-bsJ-hw-tr1"/>
+                <outlet property="BadgeView" destination="136421" id="name-outlet-136421"/>
+                <outlet property="ChallengeImage" destination="526" id="name-outlet-526"/>
+                <outlet property="ChallengeName" destination="434" id="name-outlet-434"/>
+                <outlet property="ChallengeProgressBar" destination="GLj-d7-1gw" id="name-outlet-GLj-d7-1gw"/>
+                <outlet property="ChallengeProgressText" destination="TSr-ci-UuG" id="name-outlet-TSr-ci-UuG"/>
+            </connections>
+            <point key="canvasLocation" x="-175" y="-1"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="ConnectionMessageView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" customColorSpace="sRGB" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5460" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="10" y="358" width="178.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5883" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES">
+                    <rect key="frame" x="350" y="353" width="54" height="30"/>
+                    <state key="normal" title="Dismiss"/>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint id="5521" firstAttribute="centerY" secondItem="5460" secondAttribute="centerY"/>
+                <constraint id="5582" firstItem="5460" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="10"/>
+                <constraint id="5944" firstItem="5883" firstAttribute="centerY" secondItem="1" secondAttribute="centerY"/>
+                <constraint id="6005" firstAttribute="trailing" secondItem="5883" secondAttribute="trailing" constant="10"/>
+            </constraints>
+            <connections>
+                <outlet property="DismissButton" destination="5883" id="name-outlet-5883"/>
+                <outlet property="MessageLb" destination="5460" id="name-outlet-5460"/>
+            </connections>
+        </view>
+    </objects>
+</document>

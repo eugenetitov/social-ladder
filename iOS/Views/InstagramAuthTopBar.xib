@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstagramAuthTopBar"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="InstagramAuthTopBar">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="4471" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                    <constraints>
+                        <constraint id="4475" firstAttribute="width" secondItem="4471" secondAttribute="height" multiplier="1/1"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4469" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="174" y="475.5" width="48" height="30"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" colorSpace="calibratedRGB" red="0.15686274509803921" green="0.58823529411764708" blue="0.94117647058823528" alpha="1"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authenticate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4470" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="158.5" y="480.5" width="97.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="5331" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="0.0" y="734" width="414" height="2"/>
+                    <color key="backgroundColor" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                    <constraints>
+                        <constraint id="5335" firstItem="5331" firstAttribute="height" constant="2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <connections>
+                <outlet property="btnCancel" destination="4469" id="name-outlet-4469"/>
+                <outlet property="lblTitle" destination="4470" id="name-outlet-4470"/>
+                <outlet property="vBasis" destination="4471" id="name-outlet-4471"/>
+                <outlet property="vUnderline" destination="5331" id="name-outlet-5331"/>
+            </connections>
+            <constraints>
+                <constraint id="4472" firstItem="4471" firstAttribute="leading" secondItem="1" secondAttribute="leading"/>
+                <constraint id="4473" firstItem="4471" firstAttribute="top" secondItem="1" secondAttribute="top"/>
+                <constraint id="4477" firstItem="4469" firstAttribute="leading" secondItem="4471" secondAttribute="trailing" multiplier="17/10"/>
+                <constraint id="4478" firstItem="4470" firstAttribute="centerX" secondItem="1" secondAttribute="centerX"/>
+                <constraint id="4965" firstItem="4469" firstAttribute="centerY" secondItem="4471" secondAttribute="bottom" multiplier="48/10"/>
+                <constraint id="4966" firstItem="4470" firstAttribute="centerY" secondItem="4471" secondAttribute="bottom" multiplier="48/10"/>
+                <constraint id="5332" firstItem="5331" firstAttribute="centerX" secondItem="1" secondAttribute="centerX"/>
+                <constraint id="5333" firstItem="1" firstAttribute="bottom" secondItem="5331" secondAttribute="bottom"/>
+                <constraint id="5334" firstItem="5331" firstAttribute="width" secondItem="1" secondAttribute="width"/>
+                <constraint id="10868" firstItem="4471" firstAttribute="height" secondItem="1" secondAttribute="height" multiplier="10/72"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

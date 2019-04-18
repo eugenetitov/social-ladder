@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="556" useSafeAreas="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="555">
+            <objects>
+                <viewController id="556" sceneMemberID="viewController" customClass="NotificationsViewController" storyboardIdentifier="NotificationsViewController">
+                    <view key="view" contentMode="scaleToFill" id="557">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="960" translatesAutoresizingMaskIntoConstraints="NO" customClass="NotificationsTableView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1571" firstItem="960" firstAttribute="top" secondItem="1594" secondAttribute="top"/>
+                            <constraint id="1617" firstItem="960" firstAttribute="leading" secondItem="1594" secondAttribute="leading"/>
+                            <constraint id="1640" firstItem="1594" firstAttribute="trailing" secondItem="960" secondAttribute="trailing"/>
+                            <constraint id="1663" firstItem="1594" firstAttribute="bottom" secondItem="960" secondAttribute="bottom"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1594"/>
+                    </view>
+                    <connections>
+                        <outlet property="TableView" destination="960" id="name-outlet-960"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="558" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="-229"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="116"
+    android:viewportHeight="116"
+    android:width="116dp"
+    android:height="116dp">
+    <group
+        android:translateX="-5620"
+        android:translateY="3701.5">
+        <group
+            android:translateX="5622"
+            android:translateY="-3701.5">
+            <group
+                android:translateX="16"
+                android:translateY="32">
+                <path
+                    android:pathData="M40 0C62.16 0 80 17.84 80 40 80 62.16 62.16 80 40 80 17.84 80 0 62.16 0 40 0 17.84 17.84 0 40 0Z"
+                    android:fillColor="#ffffff" />
+            </group>
+            <group
+                android:translateX="16"
+                android:translateY="32">
+                <path
+                    android:pathData="M40 0.5C61.883 0.5 79.5 18.117 79.5 40 79.5 61.883 61.883 79.5 40 79.5 18.117 79.5 0.5 61.883 0.5 40 0.5 18.117 18.117 0.5 40 0.5Z"
+                    android:strokeWidth="1"
+                    android:strokeMiterLimit="10"
+                    android:strokeColor="#dcdcdc" />
+            </group>
+            <path
+                android:pathData="M56 0c31.024 0 56 24.976 56 56 0 31.024 -24.976 56 -56 56C24.976 112 0 87.024 0 56 0 24.976 24.976 0 56 0Z"
+                android:fillColor="#ffffff" />
+            <path
+                android:pathData="M56 1c30.47 0 55 24.53 55 55 0 30.47 -24.53 55 -55 55C25.53 111 1 86.47 1 56 1 25.53 25.53 1 56 1Z"
+                android:strokeWidth="2"
+                android:strokeMiterLimit="10"
+                android:strokeColor="#3b5998" />
+            <group
+                android:translateX="8"
+                android:translateY="8">
+                <path
+                    android:pathData="M48 0A48 48 0 1 1 0 48 48 48 0 0 1 48 0Z"
+                    android:fillColor="#3b5998" />
+            </group>
+        </group>
+        <group
+            android:translateX="5669"
+            android:translateY="-3663.5">
+            <path
+                android:pathData="M5.607 36.529l0 -16.662 -5.607 0 0 -6.494 5.607 0 0 -4.789C5.607 3.026 9 0 13.959 0a46.017 46.017 0 0 1 5.011 0.256l0 5.808 -3.438 0c-2.7 0 -3.218 1.281 -3.218 3.161l0 4.146 6.43 0 -0.837 6.494 -5.594 0 0 16.664z"
+                android:strokeWidth="1"
+                android:strokeColor="#ffffff"
+                android:strokeMiterLimit="10" />
+        </group>
+    </group>
+</vector>

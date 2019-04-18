@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+	<android.support.v4.widget.SwipeRefreshLayout 
+		android:layout_alignParentTop="true"
+		android:id="@+id/swipe_refresh_layout"
+		android:layout_above="@+id/BottomLoaderView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+			android:id="@+id/feedRecycler"
+			app:MvxItemTemplate="@layout/feed_cell"
+			android:background="#EFEFEF"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:drawSelectorOnTop="false"
+			android:overScrollMode="never"
+			app:MvxBind="ItemsSource FeedItems; ItemClick FeedItemClick "/> 
+	</android.support.v4.widget.SwipeRefreshLayout>
+	<RelativeLayout 
+		android:layout_alignParentBottom="true"
+		android:id="@+id/BottomLoaderView"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+		android:background="@color/textIcon"
+		app:MvxBind="Visibility DirectVisibilityConverter(FeedLoaderHidden)">
+		<ImageView
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:src="@drawable/ic_loadingIndicator"
+			android:id="@+id/feed_loading_indicator_image"
+			android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

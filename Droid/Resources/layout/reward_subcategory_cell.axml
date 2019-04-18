@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp" >
+
+    <ffimageloading.cross.MvxCachedImageView
+        android:id="@+id/cell_background_image"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:foreground="@drawable/rewards_rounded_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:MvxBind="ImagePath MainImageURL"/>
+
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/rewards_rounded_frame"/>
+
+    <TextView
+        android:id="@+id/reward_category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/reward_font_color"
+        android:textAlignment="viewStart"
+        android:padding="10dp"
+        android:text="Free tickets"
+        app:MvxBind="Text Name"/>
+	<ImageView
+		android:id="@+id/giftIcon"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:src="@drawable/rewards_icon"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:paddingTop="10dp"
+		android:paddingRight="10dp" />
+	<TextView
+		android:id="@+id/rewards_category_count_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/giftIcon"
+		android:textColor="@color/reward_font_color"
+		app:MvxBind="Text NumChildren"
+		android:layout_marginTop="15dp"
+		android:layout_marginRight="13dp" />
+
+</android.support.constraint.ConstraintLayout>

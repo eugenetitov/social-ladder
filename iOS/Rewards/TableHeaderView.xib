@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="TableHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3786">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7614">
+                            <rect key="frame" x="15" y="360" width="62" height="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                            <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7909">
+                            <rect key="frame" x="97" y="359.5" width="4.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                            <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Van Duke @ Webster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8204">
+                            <rect key="frame" x="116.5" y="360" width="154.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                            <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                    <constraints>
+                        <constraint firstItem="7614" firstAttribute="leading" secondItem="3786" secondAttribute="leading" constant="15" id="8499"/>
+                        <constraint firstItem="7614" firstAttribute="centerY" secondItem="3786" secondAttribute="centerY" id="8794"/>
+                        <constraint firstItem="7909" firstAttribute="leading" secondItem="7614" secondAttribute="trailing" constant="20" id="9677"/>
+                        <constraint firstItem="7909" firstAttribute="centerY" secondItem="3786" secondAttribute="centerY" id="10266"/>
+                        <constraint firstItem="8204" firstAttribute="leading" secondItem="7909" secondAttribute="trailing" constant="15" id="11443"/>
+                        <constraint firstItem="8204" firstAttribute="centerY" secondItem="3786" secondAttribute="centerY" id="11738"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3786" firstAttribute="height" secondItem="1" secondAttribute="height" id="4669"/>
+                <constraint firstItem="3786" firstAttribute="top" secondItem="1" secondAttribute="top" id="5553"/>
+                <constraint firstItem="3786" firstAttribute="width" secondItem="1" secondAttribute="width" id="6436"/>
+                <constraint firstItem="3786" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="7025"/>
+            </constraints>
+            <connections>
+                <outlet property="TitleLabel" destination="7614" id="name-outlet-7614"/>
+                <outlet property="separatorText" destination="7909" id="name-outlet-7909"/>
+                <outlet property="subTitleLabel" destination="8204" id="name-outlet-8204"/>
+                <outlet property="BackgroundView" destination="3786" id="name-outlet-3786"/>
+            </connections>
+        </view>
+    </objects>
+</document>

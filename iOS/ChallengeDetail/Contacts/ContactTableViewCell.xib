@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="ContactTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5684" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="32" y="11.5" width="192" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6675" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="256" y="6" width="32" height="32"/>
+                        <constraints>
+                            <constraint id="49263" firstAttribute="width" secondItem="6675" secondAttribute="height" multiplier="1:1"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="9646" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="0.0" y="0.0" width="32" height="43.5"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="17568" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="224" y="0.0" width="32" height="43.5"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="20539" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="288" y="0.0" width="32" height="43.5"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint id="22520" firstItem="9646" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading"/>
+                    <constraint id="23511" firstItem="9646" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.1"/>
+                    <constraint id="25492" firstItem="9646" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height"/>
+                    <constraint id="28463" firstItem="9646" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="30444" firstItem="5684" firstAttribute="leading" secondItem="9646" secondAttribute="trailing"/>
+                    <constraint id="31435" firstItem="5684" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="35396" firstAttribute="trailing" secondItem="20539" secondAttribute="trailing"/>
+                    <constraint id="36387" firstAttribute="centerY" secondItem="20539" secondAttribute="centerY"/>
+                    <constraint id="37378" firstItem="20539" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.1"/>
+                    <constraint id="39359" firstItem="20539" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height"/>
+                    <constraint id="43320" firstItem="6675" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="47282" firstItem="6675" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.1"/>
+                    <constraint id="52234" firstItem="20539" firstAttribute="leading" secondItem="6675" secondAttribute="trailing"/>
+                    <constraint id="63126" firstItem="6675" firstAttribute="leading" secondItem="17568" secondAttribute="trailing"/>
+                    <constraint id="64117" firstItem="17568" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="65108" firstItem="17568" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.1"/>
+                    <constraint id="67089" firstItem="17568" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height"/>
+                    <constraint id="71050" firstItem="17568" firstAttribute="leading" secondItem="5684" secondAttribute="trailing"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblName" destination="5684" id="name-outlet-5684"/>
+                <outlet property="imgStatus" destination="6675" id="name-outlet-6675"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:background="@color/textIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/> 
+
+	<ImageView
+        android:id="@+id/parallax_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="1:0.6"
+		android:adjustViewBounds="true"
+		android:scaleType="fitXY"
+		android:background="#991144"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:MvxBind="Bitmap BytesToBitmapConverter(ChallengeImage)"
+		android:src="@drawable/Challenges_Parallax_Background"/> 
+
+	<include
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		layout="@layout/toolbar_child" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<ScrollView
+			android:id="@+id/parallax_scroll_view"
+			android:overScrollMode="never"
+			android:scrollbars="none"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/content_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/parallax_scroll_view">
+				<LinearLayout
+					android:id="@+id/top_linearLayout"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/nullDp"
+					android:orientation="horizontal"
+					app:layout_constraintDimensionRatio="1:0.6"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toTopOf="@+id/content_view"/>
+				<LinearLayout
+					android:id="@+id/collection_view"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/nullDp"
+					android:orientation="horizontal"
+					android:background="#fff"
+					android:visibility="gone"
+					app:layout_constraintDimensionRatio="3:1"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/top_linearLayout"/>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:id="@+id/title_view"
+					android:background="@color/textIcon"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"				
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/collection_view"
+					android:layout_height="wrap_content">
+					<TextView
+						android:text="Selfie with your tickets"					
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="15dp"
+						android:layout_marginLeft="8dp"
+						android:gravity="left"
+						android:id="@+id/title"
+						app:MvxBind="Text Challenge.Name"
+						android:textColor="@color/Black"
+						android:textSize="25sp" />
+					<RelativeLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/hash_layout">
+						<TextView
+							android:text="expires in 10h : 42m"					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="left"
+							android:layout_marginTop="5dp"
+							android:layout_marginLeft="8dp"
+							android:id="@+id/time"
+							android:layout_alignParentTop="true"
+							android:layout_alignParentLeft="true"
+							android:textColor="@color/areas_description_tex_color"
+							app:MvxBind="Text Challenge.NextEventCountDown"
+							android:textSize="20sp" />
+						<android.webkit.WebView
+							android:id="@+id/web_view"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="15dp"
+							android:layout_below="@+id/time"
+							app:MvxBind="Data WebViewData"/>
+						<TextView
+							android:text="To get points use hashtag:"					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="8dp"
+							android:gravity="left"
+							android:layout_below="@+id/web_view"
+							android:layout_alignParentLeft="true"
+							android:layout_marginTop="15dp"
+							android:layout_marginBottom="10dp"
+							android:id="@+id/hash_title"
+							android:textColor="@color/Black"
+							android:textSize="15sp"/>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:layout_marginLeft="8dp"
+							android:id="@+id/input_view"
+							android:layout_below="@+id/hash_title"
+							android:layout_alignParentLeft="true"
+							android:weightSum="1">
+							<EditText
+								android:layout_width="0dp"
+								android:layout_weight="0.6"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:id="@+id/hash_input"
+								android:hint="#Input hash"
+								android:editable="false"
+								android:textColor="@color/Black"
+								android:background="@drawable/hash_input_border"
+								app:MvxBind="Text Challenge.InstaCaption; LongClick CopyHashCommand; Click CopyHashCommand"
+								android:textSize="20sp"/>
+						</LinearLayout>
+						<TextView
+							android:text="^ Tap me to copy"					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:layout_below="@+id/input_view"
+							android:layout_alignParentLeft="true"
+							android:layout_marginLeft="8dp"
+							android:layout_marginTop="15dp"
+							android:id="@+id/hash_hint"
+							android:textColor="@color/areas_description_tex_color"
+							android:textSize="12sp" />
+						<TextView
+							android:text="Hashtag copied!"					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"
+							android:background="@drawable/hash_input_toast_background"
+							android:layout_alignParentLeft="true"
+							android:layout_alignTop="@+id/hash_title"
+							android:padding="10dp"
+							android:id="@+id/toast_text"
+							android:textColor="@color/Black"
+							app:MvxBind="Visibility DirectVisibilityConverter(ShowCopyToast)"
+							android:textSize="13sp" />
+					</RelativeLayout>
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/challenge_bottom_margin"
+						android:background="@color/textIcon"
+						android:id="@+id/bottom_layout"/>
+				</LinearLayout>
+			</android.support.constraint.ConstraintLayout>
+		</ScrollView>
+	</RelativeLayout>
+	
+	<ImageButton
+		android:id="@+id/photo_button"
+		android:background="@android:color/transparent"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_margin="15dp"
+		android:scaleType="fitXY"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintWidth_percent="0.25"
+		app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+		app:MvxBind="Visibility InverseVisibilityConverter(SubmitButtonHidden)"
+		android:src="@drawable/challenges_photo_btn"/>
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/loader" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/ChallengeCompleteView" />
+	</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

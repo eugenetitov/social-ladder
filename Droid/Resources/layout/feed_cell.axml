@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:background="@drawable/feedBorder"
+	android:id="@+id/main_content_layout"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent" 
+	android:paddingBottom="5dp"
+	android:layout_marginRight="2dp"
+	android:layout_marginLeft="2dp"
+	android:layout_marginTop="5dp">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scaleType="fitXY"
+	    android:src="@drawable/reward_claimed_background"
+	    app:MvxBind="Visibility FeedBackgroundVisibility(LayoutSections)"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+		android:layout_marginBottom="5dp"
+        android:id="@+id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+		<ffimageloading.cross.MvxCachedImageView
+		    android:layout_alignParentLeft = "true"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="4dp"
+			android:layout_marginLeft="4dp"
+			android:layout_marginTop="4dp"
+			android:id="@+id/ActorImage" 
+			android:layout_width="45dp"
+		    app:MvxBind="ImagePath Header.ProfilePicURL"/>
+		 <ffimageloading.cross.MvxCachedImageView
+		    android:layout_alignParentLeft = "true"
+			android:layout_height="45dp" 
+			android:layout_marginRight="4dp"
+			android:layout_marginLeft="4dp"
+			android:layout_marginTop="4dp"  
+			android:scaleType="fitEnd" 
+			android:id="@+id/agg_background_image"  
+			android:layout_width="45dp"
+		    app:MvxBind="ImagePath ChallengeTypeToActorBackground(ChallengeTypeDisplayName)"/>	
+		<ImageView
+		    android:layout_alignParentLeft = "true"
+			android:layout_height="20dp"  
+			android:scaleType="fitCenter"
+			android:layout_marginBottom="4dp" 
+			android:layout_marginLeft="4dp"
+			android:layout_alignBottom="@+id/agg_background_image" 
+			android:id="@+id/agg_sub_icon_image"  
+			android:layout_width="45dp"/>
+	    <TextView
+			android:layout_below="@+id/actorNameTextView"
+			android:layout_toRightOf="@+id/ActorImage" 
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginTop = "5dp"
+			android:textColor="#42bed8"
+			android:text="Build communism!!!"
+			app:MvxBind="Text Format('{0}{1}', ChallengeName, OfferName)"
+			android:id="@+id/titleTextView"
+			android:singleLine="true"/> 
+	<!--	app:MvxBind="Text Format('{0} people completed this challenge', AggregateProfileImageUrls.Count)" -->
+	    <TextView
+			android:layout_toRightOf="@+id/ActorImage"
+			android:layout_below="@+id/titleTextView"
+			android:layout_height="wrap_content" 
+			android:layout_width="match_parent"
+			android:textColor="@color/feed_cell_silver"
+			android:layout_marginTop="3dp"
+			android:id="@+id/timeTextView"
+			android:text="5d ago" 
+			app:MvxBind="Text DateTimeToTimeAgoString(Header.CreationDate)"/>
+	    <ImageView
+			android:id="@+id/report_button"
+			android:layout_height="16dp"
+			android:layout_width="12dp"
+			android:background="#ffffff"
+			android:layout_marginRight="5dp"
+			android:layout_alignParentRight="true" 
+			android:layout_alignTop="@+id/actorNameTextView"
+			android:src="@drawable/ic_three_dots"
+			app:MvxBind="Visibility ActionDictionaryToReportVisibility(ActionDictionary)"/>
+		<TextView 
+			android:text="John Galt completed challenge"
+			android:layout_toRightOf="@+id/ActorImage"
+			android:layout_toLeftOf="@+id/report_button"
+			android:layout_alignParentTop="true"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/actorNameTextView"
+			android:textColor="#000000"
+			android:layout_marginTop="12dp"
+			android:minLines="1"
+			android:maxLines="2" />
+		<!-- app:MvxBind="Text Format('{0} {1}', Header.Actor, Header.ActionText)" -->
+    </RelativeLayout>
+
+    <LinearLayout 
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/ContentWebView"
+        android:orientation="vertical"
+		android:visibility="gone">
+
+       <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mediaContentLayout"
+        app:layout_constraintTop_toBottomOf="@+id/ContentWebView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" >
+
+        <ffimageloading.cross.MvxCachedImageView
+            android:id="@+id/contentImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#000000"
+            android:scaleType="fitXY"
+            app:MvxBind="ImagePath BaseContent.ImageURL"/>
+
+        <ImageView
+            android:id="@+id/gradient_overlay_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+			android:src="@drawable/feed_gray_overlay"
+		    app:MvxBind="Visibility Visibility(BaseContent.ImageCaption)"/>
+
+		<TextView
+			android:id="@+id/media_overlay_text"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:textAlignment="center"
+			android:gravity="center_horizontal"
+			android:paddingBottom="15dp"
+			android:textColor="#FFFFFF"
+			app:MvxBind="Text BaseContent.ImageCaption"/>
+
+    </RelativeLayout>
+
+
+	    <LinearLayout
+			android:id="@+id/videoContentLayout"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginTop="8dp"
+			android:orientation="vertical"
+			android:visibility="gone"
+			app:layout_constraintTop_toBottomOf="@+id/mediaContentLayout"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
+
+		        <TextView
+					android:id="@+id/contentImageView"
+					android:layout_width="match_parent"
+					android:layout_height="100dp"
+					android:text="Video Test"/>
+
+		</LinearLayout>
+
+	    <android.support.constraint.ConstraintLayout
+			android:id="@+id/mapContentLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="3dp"
+			android:orientation="vertical"
+		    android:visibility="gone"
+			app:layout_constraintEnd_toEndOf="@+id/main_content_layout"
+			app:layout_constraintStart_toStartOf="@+id/main_content_layout"
+			app:layout_constraintTop_toBottomOf="@+id/videoContentLayout">
+					   
+			<socialLadder.droid.views.CustomMapView
+				android:id="@+id/map_view"
+				android:layout_width="match_parent" 
+				android:layout_height="0dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"
+				android:enabled="true"
+			    app:layout_constraintDimensionRatio="2:1"/>	
+
+		</android.support.constraint.ConstraintLayout>
+
+		  <LinearLayout
+			android:id="@+id/aggConectionContentLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:orientation="vertical"
+		    android:visibility="gone"
+		    app:layout_constraintDimensionRatio="3:1"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/mapContentLayout">
+
+					      <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+								android:id="@+id/aggCollection"
+								app:MvxItemTemplate="@layout/agg_feed_cell"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:drawSelectorOnTop="false" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/aggFeedContentLayout"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginTop="8dp"
+			android:orientation="vertical"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+		    app:layout_constraintDimensionRatio="4:1"
+		    app:layout_constraintTop_toBottomOf="@+id/aggConectionContentLayout">
+			<SocialLadder.Droid.CustomControls.AggRecyclerLayout
+				android:id="@+id/aggFeedContentLayout"
+				app:MvxItemTemplate="@layout/agg_feed_cell"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+			    android:paddingLeft="65dp"
+			    android:clipToPadding="false"
+				android:layout_weight="0.8"
+				android:drawSelectorOnTop="false"
+		        app:MvxBind="ItemsSource AggregateProfileImageUrls"/>
+			<TextView
+			    android:id="@+id/aggregate_text"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+			    android:layout_weight="0.2"
+			    android:gravity="center_horizontal"
+				android:text="11 others  completed this challenge"/>
+		</LinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/itbFeedContentLayout"
+			android:layout_width="match_parent"
+			android:layout_height="200dp"
+			android:layout_marginTop="8dp"
+		    android:visibility="gone"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/aggFeedContentLayout">
+		    <ImageView
+				android:id="@+id/itbBackgroundImageView"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:src="@drawable/itbbackground" 
+				android:scaleType="fitXY"
+				android:drawSelectorOnTop="false"/>			
+		    <TextView
+			    android:id="@+id/unit_sold_text"
+                android:textSize="22sp"
+			    android:text="@string/unit_sold_title"
+			    android:textColor="#ffffff"
+			    android:layout_centerInParent="true"
+			    android:layout_centerHorizontal="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<LinearLayout
+			    android:id="@+id/inviteText"
+			    android:layout_centerHorizontal="true"
+			    android:layout_alignParentBottom="true"
+			    android:orientation="horizontal"
+			    android:visibility="invisible"
+			    android:background="#99000000"
+				android:layout_width="wrap_content"
+				android:layout_height="30dp">
+				<ImageView
+					android:id="@+id/inviteIcon"
+					android:src="@drawable/icons_invite_icon_off"
+					android:layout_centerInParent="true" 
+					android:layout_weight="0.2"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"/>
+				<Button
+					android:layout_width="0dp"
+					android:id="@+id/inviteToBuyBtn"
+					android:focusable="false"
+					android:focusableInTouchMode="false"
+					android:layout_height="wrap_content"
+ 					android:drawSelectorOnTop="false"
+					android:layout_weight="0.8"
+					android:lines="1"
+					android:background="@null"
+					android:textColor="@color/tab_selected_color"
+					android:textSize="12sp"
+					android:text="    Invite To Buy >      "/>		
+			</LinearLayout>
+			<ImageView
+				android:id="@+id/avatarImageView"
+				android:layout_above="@+id/inviteText"
+				android:src="@drawable/ticket_icon"
+				android:layout_margin= "10dp"
+				android:layout_centerInParent="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>		
+		</RelativeLayout>		
+		<RelativeLayout
+			android:id="@+id/itjFeedContentLayout"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginTop="8dp"
+		    android:visibility="gone"
+			android:background="#000000"
+			app:layout_constraintDimensionRatio="2:1"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/itbFeedContentLayout">
+		    <ImageView
+				android:id="@+id/itjBackgroundImageView"
+		        android:src="@drawable/itjBackground"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		    <LinearLayout
+				android:id="@+id/inviteText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/feed_gray_frame"
+				android:padding="8dp"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true">
+				<android.support.v7.widget.AppCompatImageView
+					android:layout_width="wrap_content"
+					android:layout_height="fill_parent"
+					android:src="@drawable/ic_invite_icon"/>
+				<TextView
+			        android:id="@+id/invite_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false" 
+			        android:textSize="8sp"
+					android:text="Invite Friends >"
+			        android:layout_marginLeft="5dp"
+					android:textColor="@color/tab_selected_color" />
+			</LinearLayout>
+			<Button
+				android:layout_width="wrap_content"
+				android:id="@+id/inviteToJoinBtn"
+				android:focusable="false"
+				android:focusableInTouchMode="false"
+				android:layout_alignLeft="@+id/inviteText"
+				android:layout_alignRight="@+id/inviteText"
+				android:layout_alignTop="@+id/inviteText"
+				android:layout_alignBottom="@+id/inviteText"
+				android:layout_height="wrap_content"
+ 				android:drawSelectorOnTop="false"
+				android:background="@null"/> 
+			<TextView
+			    android:id="@+id/welcome_Text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+			    android:layout_alignParentTop="true"
+			    android:layout_marginTop="14dp"
+				android:gravity="center"
+			    android:textColor="#ffffff"
+				android:text="Welcome"/>
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/welcome_Text"
+				android:layout_above="@+id/inviteText"
+				android:layout_marginBottom="7dp">
+				<LinearLayout
+					android:id="@+id/avatarImageView"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal">
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="0.375"/>
+					<android.support.constraint.ConstraintLayout
+						android:layout_width="0dp"
+						android:id="@+id/mvxCachedImageView_layout"
+						android:layout_height="match_parent"
+						android:layout_weight="0.25">
+						<ffimageloading.cross.MvxCachedImageView
+							android:id="@+id/mvxCachedImageView"
+							android:layout_width="0dp"
+							android:layout_height="0dp"
+							android:padding="2dp"
+							android:src="@drawable/you"
+							android:background="@drawable/feed_round_image_border"
+							app:MvxBind="ImagePath BaseContent.ProfilePicURL"
+							app:layout_constraintDimensionRatio="1:1"
+							app:layout_constraintWidth_percent="1"
+							app:layout_constraintTop_toTopOf="@+id/mvxCachedImageView_layout"
+							app:layout_constraintEnd_toEndOf="@+id/mvxCachedImageView_layout"
+							app:layout_constraintStart_toStartOf="@+id/mvxCachedImageView_layout" />
+					</android.support.constraint.ConstraintLayout>			               
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="0.375"/>
+				</LinearLayout>
+				<TextView
+					android:id="@+id/actor_friend_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_marginBottom="8dp"
+					android:background="@drawable/feed_white_frame"
+					android:gravity="center"
+					android:textColor="@color/Black"
+					android:maxLines="1"
+					android:padding="1dp" 
+					android:text="John J."
+					app:MvxBind="Text Format('      {0}      ',BaseContent.Caption)"
+					app:layout_constraintBottom_toBottomOf="@+id/avatarImageView"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintRight_toRightOf="parent"/>
+				<ImageView
+					android:id="@+id/imageView2"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_centerVertical="true"
+					android:visibility="invisible"
+					app:layout_constraintDimensionRatio="W,1:1"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toStartOf="parent" />
+			</android.support.constraint.ConstraintLayout>					
+		</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/rewardClaimedContent"
+		android:layout_height="0dp"
+        android:layout_width="match_parent" 
+		android:padding="1dp"
+		app:layout_constraintTop_toBottomOf="@+id/itjFeedContentLayout"
+	    app:layout_constraintDimensionRatio="2.5:1">
+		
+		<FrameLayout 
+			android:id="@+id/rewardImageFrame"
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:layout_alignParentRight="true">
+
+			<ImageView
+				 android:layout_height="match_parent"
+				 android:layout_width="wrap_content"
+				 android:adjustViewBounds="true"
+				 android:src="@drawable/reward_claimed"
+				 android:padding="6dp"
+				 android:scaleType="fitCenter"/>
+
+			  <ImageView 
+				 android:layout_width="match_parent"
+				 android:src="@drawable/rewardClaimedFrame"
+				 android:layout_height="match_parent"/>
+
+			<Linearlayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content" 
+				android:layout_gravity="center"
+				android:paddingTop="5dp"
+				android:orientation="vertical">
+
+				 <ImageView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/gift_icon"/>
+
+				 <TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_marginTop="5dp"
+					android:textColor="@color/textIcon"
+					android:text="Claimed"/>
+
+			 </Linearlayout>
+
+		</FrameLayout>
+	
+		<TextView 
+			android:id="@+id/reward_title_text"
+			 android:layout_alignParentLeft="true"
+			 android:layout_toLeftOf="@+id/rewardImageFrame"
+		     android:layout_height="match_parent"
+             android:layout_width="wrap_content"
+			android:textColor="#000000"
+			 android:gravity="center"
+			 android:layout_marginTop="10dp"
+		     android:layout_marginBottom="10dp"
+			 android:background="@color/textIcon"
+			 android:layout_centerHorizontal="true"
+		     android:text="Free T-Shirt Apparel"
+		     app:MvxBind="Text BaseContent.OfferTitle"/>
+
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footerContentLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" 
+		android:layout_marginTop="8dp"
+		app:MvxBind="Visibility ActionsToFooterFeedCellVisibility(ActionDictionary)"
+        app:layout_constraintTop_toBottomOf="@+id/rewardClaimedContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+		<ffimageloading.cross.MvxCachedImageView
+			 style="@style/FeedActionIcon"
+			 android:id="@+id/commentsIcon" 
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:layout_alignParentLeft="true"
+			 android:layout_marginLeft="9dp"
+		     android:src="@drawable/ic_comment"
+			 android:layout_centerVertical="true"
+			 app:MvxBind="Visibility ActionsToCommentsVisibility(ActionDictionary)"/>
+
+		<ffimageloading.cross.MvxCachedImageView
+			 android:id="@+id/likesIcon" 
+			 style="@style/FeedActionIcon"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:layout_marginLeft="9dp"
+			 android:layout_toRightOf="@+id/commentsIcon"
+			 android:src="@drawable/ic_heart_icon_off"
+			 android:scaleType="fitXY"
+			 android:layout_centerVertical="true"
+		     app:MvxBind="ImagePath LikeToIcon(DidLike); Visibility ActionsToLikeVisibility(ActionDictionary)" />
+
+        <TextView
+			android:id="@+id/likesCountText" 
+			android:layout_toRightOf="@+id/likesIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:gravity = "center_vertical"
+			android:textColor="@color/feed_cell_silver"
+			android:layout_marginLeft="5dp" 
+            android:layout_centerVertical="true"
+			app:MvxBind="Text Format('{0} likes',Likes); Visibility ActionsToLikeVisibility(ActionDictionary)"
+            android:text="112 likes" />
+
+
+		<android.support.v7.widget.AppCompatImageView
+			 android:id="@+id/smileIcon" 
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:layout_alignParentRight="true"
+			 android:layout_alignParentTop="true"
+			 android:layout_marginRight="5dp"
+			 android:src="@drawable/points_icon"
+			 android:layout_centerVertical="true"
+		     app:MvxBind="Visibility PointsToVisibility(Points)"/>
+		
+		 <TextView
+			android:id="@+id/pointsCountText" 
+			android:layout_toLeftOf="@+id/smileIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+		    android:layout_marginRight="5dp"
+		    android:text="20 Pts"
+			android:textColor="@color/feed_cell_silver"
+			android:layout_centerVertical="true"
+		    app:MvxBind="Text Format('{0} pts',Points); Visibility PointsToVisibility(Points)"/>
+
+		<LinearLayout 
+			android:layout_width="match_parent"
+            android:layout_height="2dp"
+			android:visibility="gone"
+		    android:background="@color/feed_cell_gray"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/likesCountText"
+			android:layout_toLeftOf="@+id/pointsCountText"/>
+
+    </RelativeLayout>
+	<android.support.text.emoji.widget.EmojiAppCompatTextView
+		android:id="@+id/commentsTextView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+		android:layout_marginLeft="5dp"
+		android:paddingBottom="5dp"
+		android:text="Jack Cool!"
+        app:layout_constraintTop_toBottomOf="@+id/footerContentLayout"
+		app:MvxBind="Visibility FilteredEngagementList, Converter=CommentsToVisibility, ConverterParameter=0"/>
+	
+	<Button
+		android:id="@+id/readCommentsButton"
+        android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="5dp"
+		android:paddingBottom="5dp"
+		android:textAllCaps="false"
+		android:textColor="@color/feed_cell_gray"
+		android:text="@string/read_all_comments"
+	    app:MvxBind="Text Format('Read all {0} comments', EngagementListToCommentCount(FilteredEngagementList));Visibility CommentsToVisibility(FilteredEngagementList,3)"
+	    app:layout_constraintTop_toBottomOf="@+id/commentsTextView" 
+		
+		style="@style/LinkButton"/>
+
+</android.support.constraint.ConstraintLayout>

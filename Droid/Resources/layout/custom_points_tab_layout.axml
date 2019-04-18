@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView
+		android:text="Leaderboard"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textView"
+		android:textColor="@color/areas_description_tex_color"
+		android:gravity="center"
+		android:textSize="@dimen/areas_bottom_text"
+		app:layout_constraintVertical_bias="0.5"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:id="@+id/bottom_line"
+		android:visibility="invisible"
+		android:background="@color/areas_description_tex_color"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/points_tab_line_height"
+		app:layout_constraintVertical_bias="0.8"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</android.support.constraint.ConstraintLayout>

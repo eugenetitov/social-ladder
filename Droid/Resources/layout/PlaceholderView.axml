@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:background="@color/textIcon"
+	android:weightSum="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	local:MvxBind="Visibility DirectVisibilityConverter(PlaceholderHidden)">
+	<RelativeLayout 
+		android:layout_width="match_parent"
+		android:layout_weight="0.18"
+		android:layout_height="0dp">
+		<TextView
+			android:text="Oh"					
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent ="true"
+			android:gravity="center"
+			local:MvxBind="Text PlaceholderModel.Title"
+			android:id="@+id/ph_title"
+			android:textColor="@color/Black"
+			android:textSize="25sp" />
+	</RelativeLayout>
+	<LinearLayout 
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:weightSum="1"
+		android:layout_weight="0.12"
+		android:layout_height="0dp">
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.1"
+			android:layout_height="match_parent"/>
+		<TextView
+			android:text="text"					
+			android:layout_width="0dp"
+			android:layout_weight="0.8"
+			android:layout_height="match_parent"
+			android:gravity="center|top"
+			android:id="@+id/ph_text"
+			local:MvxBind="Text PlaceholderModel.Description"
+			android:textColor="@color/areas_description_tex_color"
+			android:textSize="15sp" />
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.1"
+			android:layout_height="match_parent"/>
+	</LinearLayout>
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.58">
+		<com.felipecsl.gifimageview.library.GifImageView
+			android:id="@+id/gif_View"
+			android:scaleType="centerCrop"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			local:layout_constraintBottom_toBottomOf="parent"
+			local:layout_constraintEnd_toEndOf="parent"
+			local:layout_constraintStart_toStartOf="parent"
+			local:layout_constraintTop_toTopOf="parent"
+			local:layout_constraintVertical_bias="0.5"
+			local:layout_constraintHorizontal_bias="0.5"
+			local:layout_constraintWidth_percent="0.7"
+			local:layout_constraintDimensionRatio="1:1"/>
+	</android.support.constraint.ConstraintLayout>
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_weight="0.12"
+		android:layout_height="0dp"/>
+</LinearLayout>

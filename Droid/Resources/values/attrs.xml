@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <declare-styleable name="FeedItemHeaderView">
+    <attr name="actorName" format="string" />
+  </declare-styleable>
+  <declare-styleable name="parallaxscrollview">
+    <attr name="parallaxOffset" format="float" />
+  </declare-styleable>
+
+</resources>

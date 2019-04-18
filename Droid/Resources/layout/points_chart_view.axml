@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"	
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="vertical"
+		android:background="#fff"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<RelativeLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"		
+			android:layout_height="wrap_content">
+			<ImageButton
+				android:id="@+id/btn_close"
+				local:MvxBind="Click DetailsChartHiddenCommand"
+				local:srcCompat="@drawable/close_icon"
+				style="@style/AreaPopupCloseButton"/>
+		</RelativeLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_margin="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<TextView
+				android:text="SocialLadder Rank"					
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/popup_title_text"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:textColor="@color/Black"
+				android:textSize="20sp" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<socialLadder.droid.views.TriangePointsView
+				android:id="@+id/popup_Triangle"
+				android:layout_width="match_parent"
+				android:layout_height="110dp"/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:layout_marginBottom="15dp"
+			android:layout_height="wrap_content">
+			<TextView
+				android:text="As you gain points for completing challenges across all of your ‘Teams’ your rank within SocialLadder will increase. Prove yourself as the ultimate SocialLadder champion."					
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/popup_description_text"
+				android:layout_gravity="center"
+				android:gravity="left"
+				android:textColor="@color/Black"
+				android:textSize="15sp" />
+		</LinearLayout>	
+	</LinearLayout>
+</LinearLayout>

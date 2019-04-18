@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+		
+	<LinearLayout
+		android:orientation="vertical"
+		android:weightSum="1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	    <LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.72"
+			android:layout_width="match_parent"
+			android:layout_height="0dp" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_weight="0.1"
+			android:weightSum="1"
+			android:layout_width="match_parent"
+			android:layout_height="0dp">
+		    <LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.15"
+				android:layout_width="0dp"
+				android:layout_height="match_parent" />
+			<TextView
+                 android:layout_weight="0.7"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/textViewBottom" 
+				 android:text="@string/intro3.Bottom"
+			     style="@style/Intro.BottomText"/>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.15"
+				android:layout_width="0dp"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.18"
+			android:layout_width="match_parent"
+			android:layout_height="0dp" />
+	
+	</LinearLayout>
+
+	<android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.v7.widget.AppCompatImageView  
+        android:id="@+id/imageViewCenter"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintWidth_percent="0.44"
+        app:srcCompat="@drawable/icons_challenges_icon_white" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view1"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintCircle="@+id/imageViewCenter"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="@dimen/intro_circleRadius"
+        app:layout_constraintWidth_percent="0.14">
+		<android.support.v7.widget.AppCompatImageView
+			android:id="@+id/imageView1"
+			style="@style/Intro3.ConstraintViews"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@+id/view1"
+			app:layout_constraintStart_toStartOf="@+id/view1"
+			app:layout_constraintTop_toTopOf="@+id/view1"
+			app:layout_constraintWidth_percent="0.8"
+			android:src="@drawable/Icons_ticket_icon_off" />
+		<TextView
+			android:id="@+id/textView1"
+			android:text="Sell"
+			style="@style/Intro3.ConstraintText"
+			app:layout_constraintEnd_toEndOf="@+id/view1"
+			app:layout_constraintStart_toStartOf="@+id/view1"
+			app:layout_constraintTop_toBottomOf="@+id/imageView1"
+			app:layout_constraintWidth_percent="1" />
+	</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view2"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintCircle="@+id/imageViewCenter"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="@dimen/intro_circleRadius"
+        app:layout_constraintWidth_percent="0.14">
+		<android.support.v7.widget.AppCompatImageView
+			android:id="@+id/imageView2"
+			style="@style/Intro3.ConstraintViews"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@+id/view2"
+			app:layout_constraintStart_toStartOf="@+id/view2"
+			app:layout_constraintTop_toTopOf="@+id/view2"
+			app:layout_constraintWidth_percent="0.8"
+			app:srcCompat="@drawable/icons_quiz_icon_white" />
+		<TextView
+			android:id="@+id/textView2"
+			style="@style/Intro3.ConstraintText"
+			android:text="Quiz"
+			app:layout_constraintEnd_toEndOf="@+id/view2"
+			app:layout_constraintStart_toStartOf="@+id/view2"
+			app:layout_constraintTop_toBottomOf="@+id/imageView2"
+			app:layout_constraintWidth_percent="1" />
+	</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view3"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintCircle="@+id/imageViewCenter"
+        app:layout_constraintCircleAngle="150"
+        app:layout_constraintCircleRadius="@dimen/intro_circleRadius"
+        app:layout_constraintWidth_percent="0.14">
+	    <android.support.v7.widget.AppCompatImageView
+			android:id="@+id/imageView3"
+			style="@style/Intro3.ConstraintViews"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@+id/view3"
+			app:layout_constraintStart_toStartOf="@+id/view3"
+			app:layout_constraintTop_toTopOf="@+id/view3"
+			app:layout_constraintWidth_percent="0.8"
+			app:srcCompat="@drawable/icons_bullhorn_icon_white" />
+		<TextView
+			android:id="@+id/textView3"
+			style="@style/Intro3.ConstraintText"
+			android:text="Share"
+			app:layout_constraintEnd_toEndOf="@+id/view3"
+			app:layout_constraintStart_toStartOf="@+id/view3"
+			app:layout_constraintTop_toBottomOf="@+id/imageView3"
+			app:layout_constraintWidth_percent="1" />
+	</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view4"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintCircle="@+id/imageViewCenter"
+        app:layout_constraintCircleAngle="210"
+        app:layout_constraintCircleRadius="@dimen/intro_circleRadius"
+        app:layout_constraintWidth_percent="0.14">
+	    <android.support.v7.widget.AppCompatImageView
+			android:id="@+id/imageView4"
+			style="@style/Intro3.ConstraintViews"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@+id/view4"
+			app:layout_constraintStart_toStartOf="@+id/view4"
+			app:layout_constraintTop_toTopOf="@+id/view4"
+			app:layout_constraintWidth_percent="0.8"
+			app:srcCompat="@drawable/icons_insta_icon_white" />
+		<TextView
+			android:id="@+id/textView4"
+			style="@style/Intro3.ConstraintText"
+			android:text="Instagram"
+			app:layout_constraintEnd_toEndOf="@+id/view4"
+			app:layout_constraintStart_toStartOf="@+id/view4"
+			app:layout_constraintTop_toBottomOf="@+id/imageView4"
+			app:layout_constraintWidth_percent="1" />
+	</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view5"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintCircle="@+id/imageViewCenter"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="@dimen/intro_circleRadius"
+        app:layout_constraintWidth_percent="0.14">
+	    <android.support.v7.widget.AppCompatImageView
+			android:id="@+id/imageView5"
+			style="@style/Intro3.ConstraintViews"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@+id/view5"
+			app:layout_constraintStart_toStartOf="@+id/view5"
+			app:layout_constraintTop_toTopOf="@+id/view5"
+			app:layout_constraintWidth_percent="0.8"
+			app:srcCompat="@drawable/icons_pin_icon_white" />
+		<TextView
+			android:id="@+id/textView5"
+			style="@style/Intro3.ConstraintText"
+			android:text="Checkin"
+			app:layout_constraintEnd_toEndOf="@+id/view5"
+			app:layout_constraintStart_toStartOf="@+id/view5"
+			app:layout_constraintTop_toBottomOf="@+id/imageView5"
+			app:layout_constraintWidth_percent="1" />
+	</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view6"
+		style="@style/Intro3.ConstraintViews"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintCircle="@+id/imageViewCenter"
+        app:layout_constraintCircleAngle="330"
+        app:layout_constraintCircleRadius="@dimen/intro_circleRadius"
+        app:layout_constraintWidth_percent="0.14">
+	    <android.support.v7.widget.AppCompatImageView
+			android:id="@+id/imageView6"
+			style="@style/Intro3.ConstraintViews"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="@+id/view6"
+			app:layout_constraintStart_toStartOf="@+id/view6"
+			app:layout_constraintTop_toTopOf="@+id/view6"
+			app:layout_constraintWidth_percent="0.8"
+			app:srcCompat="@drawable/icons_invite_icon_white" />
+		<TextView
+			android:id="@+id/textView6"
+			android:text="Invite"
+			style="@style/Intro3.ConstraintText"
+			app:layout_constraintEnd_toEndOf="@+id/view6"
+			app:layout_constraintStart_toStartOf="@+id/view6"
+			app:layout_constraintTop_toBottomOf="@+id/imageView6"
+			app:layout_constraintWidth_percent="1" />
+	</android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

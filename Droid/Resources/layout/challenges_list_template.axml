@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:weightSum="1" 
+			android:layout_marginLeft="5dp"
+			android:layout_marginTop="10dp"
+			local:MvxBind="Visibility InverseVisibilityConverter(SectionHidden)"
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content">
+			<RelativeLayout
+				android:layout_weight="0.06"
+				android:layout_width="0dp" 
+				android:layout_marginRight="0dp"
+				android:layout_height="match_parent">
+				<ImageView
+					android:id="@+id/challenge_dot"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:scaleType="fitXY" 
+					android:layout_marginRight="0dp"
+					android:adjustViewBounds="true"
+					android:layout_centerHorizontal="true"	
+					android:layout_alignParentTop = "true"
+					android:src="@drawable/challenges_dot"/>
+			</RelativeLayout>
+			<TextView				
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.86"
+			    android:layout_marginTop="4dp"
+				android:layout_marginLeft="-3dp"
+				android:id="@+id/section_title"
+				local:MvxBind="Text SectionName"
+				android:text="Text"
+				android:textColor="@color/areas_description_tex_color"
+				android:textAlignment="textStart"
+				android:textSize="16sp"/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:weightSum="1"
+			android:layout_marginBottom="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="0dp"
+				android:layout_weight="0.005"
+				local:MvxBind="Background ColorHexToDrawableConverter(Color)"
+				android:layout_height="match_parent"/>
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_weight="0.115"
+				android:layout_height="match_parent">
+				<ImageView
+					android:id="@+id/challenge_icon"
+					android:layout_width="25dp"
+					android:layout_height="25dp"
+					android:layout_centerInParent="true"
+					android:scaleType="centerInside"
+					local:MvxBind="Drawable ChallengeCollectionImageConverter(Icon)"
+					android:adjustViewBounds="true"/>
+			</RelativeLayout>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_weight="0.70"
+				android:layout_height="wrap_content">
+				<TextView				
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/top_text"
+					local:MvxBind="Text Name"
+					android:text="Text"
+					android:layout_marginBottom="4dp"
+					android:layout_marginLeft="2dp"
+					android:textColor="@color/Black"
+					android:textAlignment="textStart"
+					android:textSize="18sp"/>
+				<TextView				
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/bottom_text"
+					local:MvxBind="Text NextEventCountDown"
+					android:text="Text"
+					android:layout_marginLeft="2dp"
+					android:textColor="@color/areas_description_tex_color"
+					android:textAlignment="textStart"
+					android:textSize="18sp"/>
+			</LinearLayout>
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_weight="0.13"
+				android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content"> 
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_margin="3dp"  
+					local:MvxBind="Visibility InverseVisibilityConverter(LockStatus)"
+					android:layout_centerInParent="true"
+					android:layout_height="wrap_content">
+					<ImageView 
+						android:id="@+id/challenge_icon"
+						android:layout_width="25dp"
+						android:layout_height="25dp"
+						android:layout_gravity="center_horizontal"
+						android:scaleType="fitEnd" 
+						android:adjustViewBounds="true"
+						android:src="@drawable/points_icon" />
+					<TextView				
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/points_text"
+						android:textAlignment="center"
+						local:MvxBind="Text PointsText"
+						android:text="Text"
+						android:maxLines="1"
+						android:textColor="@color/areas_description_tex_color"
+						android:textSize="11sp" />
+				</LinearLayout>
+			</RelativeLayout>		
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:weightSum="1"
+			android:layout_width="match_parent"
+			android:layout_height="1dp">
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="0dp"
+				android:layout_weight="0.12"
+				android:layout_height="match_parent"/>
+			<LinearLayout
+				android:orientation="horizontal"
+				local:MvxBind="Background ColorHexToDrawableConverter(Color)"
+				android:layout_width="0dp"
+				android:layout_weight="0.88"
+				android:layout_height="match_parent"/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

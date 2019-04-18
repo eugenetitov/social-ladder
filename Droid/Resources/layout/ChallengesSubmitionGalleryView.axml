@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffff" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"> 
+
+	<include
+		android:id="@+id/toolbar"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		layout="@layout/toolbar_child" />
+
+	<RelativeLayout
+		android:id="@+id/title_and_counter_layout"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		android:layout_margin="15dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/ChallengeName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/counter_layout"
+			android:layout_marginRight="10dp"
+			android:ellipsize="end"
+			android:gravity="left"
+			android:maxLines="1"
+			android:textColor="@color/Black"
+			app:MvxBind="Text ChallengeName"/>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:id="@+id/counter_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@drawable/postering_counter_border"
+			app:MvxBind="Visibility InverseVisibilityConverter(ImageCountViewHidden)"
+			android:padding="5dip">
+			<TextView
+				android:text="1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:id="@+id/current_count"
+				android:textColor="@color/Black"
+				app:MvxBind="Text PosteringTargetPhotoCount"
+				android:textSize="16sp" />
+			<TextView
+				android:text=" / 3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:id="@+id/total_count"
+				android:textColor="@color/areas_description_tex_color"
+				app:MvxBind="Text PosteringTotalPhotoCount"
+				android:textSize="16sp" />
+		</LinearLayout>
+	</RelativeLayout>
+
+    <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+        android:id="@+id/image_collection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:MvxBind="ItemsSource Posters"
+		android:overScrollMode="never"
+        app:MvxItemTemplate="@layout/submition_gallery_item_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_and_counter_layout" />
+
+    <ImageButton
+        android:id="@+id/photo_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+		android:layout_margin="15dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/challenges_postering_btn"
+        app:MvxBind="Click TakePictureCommand; Visibility InverseVisibilityConverter(SubmitButtonHidden)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <ImageButton
+        android:id="@+id/photo_button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+		android:layout_margin="15dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+		android:visibility="gone"
+        android:src="@drawable/challenge_submit_btn"
+        app:MvxBind="Click CompleteChallengeCommand;  Visibility DirectVisibilityConverter(IsSubmitionEnabled)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+	 <include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/ChallengeCompleteView" />
+
+	<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+		    android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			layout="@layout/loader" />
+
+</android.support.constraint.ConstraintLayout >

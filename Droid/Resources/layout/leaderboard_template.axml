@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/leaderboard_item_height">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_alignParentTop="true"
+		android:layout_width="match_parent"
+		android:background="#E5E5E5"
+		android:visibility="invisible"
+		android:id="@+id/horizontal_line"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_height="2dp"/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:weightSum="1"
+		android:id="@+id/content_layout"
+		android:layout_below="@+id/horizontal_line"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.02"
+			android:layout_height="match_parent"/>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="0dp"
+			android:layout_weight="0.11"
+			android:layout_height="match_parent">
+			<ImageView
+                android:id="@+id/leaderboard_item_triangle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:visibility="gone"
+                android:src="@drawable/leaderboard_item_triangle"/>
+			<TextView
+				android:text="42"					
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:layout_marginLeft="3dp"
+				android:id="@+id/tv_count"
+				android:textColor="@color/custom_triangle_line_color"
+				local:MvxBind="Text Rank"
+				android:textSize="14sp" />
+		
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.13"
+			android:layout_height="match_parent">
+		
+		    <MvxImageView
+                android:id="@+id/user_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+				android:layout_gravity="center"
+                android:src="@drawable/you"
+				local:MvxBind="ImageUrl ProfilePicURL" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.04"
+			android:layout_height="match_parent"/>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.62"
+			android:weightSum="1"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_weight="0.35"
+				android:layout_height="0dp"/>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_weight="0.35"
+				android:layout_height="0dp">
+				<ProgressBar
+					android:id="@+id/progress"	
+					style="@style/IntroActivity.Progress"
+					android:progressDrawable="@drawable/leaderboard_progress_bar"
+					android:layout_margin="0dp"
+					local:MvxBind="Progress CurrentScoreValue"
+					android:layout_width="match_parent"
+					android:layout_height="10dp"/> 
+			</LinearLayout>
+
+			<TextView
+				android:text="UserName"					
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:layout_marginLeft="3dp"
+				android:id="@+id/user_name"
+				android:textAlignment="center"
+				local:MvxBind="Text Name"
+				android:textColor="@color/Black"
+				android:textSize="14sp" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_weight="0.08"
+			android:layout_height="match_parent"/>
+	
+	</LinearLayout>
+</RelativeLayout>

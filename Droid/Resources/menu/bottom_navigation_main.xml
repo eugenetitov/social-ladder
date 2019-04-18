@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/menu_feed"
+      android:enabled="true"
+      android:icon="@drawable/ic_action_feed"
+      android:title="@string/tab_feed_title"
+      app:showAsAction="ifRoom" />
+
+  <item
+      android:id="@+id/menu_points"
+      android:enabled="true"
+      android:icon="@drawable/ic_action_points"
+      android:title="@string/tab_points_title"
+      app:showAsAction="ifRoom" />
+
+  <item
+      android:id="@+id/menu_rewards"
+      android:enabled="true"
+      android:icon="@drawable/ic_action_rewards"
+      android:title="@string/tab_rewards_title"
+      app:showAsAction="ifRoom" />
+
+  <item
+      android:id="@+id/menu_challenges"
+      android:enabled="true"
+      android:icon="@drawable/ic_action_challenges"
+      android:title="@string/tab_challenges_title"
+      app:showAsAction="ifRoom" />
+
+    <item
+      android:id="@+id/menu_more"
+      android:enabled="true"
+      android:icon="@drawable/ic_action_more"
+      android:title="@string/tab_more_title"
+      app:showAsAction="ifRoom" />
+
+</menu>

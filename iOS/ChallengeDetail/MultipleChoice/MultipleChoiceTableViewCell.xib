@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="cxk-wN-pdQ" customClass="MultipleChoiceTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" id="129390" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <constraints>
+                            <constraint id="129636" firstAttribute="width" secondItem="129390" secondAttribute="height" multiplier="207:26"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="121887" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="0.0" y="0.0" width="48" height="52.5"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="526">
+                                <rect key="frame" x="16" y="18.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint id="121888" firstAttribute="width" secondItem="526" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="121892" firstItem="526" firstAttribute="centerY" secondItem="121887" secondAttribute="centerY"/>
+                            <constraint id="121893" firstItem="526" firstAttribute="centerX" secondItem="121887" secondAttribute="centerX"/>
+                            <constraint id="122857" firstItem="526" firstAttribute="width" secondItem="121887" secondAttribute="width" multiplier="16/48"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="18653" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="48" y="0.0" width="16.5" height="52.5"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="445">
+                        <rect key="frame" x="64.5" y="16" width="333" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" colorSpace="calibratedRGB" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" id="19220" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="48" y="51.5" width="366" height="1"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                        <constraints>
+                            <constraint id="37346" firstItem="19220" firstAttribute="height" constant="1"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="48103" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="397.5" y="0.0" width="16.5" height="52.5"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint id="26583" firstItem="18653" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top"/>
+                    <constraint id="32247" firstItem="18653" firstAttribute="trailing" secondItem="445" secondAttribute="leading"/>
+                    <constraint id="33380" firstItem="YTl-1W-gDM" firstAttribute="centerY" secondItem="445" secondAttribute="centerY"/>
+                    <constraint id="34513" firstItem="YTl-1W-gDM" firstAttribute="bottom" secondItem="19220" secondAttribute="bottom"/>
+                    <constraint id="35646" firstItem="19220" firstAttribute="leading" secondItem="18653" secondAttribute="leading"/>
+                    <constraint id="36779" firstItem="19220" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailing"/>
+                    <constraint id="48670" firstItem="YTl-1W-gDM" firstAttribute="trailing" secondItem="48103" secondAttribute="trailing"/>
+                    <constraint id="49803" firstItem="48103" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top"/>
+                    <constraint id="50936" firstItem="YTl-1W-gDM" firstAttribute="bottom" secondItem="48103" secondAttribute="bottom"/>
+                    <constraint id="53768" firstItem="48103" firstAttribute="width" secondItem="18653" secondAttribute="width"/>
+                    <constraint id="54901" firstItem="48103" firstAttribute="leading" secondItem="445" secondAttribute="trailing"/>
+                    <constraint id="121891" firstItem="121887" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="121895" firstItem="121887" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading"/>
+                    <constraint id="121896" firstItem="18653" firstAttribute="leading" secondItem="121887" secondAttribute="trailing"/>
+                    <constraint id="121898" firstItem="18653" firstAttribute="height" secondItem="121887" secondAttribute="height"/>
+                    <constraint id="121899" firstItem="445" firstAttribute="leading" secondItem="18653" secondAttribute="trailing"/>
+                    <constraint id="121900" firstItem="445" firstAttribute="trailing" secondItem="48103" secondAttribute="leading"/>
+                    <constraint id="121901" firstItem="18653" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.04"/>
+                    <constraint id="122574" firstItem="121887" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height"/>
+                    <constraint id="123590" firstItem="121887" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="48/414"/>
+                    <constraint id="129391" firstItem="48103" firstAttribute="trailing" secondItem="129390" secondAttribute="trailing"/>
+                    <constraint id="129392" firstItem="129390" firstAttribute="bottom" secondItem="19220" secondAttribute="centerY"/>
+                    <constraint id="129393" firstItem="129390" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top"/>
+                    <constraint id="129394" firstItem="129390" firstAttribute="leading" secondItem="121887" secondAttribute="leading"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ChoiceName" destination="445" id="name-outlet-445"/>
+                <outlet property="SelectedImage" destination="526" id="name-outlet-526"/>
+                <outlet property="ImgBackground" destination="121887" id="name-outlet-121887"/>
+            </connections>
+            <point key="canvasLocation" x="-226" y="53.5"/>
+            <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+        </tableViewCell>
+    </objects>
+  <resources>
+    <image name="AreaScore" width="60" height="60"/>
+    <image name="AreaStatus" width="12" height="12"/>
+    <image name="avatar_outline1" width="40" height="40"/>
+    <image name="avatar_outline2" width="40" height="40"/>
+    <image name="avatar_outline3" width="40" height="40"/>
+    <image name="avatar_outline4" width="40" height="40"/>
+    <image name="avatar_outline_you" width="40" height="40"/>
+    <image name="Background" width="414" height="650"/>
+    <image name="bullhorn_icon_white" width="48" height="44"/>
+    <image name="challenge-btn_poster" width="112" height="112"/>
+    <image name="gift_icon" width="56" height="65"/>
+    <image name="gift_icon_white" width="96" height="104"/>
+    <image name="IconDelete" width="32" height="32"/>
+    <image name="IconScoreTransactions" width="128" height="128"/>
+    <image name="ImagePlaceholder" width="88" height="88"/>
+    <image name="insta-icon_white" width="48" height="48"/>
+    <image name="invite-icon_white" width="44" height="44"/>
+    <image name="LaunchScreen" width="1248" height="704"/>
+    <image name="pin_icon_white" width="32" height="48"/>
+    <image name="points-icon_white" width="96" height="96"/>
+    <image name="ProfilePlaceholder" width="48" height="48"/>
+    <image name="quiz-icon_white" width="44" height="48"/>
+    <image name="rewards-Background" width="414" height="651"/>
+    <image name="ScoreBackground" width="414" height="311"/>
+    <image name="ScoreCircle" width="60" height="60"/>
+    <image name="SelectedMC" width="48" height="53"/>
+    <image name="SLCircleLogo" width="142" height="142"/>
+    <image name="ticket-icon_white" width="55" height="56"/>
+  </resources>
+</document>

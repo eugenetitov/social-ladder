@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:width="24dp"
+    android:height="24dp">
+    <path
+        android:pathData="M2 0.5l20 0c0.831 0 1.5 0.669 1.5 1.5l0 20c0 0.831 -0.669 1.5 -1.5 1.5l-20 0C1.169 23.5 0.5 22.831 0.5 22L0.5 2C0.5 1.169 1.169 0.5 2 0.5Z"
+        android:strokeWidth="1"
+        android:strokeMiterLimit="10"
+        android:strokeColor="#adadad" />
+    <group
+        android:translateY="8">
+        <path
+            android:pathData="M0.5 0.5l23 0 0 11 -23 0z"
+            android:strokeWidth="1"
+            android:strokeMiterLimit="10"
+            android:strokeColor="#adadad" />
+    </group>
+    <group
+        android:translateX="2"
+        android:translateY="2">
+        <path
+            android:pathData="M4.5 2.5a2 2 0 0 1 -2 2 2 2 0 0 1 -2 -2 2 2 0 0 1 2 -2 2 2 0 0 1 2 2z"
+            android:strokeWidth="1"
+            android:strokeMiterLimit="10"
+            android:strokeColor="#adadad" />
+    </group>
+    <group
+        android:translateX="9"
+        android:translateY="3">
+        <path
+            android:pathData="M0.5 0l10 0C10.777 0 11 0.223 11 0.5 11 0.777 10.777 1 10.5 1L0.5 1C0.223 1 0 0.777 0 0.5 0 0.223 0.223 0 0.5 0Z"
+            android:fillColor="#adadad" />
+    </group>
+    <group
+        android:translateX="9"
+        android:translateY="5">
+        <path
+            android:pathData="M0.5 0l6 0C6.777 0 7 0.223 7 0.5 7 0.777 6.777 1 6.5 1l-6 0C0.223 1 0 0.777 0 0.5 0 0.223 0.223 0 0.5 0Z"
+            android:fillColor="#adadad" />
+    </group>
+</vector>

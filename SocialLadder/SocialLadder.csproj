@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9091AE6D-A9AE-4386-995B-4225304073A1}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SocialLadder</RootNamespace>
+    <AssemblyName>SocialLadder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Authentication\IInstagramAuthenticationDelegate.cs" />
+    <Compile Include="Authentication\InstagramModels\InstagramUserResponce.cs" />
+    <Compile Include="Authentication\InstagramModels\UserData.cs" />
+    <Compile Include="Converters\ByteConverter.cs" />
+    <Compile Include="Converters\ColorHexToMvxColorConverter.cs" />
+    <Compile Include="Converters\ImageUrlToByteArrayLocalConverter.cs" />
+    <Compile Include="Converters\TextWithQuoteConverter.cs" />
+    <Compile Include="Enums\ChallengesCollectionItemState.cs" />
+    <Compile Include="Enums\ChallengesFacebookShareResponseType.cs" />
+    <Compile Include="Enums\Constants\ActionTypeConstants.cs" />
+    <Compile Include="Enums\Constants\ChallengesConstants.cs" />
+    <Compile Include="Enums\ENavigationTabs.cs" />
+    <Compile Include="Enums\FeedActionParam.cs" />
+    <Compile Include="Enums\FeedLoadingIndicatorMode.cs" />
+    <Compile Include="Enums\LocalNetworkAction.cs" />
+    <Compile Include="Enums\NotificationType.cs" />
+    <Compile Include="Enums\NotififcationStatus.cs" />
+    <Compile Include="Enums\RewardType.cs" />
+    <Compile Include="Enums\WebViewContentType.cs" />
+    <Compile Include="Extensions\PropertiesExtension.cs" />
+    <Compile Include="Helpers\ChallengesIconHelper.cs" />
+    <Compile Include="Helpers\ChallengesPhotoHelper.cs" />
+    <Compile Include="Helpers\CountSuffixGenerator.cs" />
+    <Compile Include="Helpers\LocalPlaceholderHelper.cs" />
+    <Compile Include="Helpers\LogoutHelper.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
+    <Compile Include="Helpers\StringParser.cs" />
+    <Compile Include="Interfaces\IActionHandlerService.cs" />
+    <Compile Include="Interfaces\Base\IBaseChildViewModel.cs" />
+    <Compile Include="Interfaces\Base\IBaseViewModel.cs" />
+    <Compile Include="Interfaces\IAlertService.cs" />
+    <Compile Include="Interfaces\IBrowserService.cs" />
+    <Compile Include="Interfaces\IChallengeInviteService.cs" />
+    <Compile Include="Interfaces\IClipboardService.cs" />
+    <Compile Include="Interfaces\ICloudinaryService.cs" />
+    <Compile Include="Interfaces\IEncodingService.cs" />
+    <Compile Include="Interfaces\IFacebookService.cs" />
+    <Compile Include="Authentication\FacebookAuthenticator.cs" />
+    <Compile Include="Authentication\FacebookOAuthToken.cs" />
+    <Compile Include="Authentication\IFacebookAuthenticationDelegate.cs" />
+    <Compile Include="Authentication\InstagramAuthenticator.cs" />
+    <Compile Include="Authentication\TwitterAuthentificator.cs" />
+    <Compile Include="CodeBehindUIConstants.cs" />
+    <Compile Include="Enums\FeedActionType.cs" />
+    <Compile Include="Enums\FeedContentType.cs" />
+    <Compile Include="Enums\FeedEngagementType.cs" />
+    <Compile Include="Interfaces\IChallengeShareService.cs" />
+    <Compile Include="Interfaces\IFacebookShareService.cs" />
+    <Compile Include="Interfaces\IFirebaseService.cs" />
+    <Compile Include="Interfaces\IItemActionService.cs" />
+    <Compile Include="Interfaces\ILocalNotificationService.cs" />
+    <Compile Include="Interfaces\ILocationService.cs" />
+    <Compile Include="Interfaces\IMainTabViewModel.cs" />
+    <Compile Include="Interfaces\INetworkViewModel.cs" />
+    <Compile Include="Interfaces\INotificationService.cs" />
+    <Compile Include="Interfaces\IPlatformAssetService.cs" />
+    <Compile Include="Interfaces\IPushNotificationService.cs" />
+    <Compile Include="Interfaces\IShareService.cs" />
+    <Compile Include="Interfaces\ISmsService.cs" />
+    <Compile Include="Interfaces\IPlatformNavigationService.cs" />
+    <Compile Include="Logger\LogHelper.cs" />
+    <Compile Include="Mocks\MockGenerator.cs" />
+    <Compile Include="Models\CachedFileModel.cs" />
+    <Compile Include="Models\EncouragementSubmitModel.cs" />
+    <Compile Include="Models\InteractionModel\ImagePickerInteractionModel.cs" />
+    <Compile Include="Models\LocalAreaModel.cs" />
+    <Compile Include="Models\LocalModels\Areas\LocalAreasModel.cs" />
+    <Compile Include="Models\LocalModels\Areas\LocalCurrentAreaModel.cs" />
+    <Compile Include="Models\LocalModels\Challenges\ChallengeIcon.cs" />
+    <Compile Include="Models\LocalModels\Challenges\LocalChallengeAnswerModel.cs" />
+    <Compile Include="Models\LocalModels\Challenges\LocalChallengeModel.cs" />
+    <Compile Include="Models\LocalModels\Challenges\LocalChallengeTypeModel.cs" />
+    <Compile Include="Models\LocalModels\Challenges\LocalContactModel.cs" />
+    <Compile Include="Models\LocalModels\LocalChangedMainViewModel.cs" />
+    <Compile Include="Models\LocalModels\LocalPlaceholderModel.cs" />
+    <Compile Include="Models\LocalModels\Challenges\LocalPosterModel.cs" />
+    <Compile Include="Models\LocalModels\LocalWebDataModel.cs" />
+    <Compile Include="Models\LocalModels\LocationModel.cs" />
+    <Compile Include="Models\LocalModels\Mappers\AreaMapper.cs" />
+    <Compile Include="Models\LocalModels\Mappers\AreasViewMapper.cs" />
+    <Compile Include="Models\LocalModels\Mappers\ChallengeAnswerModelMapper.cs" />
+    <Compile Include="Models\LocalModels\Mappers\ChallengesCollectionMapper.cs" />
+    <Compile Include="Models\LocalModels\Mappers\ChallengesListMapper.cs" />
+    <Compile Include="Models\LocalModels\Mappers\FriendMapper.cs" />
+    <Compile Include="Models\LocalModels\Mappers\NotificationsMapper.cs" />
+    <Compile Include="Models\LocalModels\More\MoreSocialConnectedNetworksModel.cs" />
+    <Compile Include="Models\LocalModels\Notifications\LocalNotificationModel.cs" />
+    <Compile Include="Models\LocalModels\Points\LocalFriendModel.cs" />
+    <Compile Include="Models\LocalModels\Points\PointsSummaryLocalModel.cs" />
+    <Compile Include="Models\LocalModels\Points\TransactionsLocalModel.cs" />
+    <Compile Include="Models\MessangerModels\MessangerFeedUrlModel.cs" />
+    <Compile Include="Models\MessangerModels\MessangerImageGalleryModel.cs" />
+    <Compile Include="Models\MessangerModels\MessangerChallengeModel.cs" />
+    <Compile Include="Models\MessangerModels\MessangerRewardModel.cs" />
+    <Compile Include="Models\MessangerModels\MessangerWebModel.cs" />
+    <Compile Include="Models\MessangerModels\MessengerActionHandlerModel.cs" />
+    <Compile Include="Models\ProfileUpdateModel.cs" />
+    <Compile Include="Models\RewardCollectionItemModel.cs" />
+    <Compile Include="Models\RpcCallModel.cs" />
+    <Compile Include="Models\UpdatedFeedItemModel.cs" />
+    <Compile Include="Services\ActionHandlerService.cs" />
+    <Compile Include="Services\CloudinaryService.cs" />
+    <Compile Include="Services\InstagramService.cs" />
+    <Compile Include="Services\ServiceModels\BaseServiceModel.cs" />
+    <Compile Include="Services\ServiceModels\InstagramModel.cs" />
+    <Compile Include="Services\ServiceModels\TwitterModel.cs" />
+    <Compile Include="Services\TwitterService.cs" />
+    <Compile Include="SL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FacebookModel.cs" />
+    <Compile Include="Services\FacebookService.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Models\FeedModel.cs" />
+    <Compile Include="Api\ISLService.cs" />
+    <Compile Include="Api\SLService.cs" />
+    <Compile Include="Api\SLManager.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Models\NetworkModel.cs" />
+    <Compile Include="Models\ProfileModel.cs" />
+    <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\ChallengeModel.cs" />
+    <Compile Include="Models\RewardModel.cs" />
+    <Compile Include="Models\NotificationModel.cs" />
+    <Compile Include="Models\ShareModel.cs" />
+    <Compile Include="Models\TwitterModel.cs" />
+    <Compile Include="Models\SummaryModel.cs" />
+    <Compile Include="ViewModels\Base\BaseChallengesViewModel.cs" />
+    <Compile Include="ViewModels\Base\BaseFeedViewModel.cs" />
+    <Compile Include="ViewModels\Base\BasePointsViewModel.cs" />
+    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\BasePosteringViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ChallengeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ChallengesDetails\PhotoGalleryViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ChallengesDetails\ContactsPickerViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ChallengesDetails\PhotoPickerViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ChallengesDetails\SubmitionGalleryViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ChallengesDetails\TwitterDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\CheckInViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\CollateralTrackingViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\DocSubmitViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\FacebookViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\FBEngagementViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\FlyeringViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\InstagramViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\InviteViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\ManualViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\MultipleChoiceViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\PosteringViewModel.cs" />
+    <Compile Include="ViewModels\Challenges\TwitterViewModel.cs" />
+    <Compile Include="ViewModels\Feed\FeedDetailViewModel.cs" />
+    <Compile Include="ViewModels\Feed\FeedViewModel.cs" />
+    <Compile Include="ViewModels\Intro\AreasCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Intro\Intro1ViewModel.cs" />
+    <Compile Include="ViewModels\Intro\Intro2ViewModel.cs" />
+    <Compile Include="ViewModels\Intro\Intro3ViewModel.cs" />
+    <Compile Include="ViewModels\Intro\Intro4ViewModel.cs" />
+    <Compile Include="ViewModels\Intro\IntroContainerViewModel.cs" />
+    <Compile Include="ViewModels\Intro\NetworksViewModel.cs" />
+    <Compile Include="ViewModels\Main\MainViewModel.cs" />
+    <Compile Include="ViewModels\More\LocationSettingsViewModel.cs" />
+    <Compile Include="ViewModels\More\MoreViewModel.cs" />
+    <Compile Include="ViewModels\More\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\Points\LeaderboardViewModel.cs" />
+    <Compile Include="ViewModels\Points\PointsContainerViewModel.cs" />
+    <Compile Include="ViewModels\Points\PointsViewModel.cs" />
+    <Compile Include="ViewModels\Points\TransactionsViewModel.cs" />
+    <Compile Include="ViewModels\Rewards\RewardsViewModel.cs" />
+    <Compile Include="ViewModels\Rewards\RewardsDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Rewards\RewardCategoriesViewModel.cs" />
+    <Compile Include="ViewModels\Web\WebViewModel.cs" />
+    <Compile Include="ViewModels\Notification\NotificationsViewModel.cs" />
+    <Compile Include="Models\LocalModels\Notifications\ExpandableNotificationModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

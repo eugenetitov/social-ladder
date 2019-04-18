@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="422">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="421">
+            <objects>
+                <viewController id="422" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20172"/>
+                        <viewControllerLayoutGuide type="bottom" id="20173"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3247">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="3248">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0.0392156862745098" green="0.37647058823529411" blue="1" alpha="1"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3249">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3250" image="SLCircleLogo">
+                                        <rect key="frame" x="136.5" y="260.5" width="141" height="141"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3250" secondAttribute="height" multiplier="1:1" id="6731"/>
+                                        </constraints>
+                                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SocialLadder" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" translatesAutoresizingMaskIntoConstraints="NO" id="4196" adjustsFontForContentSizeCategory="NO" adjustsLetterSpacingToFitWidth="YES" minimumFontSize="24">
+                                        <rect key="frame" x="94.5" y="419.5" width="225" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4196" firstAttribute="top" secondItem="3250" secondAttribute="bottom" constant="18" id="4229"/>
+                                    <constraint firstItem="4196" firstAttribute="centerX" secondItem="3250" secondAttribute="centerX" id="4230"/>
+                                    <constraint firstItem="3250" firstAttribute="centerX" secondItem="3249" secondAttribute="centerX" id="4234"/>
+                                    <constraint firstAttribute="centerY" secondItem="3250" secondAttribute="centerY" constant="37" id="4235"/>
+                                    <constraint firstItem="3250" firstAttribute="width" secondItem="3249" secondAttribute="width" multiplier="0.338" constant="1" id="Kjm-2W-8qq"/>
+                                    <constraint id="8353" firstItem="4196" firstAttribute="width" secondItem="3249" secondAttribute="width" constant="1" multiplier="0.541"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3248" firstAttribute="top" secondItem="3247" secondAttribute="top" id="3255"/>
+                            <constraint firstItem="3248" firstAttribute="leading" secondItem="3247" secondAttribute="leading" id="3256"/>
+                            <constraint firstItem="3248" firstAttribute="trailing" secondItem="3247" secondAttribute="trailing" id="3258"/>
+                            <constraint firstItem="3249" firstAttribute="top" secondItem="3248" secondAttribute="top" id="3260"/>
+                            <constraint firstItem="3249" firstAttribute="leading" secondItem="3247" secondAttribute="leading" id="3261"/>
+                            <constraint firstItem="3249" firstAttribute="trailing" secondItem="3247" secondAttribute="trailing" id="3262"/>
+                            <constraint id="16936" firstItem="20173" firstAttribute="bottom" secondItem="3249" secondAttribute="bottom"/>
+                            <constraint id="19922" firstItem="20173" firstAttribute="bottom" secondItem="3248" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="424" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.4" y="97.6012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchScreen" width="1248" height="704"/>
+        <image name="SLCircleLogo" width="142" height="142"/>
+    </resources>
+</document>

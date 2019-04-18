@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="224" id="cxk-wN-pdQ" customClass="RewardsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="504" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="605" clipsSubviews="YES">
+                        <rect key="frame" x="10" y="29.5" width="194" height="194"/>
+                        <color key="backgroundColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="605" secondAttribute="height" multiplier="1:1" id="182929"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="306824" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                        <rect key="frame" x="10" y="29.5" width="194" height="194"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="0.6"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10385">
+                        <rect key="frame" x="216" y="39.5" width="288" height="174.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19815">
+                                <rect key="frame" x="44" y="147" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="19815" secondAttribute="height" id="239357"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40 Units Available" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40650">
+                                <rect key="frame" x="189" y="151" width="87" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="214852" userInteractionEnabled="NO" multipleTouchEnabled="YES" text="Lorem ipsum dolor">
+                                <rect key="frame" x="12" y="69" width="264" height="36.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="223378">
+                                <rect key="frame" x="16" y="151" width="26" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="325464" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <constraints>
+                                    <constraint id="325748" firstAttribute="height" constant="1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="326310" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="0.0" y="173.5" width="288" height="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1"/>
+                                <constraints>
+                                    <constraint id="326311" firstAttribute="height" constant="1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="413499" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="0.0" y="81" width="12" height="12"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                <constraints>
+                                    <constraint id="413500" firstAttribute="width" secondItem="413499" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="413507" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="276" y="81" width="12" height="12"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                <constraints>
+                                    <constraint id="413508" firstAttribute="width" secondItem="413507" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="40650" firstAttribute="centerY" secondItem="223378" secondAttribute="centerY" id="228798"/>
+                            <constraint firstItem="19815" firstAttribute="width" secondItem="10385" secondAttribute="width" multiplier="0.07" id="239129"/>
+                            <constraint firstItem="19815" firstAttribute="centerY" secondItem="223378" secondAttribute="centerY" id="239132"/>
+                            <constraint firstItem="223378" firstAttribute="width" relation="greaterThanOrEqual" secondItem="10385" secondAttribute="width" multiplier="0.09" id="239135"/>
+                            <constraint firstItem="19815" firstAttribute="leading" secondItem="223378" secondAttribute="trailing" constant="2" id="239800"/>
+                            <constraint firstItem="40650" firstAttribute="width" relation="lessThanOrEqual" secondItem="10385" secondAttribute="width" multiplier="0.65" id="246031"/>
+                            <constraint id="325535" firstItem="325464" firstAttribute="top" secondItem="10385" secondAttribute="top"/>
+                            <constraint id="325606" firstAttribute="centerX" secondItem="325464" secondAttribute="centerX"/>
+                            <constraint id="325677" firstItem="325464" firstAttribute="width" secondItem="10385" secondAttribute="width"/>
+                            <constraint id="326382" firstAttribute="bottom" secondItem="326310" secondAttribute="bottom"/>
+                            <constraint id="326453" firstItem="326310" firstAttribute="centerX" secondItem="10385" secondAttribute="centerX"/>
+                            <constraint id="326524" firstItem="326310" firstAttribute="width" secondItem="10385" secondAttribute="width"/>
+                            <constraint id="411836" firstItem="40650" firstAttribute="top" secondItem="223378" secondAttribute="top"/>
+                            <constraint id="411837" firstAttribute="centerY" secondItem="214852" secondAttribute="centerY"/>
+                            <constraint id="412945" firstItem="214852" firstAttribute="height" secondItem="10385" secondAttribute="height" multiplier="0.7" relation="lessThanOrEqual"/>
+                            <constraint id="413502" firstAttribute="centerY" secondItem="413499" secondAttribute="centerY"/>
+                            <constraint id="413503" firstItem="413499" firstAttribute="height" secondItem="10385" secondAttribute="height" multiplier="0.07"/>
+                            <constraint id="413504" firstItem="413499" firstAttribute="leading" secondItem="10385" secondAttribute="leading"/>
+                            <constraint id="413505" firstItem="413499" firstAttribute="trailing" secondItem="214852" secondAttribute="leading"/>
+                            <constraint id="413509" firstAttribute="centerY" secondItem="413507" secondAttribute="centerY"/>
+                            <constraint id="413510" firstAttribute="trailing" secondItem="413507" secondAttribute="trailing"/>
+                            <constraint id="413511" firstItem="413507" firstAttribute="width" secondItem="413499" secondAttribute="width"/>
+                            <constraint id="413512" firstItem="214852" firstAttribute="trailing" secondItem="413507" secondAttribute="leading"/>
+                            <constraint id="413513" firstItem="223378" firstAttribute="leading" secondItem="413499" secondAttribute="trailing" multiplier="1.3"/>
+                            <constraint id="413514" firstItem="413507" firstAttribute="leading" secondItem="40650" secondAttribute="trailing"/>
+                            <constraint id="413516" firstAttribute="bottom" secondItem="223378" secondAttribute="bottom" multiplier="1.07"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="210230">
+                        <rect key="frame" x="136" y="15" width="87" height="87.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="210230" secondAttribute="height" id="210727"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="240909">
+                        <rect key="frame" x="73" y="90.5" width="68" height="47"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="203931">
+                        <rect key="frame" x="71" y="90.5" width="72" height="72"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="404557" firstAttribute="width" secondItem="203931" secondAttribute="height" multiplier="1:1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="387783" text="3000">
+                        <rect key="frame" x="71" y="90.5" width="70" height="47"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                        <color key="textColor" colorSpace="calibratedRGB" red="0.90980392156862744" green="0.12156862745098039" blue="0.54117647058823526" alpha="1"/>
+                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint id="387784" firstAttribute="width" secondItem="387783" secondAttribute="height" multiplier="1.5:1"/>
+                        </constraints>
+                    </label>
+                    <view contentMode="scaleToFill" id="332092" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                        <rect key="frame" x="71" y="126.5" width="72" height="36"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="360710" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="0.0" y="-36" width="72" height="72"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="38"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="363354" firstAttribute="width" secondItem="360710" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="345624" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="7.5" y="-28.5" width="57" height="57"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.90980392156862744" green="0.12156862745098039" blue="0.54117647058823526" alpha="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="30.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="362976" firstAttribute="width" secondItem="345624" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="376651" text="3000">
+                                <rect key="frame" x="11" y="0.0" width="50" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint id="378538" firstAttribute="width" secondItem="376651" secondAttribute="height" multiplier="2.2:1"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="361842" firstItem="360710" firstAttribute="centerX" secondItem="345624" secondAttribute="centerX"/>
+                            <constraint id="362220" firstItem="360710" firstAttribute="bottom" secondItem="332092" secondAttribute="bottom"/>
+                            <constraint id="362598" firstItem="360710" firstAttribute="width" secondItem="332092" secondAttribute="width"/>
+                            <constraint id="365618" firstAttribute="centerX" secondItem="360710" secondAttribute="centerX"/>
+                            <constraint id="366750" firstItem="345624" firstAttribute="width" secondItem="332092" secondAttribute="width" multiplier="650/815"/>
+                            <constraint id="369768" firstItem="345624" firstAttribute="centerY" secondItem="360710" secondAttribute="centerY"/>
+                            <constraint id="378160" firstAttribute="centerX" secondItem="376651" secondAttribute="centerX"/>
+                            <constraint id="378916" firstItem="376651" firstAttribute="width" secondItem="332092" secondAttribute="width" multiplier="0.7"/>
+                            <constraint id="380048" firstItem="376651" firstAttribute="top" secondItem="332092" secondAttribute="top"/>
+                        </constraints>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="240931" userInteractionEnabled="NO">
+                        <rect key="frame" x="59" y="137.5" width="95.5" height="86"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244797">
+                        <rect key="frame" x="107" y="167.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="294067">
+                        <rect key="frame" x="4" y="15" width="71.5" height="72"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="294069" firstAttribute="width" secondItem="294067" secondAttribute="height" multiplier="1:1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="396749" text="3000">
+                        <rect key="frame" x="27.5" y="29.5" width="24" height="11"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                        <color key="textColor" colorSpace="calibratedRGB" red="0.90980392156862744" green="0.12156862745098039" blue="0.54117647058823526" alpha="1"/>
+                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                    <view contentMode="scaleToFill" id="396728" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                        <rect key="frame" x="4" y="51" width="71.5" height="36"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="396729" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="0.0" y="-36" width="72" height="72"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="38"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="396730" firstAttribute="width" secondItem="396729" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="396731" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                                <rect key="frame" x="7.5" y="-28.5" width="57" height="57"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.90980392156862744" green="0.12156862745098039" blue="0.54117647058823526" alpha="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="30.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <constraints>
+                                    <constraint id="396732" firstAttribute="width" secondItem="396731" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="396733" text="3000">
+                                <rect key="frame" x="11" y="0.0" width="50" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint id="396734" firstAttribute="width" secondItem="396733" secondAttribute="height" multiplier="2.2:1"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="396735" firstItem="396729" firstAttribute="centerX" secondItem="396731" secondAttribute="centerX"/>
+                            <constraint id="396736" firstItem="396729" firstAttribute="bottom" secondItem="396728" secondAttribute="bottom"/>
+                            <constraint id="396737" firstItem="396729" firstAttribute="width" secondItem="396728" secondAttribute="width"/>
+                            <constraint id="396738" firstAttribute="centerX" secondItem="396729" secondAttribute="centerX"/>
+                            <constraint id="396739" firstItem="396731" firstAttribute="width" secondItem="396728" secondAttribute="width" multiplier="650/815"/>
+                            <constraint id="396740" firstItem="396731" firstAttribute="centerY" secondItem="396729" secondAttribute="centerY"/>
+                            <constraint id="396741" firstAttribute="centerX" secondItem="396733" secondAttribute="centerX"/>
+                            <constraint id="396742" firstItem="396733" firstAttribute="width" secondItem="396728" secondAttribute="width" multiplier="0.7"/>
+                            <constraint id="396743" firstItem="396733" firstAttribute="top" secondItem="396728" secondAttribute="top"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="398690" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                        <rect key="frame" x="4" y="15" width="103" height="14.5"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <constraints>
+                            <constraint id="398698" firstAttribute="width" secondItem="398690" secondAttribute="height" multiplier="7.1:1"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="398703" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                        <rect key="frame" x="107" y="15" width="116" height="14.5"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <constraints>
+                            <constraint id="398704" firstAttribute="width" secondItem="398703" secondAttribute="height" multiplier="8:1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="605" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="2008" constant="10"/>
+                    <constraint firstAttribute="trailing" secondItem="10385" secondAttribute="trailing" id="11444"/>
+                    <constraint firstItem="10385" firstAttribute="centerY" secondItem="605" secondAttribute="centerY" id="191124"/>
+                    <constraint firstItem="203931" firstAttribute="centerX" secondItem="605" secondAttribute="centerX" id="205074"/>
+                    <constraint firstItem="203931" firstAttribute="centerY" secondItem="605" secondAttribute="centerY" id="205727"/>
+                    <constraint firstItem="203931" firstAttribute="width" secondItem="605" secondAttribute="width" multiplier="0.37" id="207359"/>
+                    <constraint firstItem="210230" firstAttribute="width" secondItem="605" secondAttribute="width" multiplier="0.45" id="210636"/>
+                    <constraint firstItem="10385" firstAttribute="height" secondItem="605" secondAttribute="height" multiplier="0.9" id="220667"/>
+                    <constraint firstItem="240909" firstAttribute="top" secondItem="203931" secondAttribute="top" id="240910"/>
+                    <constraint firstItem="240909" firstAttribute="height" secondItem="203931" secondAttribute="height" multiplier="0.65" id="240913"/>
+                    <constraint firstItem="605" firstAttribute="centerX" secondItem="240909" secondAttribute="centerX" id="240914"/>
+                    <constraint firstItem="240909" firstAttribute="width" secondItem="203931" secondAttribute="width" multiplier="0.95" id="240915"/>
+                    <constraint firstItem="240931" firstAttribute="top" secondItem="240909" secondAttribute="bottom" id="240932"/>
+                    <constraint firstItem="240931" firstAttribute="width" secondItem="240909" secondAttribute="width" multiplier="1.4" id="240934"/>
+                    <constraint firstItem="240931" firstAttribute="centerX" secondItem="605" secondAttribute="centerX" id="240936"/>
+                    <constraint firstItem="605" firstAttribute="bottom" secondItem="240931" secondAttribute="bottom" id="240937"/>
+                    <constraint firstItem="244797" firstAttribute="top" secondItem="203931" secondAttribute="bottom" constant="5" id="244798"/>
+                    <constraint firstItem="244797" firstAttribute="centerX" secondItem="240909" secondAttribute="centerX" id="244799"/>
+                    <constraint firstItem="605" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" id="249013" multiplier="1:2.6"/>
+                    <constraint firstItem="605" firstAttribute="centerY" secondItem="10385" secondAttribute="centerY" id="253121"/>
+                    <constraint firstAttribute="bottom" secondItem="605" secondAttribute="bottom" id="259454"/>
+                    <constraint id="294071" firstItem="294067" firstAttribute="width" secondItem="203931" secondAttribute="width"/>
+                    <constraint id="301747" firstItem="10385" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="216"/>
+                    <constraint id="306825" firstItem="306824" firstAttribute="centerY" secondItem="605" secondAttribute="centerY"/>
+                    <constraint id="306826" firstItem="306824" firstAttribute="centerX" secondItem="605" secondAttribute="centerX"/>
+                    <constraint id="306827" firstItem="306824" firstAttribute="top" secondItem="605" secondAttribute="top"/>
+                    <constraint id="306828" firstItem="306824" firstAttribute="leading" secondItem="605" secondAttribute="leading"/>
+                    <constraint id="333978" firstItem="332092" firstAttribute="centerX" secondItem="203931" secondAttribute="centerX"/>
+                    <constraint id="336841" firstItem="332092" firstAttribute="width" secondItem="203931" secondAttribute="width"/>
+                    <constraint id="338281" firstItem="203931" firstAttribute="bottom" secondItem="332092" secondAttribute="bottom"/>
+                    <constraint id="338893" firstItem="332092" firstAttribute="height" secondItem="203931" secondAttribute="height" multiplier="0.5"/>
+                    <constraint id="396744" firstItem="396728" firstAttribute="bottom" secondItem="294067" secondAttribute="bottom"/>
+                    <constraint id="396745" firstItem="396728" firstAttribute="width" secondItem="294067" secondAttribute="width"/>
+                    <constraint id="396746" firstItem="396728" firstAttribute="centerX" secondItem="294067" secondAttribute="centerX"/>
+                    <constraint id="396747" firstItem="396728" firstAttribute="height" secondItem="294067" secondAttribute="height" multiplier="0.5"/>
+                    <constraint id="398694" firstItem="398690" firstAttribute="height" secondItem="605" secondAttribute="height" multiplier="1/13.35"/>
+                    <constraint id="398696" firstItem="605" firstAttribute="centerX" secondItem="398690" secondAttribute="right"/>
+                    <constraint id="398697" firstItem="398690" firstAttribute="bottom" secondItem="605" secondAttribute="top"/>
+                    <constraint id="398700" firstItem="294067" firstAttribute="top" secondItem="398690" secondAttribute="top"/>
+                    <constraint id="398701" firstItem="398690" firstAttribute="leading" secondItem="294067" secondAttribute="leading"/>
+                    <constraint id="398705" firstItem="398703" firstAttribute="bottom" secondItem="605" secondAttribute="top"/>
+                    <constraint id="398706" firstItem="398703" firstAttribute="leading" secondItem="605" secondAttribute="centerX"/>
+                    <constraint id="398708" firstItem="398703" firstAttribute="width" secondItem="605" secondAttribute="width" multiplier="0.6"/>
+                    <constraint id="400479" firstItem="210230" firstAttribute="top" secondItem="398703" secondAttribute="top"/>
+                    <constraint id="400480" firstItem="398703" firstAttribute="trailing" secondItem="210230" secondAttribute="trailing"/>
+                    <constraint id="421168" firstItem="387783" firstAttribute="top" secondItem="203931" secondAttribute="top"/>
+                    <constraint id="421548" firstItem="387783" firstAttribute="leading" secondItem="203931" secondAttribute="leading"/>
+                    <constraint id="421928" firstItem="240909" firstAttribute="trailing" secondItem="387783" secondAttribute="trailing"/>
+                    <constraint id="431333" firstItem="396728" firstAttribute="centerX" secondItem="396749" secondAttribute="centerX"/>
+                    <constraint id="453151" firstItem="396749" firstAttribute="top" secondItem="398690" secondAttribute="bottom"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="DescriptionView" destination="10385" id="name-outlet-10385"/>
+                <outlet property="LeadingSpaceImageConstraint" destination="2008" id="name-outlet-2008"/>
+                <outlet property="LikeButton" destination="19815" id="name-outlet-19815"/>
+                <outlet property="RewardImage" destination="605" id="name-outlet-605"/>
+                <outlet property="RewardName" destination="214852" id="name-outlet-214852"/>
+                <outlet property="TrailingSpaceDescriptionConstraint" destination="11444" id="name-outlet-11444"/>
+                <outlet property="iconStatus" destination="203931" id="name-outlet-203931"/>
+                <outlet property="lblAviableUnits" destination="40650" id="name-outlet-40650"/>
+                <outlet property="lblPointsCount" destination="223378" id="name-outlet-223378"/>
+                <outlet property="lockStatus" destination="240909" id="name-outlet-240909"/>
+                <outlet property="needMoreStatus" destination="244797" id="name-outlet-244797"/>
+                <outlet property="topStatusImage" destination="210230" id="name-outlet-210230"/>
+                <outlet property="unlockStatus" destination="240931" id="name-outlet-240931"/>
+                <outlet property="topLeftIcon" destination="294067" id="name-outlet-294067"/>
+                <outlet property="LeadingSpaceDescriptionConstraint" destination="301747" id="name-outlet-301747"/>
+                <outlet property="RewardImageOverlay" destination="306824" id="name-outlet-306824"/>
+                <outlet property="statusContainer" destination="333978" id="name-outlet-333978"/>
+                <outlet property="cnStatusPercent" destination="338893" id="name-outlet-338893"/>
+                <outlet property="vStatusBorder" destination="360710" id="name-outlet-360710"/>
+                <outlet property="vStatusCircle" destination="345624" id="name-outlet-345624"/>
+                <outlet property="lblStatusCountBottom" destination="376651" id="name-outlet-376651"/>
+                <outlet property="lblStatusCountTop" destination="387783" id="name-outlet-387783"/>
+                <outlet property="vPercentContainer" destination="332092" id="name-outlet-332092"/>
+                <outlet property="vPercentContainerLeft" destination="396728" id="name-outlet-396728"/>
+                <outlet property="lblStatusCountTopLeft" destination="396749" id="name-outlet-396749"/>
+                <outlet property="vStatusBorderLeft" destination="396729" id="name-outlet-396729"/>
+                <outlet property="vStatusCircleLeft" destination="396731" id="name-outlet-396731"/>
+                <outlet property="lblStatusCountBottomLeft" destination="396733" id="name-outlet-396733"/>
+                <outlet property="cnStatusPercentLeft" destination="396747" id="name-outlet-396747"/>
+                <outlet property="cnCenterStatusWidth" destination="207359" id="name-outlet-207359"/>
+                <outlet property="cnTopStatusImageWidth" destination="210636" id="name-outlet-210636"/>
+            </connections>
+            <point key="canvasLocation" x="-256.5" y="53.5"/>
+        </tableViewCell>
+    </objects>
+</document>

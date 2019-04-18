@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="horizontal"
+	android:weightSum="1"
+	android:background="@color/textIcon"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/user_profile_view_height">
+	<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="@dimen/nullDp"
+		android:layout_weight="0.4"
+		android:layout_height="match_parent">
+		<MvxImageView
+            android:id="@+id/area_image"
+			android:layout_centerInParent="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sl_cricle_icon"
+			local:MvxBind="ImageUrl UserProfile.ProfilePictureURL" />
+		<include 
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginLeft="-5dp"
+			android:layout_marginBottom="-5dp"
+			android:layout_alignBottom="@+id/area_image"
+			android:layout_toRightOf="@+id/area_image"
+			android:layout_centerVertical="true"
+			android:id="@+id/score"
+			layout="@layout/score_image_layout"/>
+	</RelativeLayout>
+	<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="@dimen/nullDp"
+		android:layout_weight="0.4"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_marginLeft="5dp"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<android.support.text.emoji.widget.EmojiAppCompatTextView				
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="left"
+				android:text="User Name"
+				android:id="@+id/profile_name"
+				android:textColor="@color/Black"
+				android:layout_marginLeft="5dp"
+				android:textSize="12sp" 
+				android:textAlignment="viewStart"
+				local:MvxBind="Text UserProfile.UserName"/>
+			<TextView				
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="left"
+				android:text="User Rank Category"
+				android:layout_marginTop="3dp"
+				android:layout_marginLeft="5dp"
+				android:id="@+id/profile_info"
+				android:textColor="@color/areas_description_tex_color"
+				android:textSize="12sp" 
+				android:textAlignment="viewStart"
+				local:MvxBind="Text UserProfile.ScoreLabel"/>
+		</LinearLayout>
+	</RelativeLayout>
+		<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="@dimen/nullDp"
+		android:layout_weight="0.2"
+		android:layout_height="match_parent">
+		<ImageButton
+			android:id="@+id/btn_close"
+			local:MvxBind="Click BackCommand"
+			local:srcCompat="@drawable/close_icon"
+			style="@style/AreaPopupCloseButton"/>
+	</RelativeLayout>
+
+</LinearLayout>

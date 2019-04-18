@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:minHeight="?attr/actionBarSize"
+	local:contentInsetStart="0dp"
+	local:contentInsetEnd="0dp"
+	android:paddingLeft="0dp"
+	android:paddingRight="0dp"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/main_toolbar_layout"
+		local:MvxBind="Background ColorHexToDrawableConverter(HexToolbarColor)">
+		<MvxImageView
+            android:id="@+id/area_image"
+			android:layout_marginTop="5dp" 
+			android:layout_marginBottom="5dp" 
+			android:layout_marginLeft="10dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+			android:layout_toRightOf="@+id/back_layout"
+            android:src="@drawable/sl_cricle_icon"
+			local:MvxBind="ImageUrl Image" />
+		<include 
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginLeft="-5dp"
+			android:background="#999"
+			android:layout_toRightOf="@+id/area_image"
+			android:layout_centerVertical="true"
+			android:id="@+id/score"
+			layout="@layout/score_image_layout"/>
+		<RelativeLayout
+			android:id="@+id/notification_layout"
+			android:layout_width="wrap_content"
+			android:layout_marginRight="10dp"
+			android:layout_alignParentRight="true"
+			android:layout_height="match_parent"
+			local:MvxBind="Click NotificationCommand"
+			android:orientation="horizontal">			
+			<ImageView
+				android:id="@+id/ball_image"			
+				android:layout_width="23dp"
+				android:layout_height="23dp"
+				android:focusable="false"
+				android:background="@android:color/transparent"
+				android:scaleType="fitXY"
+				android:layout_centerInParent="true"
+				android:src="@drawable/bell_icon" />
+			<ImageView
+				android:id="@+id/dot_image"
+				android:layout_width="15dp"
+				android:layout_height="15dp"
+				android:layout_toRightOf="@+id/ball_image"
+				android:layout_above="@+id/ball_image"
+				android:src="@drawable/notif_dot"
+				android:visibility="invisible"
+				local:MvxBind="Visibility InverseVisibilityConverter(NotificationDotHidden)" />
+		</RelativeLayout>
+		<TextView				
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="left"
+			android:layout_margin="5dp"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/score"
+			android:layout_toLeftOf="@+id/notification_layout"
+			android:id="@+id/area_name_text"
+			android:textColor="@color/textIcon"
+			android:textSize="18sp" 
+			android:textAlignment="viewStart"
+			local:MvxBind="Text Title"/>	
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="3dp"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:src="@drawable/toovbar_bottom_indicator" />
+	</RelativeLayout>
+</android.support.v7.widget.Toolbar>
+<!--local:MvxBind="Background ColorConverter(ToolbarColor); Click ShowAreasCommand">-->

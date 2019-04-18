@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:background="@android:color/transparent"
+	local:MvxBind="Visibility DirectVisibilityConverter(AreaCollectionHidden)"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:overScrollMode="never"
+		android:id="@+id/areas_collection"
+		android:background="@color/textIcon"
+		local:MvxItemTemplate="@layout/areas_collection_template"
+		local:MvxTemplateSelector="SocialLadder.Droid.TemplateSelectors.AreasTemplateSelector,SocialLadder.Droid"
+		local:MvxBind="ItemsSource AreasCollection; ItemClick AreaClickCommand" />
+</LinearLayout>

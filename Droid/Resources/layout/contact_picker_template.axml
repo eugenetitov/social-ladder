@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+	android:weightSum="1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.05"
+		android:layout_height="match_parent"/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:weightSum="1"
+		android:layout_width="0dp"
+		android:layout_weight="0.8"
+		android:layout_height="match_parent">
+		<TextView				
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.7"
+			android:id="@+id/name_text"
+			android:textColor="@color/Black"
+			android:textSize="20sp"
+			android:minLines="1"
+			local:MvxBind="Text Name"
+			android:text="User"/>
+		<TextView				
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.3"
+			android:layout_marginBottom="5dp"
+			android:minLines="1"
+			android:id="@+id/number_text"
+			android:textColor="@color/areas_description_tex_color"
+			android:textSize="12sp"
+			local:MvxBind="Text Number"
+			android:text="Number"/>	
+	</LinearLayout>
+	<RelativeLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.15"
+		android:layout_height="match_parent">
+		<ImageView
+			android:id="@+id/selected_image"
+			android:layout_width="15dp"
+			android:layout_height="15dp"
+			android:layout_centerInParent="true"
+			android:scaleType="fitXY"
+			local:MvxBind="Visibility DirectVisibilityConverter(IsSelected)"
+			android:src="@drawable/connect_social"/>
+	</RelativeLayout>
+</LinearLayout>

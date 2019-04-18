@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- blocked cell user does not have enough points -->
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".35">
+
+		
+		<ffimageloading.cross.MvxCachedImageView
+		    android:layout_alignParentLeft = "true"
+			android:foreground="@drawable/rewards_rounded_frame"
+			android:padding="1dp"
+			android:layout_height="match_parent"  
+			android:layout_width="match_parent"
+		    app:MvxBind="ImagePath MainImageURL" />
+
+        <ImageView
+            android:id="@+id/status_icon_image"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+			android:layout_marginTop="40dip"
+			android:layout_marginBottom="5dip"
+			android:src="@drawable/ic_lock_icon"
+			android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/text_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+			android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true" 
+			android:textSize="11dip"
+			android:textColor="@color/reward_font_color"
+            android:layout_below="@+id/status_icon_image"
+            android:text="Unlocks in"/>
+
+        <TextView
+			android:id="@+id/count_down_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+			android:gravity="center_horizontal"
+			android:textColor="@color/reward_font_color"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text_view1"
+			android:textSize="11dip"
+            android:text="9h:5m:10s"
+		    app:MvxBind="Text NextEventCountDown"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+		android:background="@color/reward_font_color"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+		<TextView
+			android:id="@+id/reward_name_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:layout_centerVertical="true"
+			app:MvxBind="Text Name"
+			android:text="Free tickets"
+			android:textColor="@android:color/background_dark" />
+
+        <TextView
+            android:id="@+id/point_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp" 
+            android:layout_alignParentBottom="true"
+			app:MvxBind="Text MinScore"
+			android:textColor="@color/feed_cell_gray"
+            android:text="2000"/>
+
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/points_icon"
+            android:layout_alignTop="@+id/point_price_text"
+            android:layout_alignBottom="@+id/point_price_text"
+            android:layout_toRightOf="@+id/point_price_text"/>
+
+        <TextView
+            android:id="@+id/unit_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+			android:textColor="@color/feed_cell_gray"
+			app:MvxBind="Text Format('{0} Units Available',RemainingUnits)"
+            android:text="56 units aviable"/>
+    </RelativeLayout>
+	<RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".16"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+	<ImageView
+            android:id="@+id/status_icon_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/score"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+		<TextView
+			android:id="@+id/points_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:layout_alignTop="@+id/status_icon_image"
+			android:textColor="@color/pink_revards_text_color"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			app:MvxBind="Text RewardsMinPriceToScore(MinScore)"/>
+	</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

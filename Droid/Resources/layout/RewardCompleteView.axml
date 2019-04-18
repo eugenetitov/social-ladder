@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/RewardsCompleteLayout"
+	android:visibility = "gone"
+	android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	app:MvxBind="Visibility DirectVisibilityConverter(IsCompleteViewVisible)">
+
+    <LinearLayout
+		android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:alpha="0.4"
+		android:background="#CCFAAAAA"
+        android:orientation="vertical" 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/top_margin_View"
+        android:layout_width="@dimen/nullDp"
+        android:layout_height="@dimen/nullDp"
+        android:orientation="vertical"
+		app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.15"/>
+
+	   <LinearLayout
+        android:id="@+id/additional_margin_View"
+        android:layout_width="@dimen/nullDp"
+        android:layout_height="@dimen/nullDp"
+ 		app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent" 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_margin_View"
+        app:layout_constraintWidth_percent="0.15"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="@dimen/nullDp"
+		android:id="@+id/content_view"
+		android:layout_marginBottom="@dimen/challenge_complete_text_margin"
+		android:background="@color/textIcon"
+        android:layout_height="0dp" 
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/additional_margin_View"
+		app:layout_constraintBottom_toTopOf="@+id/bottom_margin_view"
+        app:layout_constraintWidth_percent="0.9">
+
+        <LinearLayout
+            android:id="@+id/content_margin_View"
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="@dimen/nullDp"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="1:0.866"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintTop_toTopOf="@+id/content_view"
+            app:layout_constraintWidth_percent="0.22"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="@dimen/nullDp"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintTop_toTopOf="@+id/content_view"
+            app:layout_constraintWidth_percent="0.12">
+            <ImageButton
+                android:id="@+id/btn_close"
+				style="@style/AreaPopupCloseButton"
+				android:layout_centerInParent="true"
+                app:srcCompat="@drawable/close_icon"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/complete_title_text"
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+			android:textColor="@color/Black"
+			android:textAlignment="center"
+			android:gravity="center" 
+			app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintTop_toBottomOf="@+id/content_margin_View" />
+
+		 <TextView
+            android:id="@+id/complete_title_text2"
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+			android:textColor="@color/Black"
+			android:textAlignment="center"
+			android:gravity="center" 
+			app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintTop_toBottomOf="@+id/complete_title_text" />
+
+        <TextView
+            android:id="@+id/complete_message_text"
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="wrap_content"
+			app:layout_constraintWidth_percent="0.7"
+            android:text="TextView"
+			android:layout_marginTop="@dimen/challenge_complete_text_margin"
+			android:textAlignment="center"
+			android:gravity="center"
+			app:MvxBind="Text PeopleCountCompleteView"
+			android:textColor="@color/areas_description_tex_color"
+            app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintTop_toBottomOf="@+id/complete_title_text2" />
+
+        <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="wrap_content"
+			app:MvxItemTemplate="@layout/feed_cell"
+			android:drawSelectorOnTop="false"
+			app:MvxBind="ItemsSource FeedItems; Visibility InverseVisibilityConverter(FeedItemCompleteViewHidden)"
+			app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintTop_toBottomOf="@+id/points_text" />
+
+		<Button
+			android:id="@+id/collectButton"
+			android:layout_width="@dimen/nullDp"
+            android:layout_height="wrap_content"
+			android:textAllCaps="false"
+			android:textColor="@color/reward_font_color"
+			android:background="@color/collectButtonBackground"
+			android:text="@string/collect_button_title"
+            app:MvxBind = "Click BrowseRewadsCommand"
+			app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintBottom_toBottomOf="@+id/content_view" />
+
+    </android.support.constraint.ConstraintLayout>
+
+	<LinearLayout
+		android:id="@+id/bottom_margin_view"
+        android:layout_width="@dimen/nullDp"
+        android:layout_height="@dimen/nullDp"
+		android:orientation="vertical"
+		app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintDimensionRatio="1:0.866"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.45"/>
+
+    <LinearLayout
+        android:id="@+id/triangular_view"
+        android:layout_width="@dimen/nullDp"
+        android:layout_height="@dimen/nullDp"
+        android:orientation="vertical" 
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/additional_margin_View"
+        app:layout_constraintWidth_percent="0.3">
+
+		<ImageView
+			android:id="@+id/rewardIcon"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+
+	</LinearLayout>
+</android.support.constraint.ConstraintLayout>

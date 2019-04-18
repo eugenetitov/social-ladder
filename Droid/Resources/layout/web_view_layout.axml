@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/toolbar_layout"
+			android:layout_alignParentTop="true">
+			<RelativeLayout
+				android:id="@+id/toolbar_with_score_layout"
+				android:layout_alignParentTop="true"
+				app:MvxBind="Visibility InverseVisibilityConverter(WebToolbarBackShowed)"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<include		
+					layout="@layout/toolbar_back" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/toolbar_without_score_layout"
+				android:layout_alignParentTop="true"
+				app:MvxBind="Visibility DirectVisibilityConverter(WebToolbarBackShowed)"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<include		
+					layout="@layout/toolbar_child" />
+			</RelativeLayout>
+		</RelativeLayout>
+        <android.webkit.WebView
+            android:id="@+id/webView"
+			android:layout_alignParentBottom="true"
+			android:layout_below="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+			app:MvxBind="Data WebViewData"/>		
+	</RelativeLayout>
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="80dp"
+		android:minHeight="80dp"
+		android:src="@drawable/ic_loadingIndicator"
+		android:id="@+id/web_view_loader"
+		android:layout_centerInParent="true" />
+</RelativeLayout>

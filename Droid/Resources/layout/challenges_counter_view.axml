@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="25dp"
+	android:paddingLeft="5dp"
+	android:paddingRight="5dp"
+	android:paddingTop="2dp"
+	android:paddingBottom="2dp"
+	android:visibility="gone"
+	app:MvxBind="Visibility InverseVisibilityConverter(ImageCountViewHidden)"
+	android:background="@drawable/postering_counter_border">
+	<TextView				
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:id="@+id/current_count"
+		android:textColor="@color/Black"
+		app:MvxBind="Text PosteringTargetPhotoCount"
+		android:textSize="16sp" />
+	<TextView
+		android:text=" / 3"					
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:id="@+id/total_count"
+		android:textColor="@color/areas_description_tex_color"
+		app:MvxBind="Text PosteringTotalPhotoCount"
+		android:textSize="16sp" />
+</LinearLayout>

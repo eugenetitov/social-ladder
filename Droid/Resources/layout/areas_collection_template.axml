@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:background="@color/textIcon"
+	android:layout_marginLeft="@dimen/areas_view_width_margin"
+	android:layout_marginRight="@dimen/areas_view_width_margin"
+    android:layout_width="@dimen/areas_view_width"
+    android:layout_height="@dimen/areas_view_height">
+	<RelativeLayout
+		android:layout_margin="5dp"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent">
+		<TextView
+			android:text="Area Title"					
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:gravity="center"
+			android:id="@+id/title"
+			android:lines="1"
+			android:textColor="@color/Black"
+			local:MvxBind="Text areaName"
+			android:textSize="15sp" />		
+		<MvxImageView
+			android:id="@+id/imageView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_above="@+id/title"
+			android:scaleType="fitCenter"
+			android:layout_alignParentLeft="true"     
+			android:layout_alignParentTop="true"
+			android:layout_toLeftOf="@+id/score"
+			local:MvxBind="ImageUrl areaDefaultImageURL" />	
+	</RelativeLayout>
+</LinearLayout>

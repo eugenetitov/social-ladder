@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:id="@+id/score_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<ImageView
+		android:id="@+id/score_image"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:src="@drawable/IconScoreTransactions"
+		local:MvxBind="Drawable StringDrawableConverter(ScoreImage)"/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:weightSum="1"
+		android:layout_height="match_parent"
+		local:MvxBind="Visibility InverseVisibilityConverter(IsBusy)">
+		<RelativeLayout
+			android:layout_weight="0.5"
+			android:layout_width="match_parent"
+			android:layout_height="0dp">
+			<TextView
+				android:text="200"					
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/score_count"
+				android:textColor="#E81F8A"
+				android:textSize="12sp"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true"
+				local:MvxBind="Text ScoreCount"/>
+		</RelativeLayout>
+	</LinearLayout>
+</RelativeLayout>

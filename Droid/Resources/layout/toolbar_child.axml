@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:minHeight="?attr/actionBarSize"
+	local:contentInsetStart="0dp"
+	local:contentInsetEnd="0dp"
+	android:paddingLeft="0dp"
+	android:paddingRight="0dp"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/main_toolbar_layout"
+		local:MvxBind="Background ColorHexToDrawableConverter(HexToolbarColor)">
+		<RelativeLayout
+			android:id="@+id/back_layout"
+			android:layout_marginLeft="5dp"
+			android:layout_width="wrap_content"
+			local:MvxBind="Visibility DirectVisibilityConverter(BackButtonHidden)"
+			android:layout_alignParentLeft="true"
+			android:layout_height="match_parent">
+			<ImageButton
+				android:id="@+id/backArrow_image"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:focusable="false"				
+				android:focusableInTouchMode="false"
+				android:background="@android:color/transparent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/back_arrow"
+				local:MvxBind="Click BackCommand" />
+		</RelativeLayout>
+		<MvxImageView
+            android:id="@+id/area_image"
+			android:layout_marginTop="5dp" 
+			android:layout_marginBottom="5dp" 
+			android:layout_marginLeft="10dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+			android:layout_toRightOf="@+id/back_layout"
+            android:src="@drawable/sl_cricle_icon"
+			local:MvxBind="ImageUrl Image" />
+		<include 
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginLeft="-5dp"
+			android:background="#999"
+			android:layout_toRightOf="@+id/area_image"
+			android:layout_centerVertical="true"
+			android:id="@+id/score"
+			layout="@layout/score_image_layout"/>
+		<TextView				
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="left"
+			android:layout_margin="5dp"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/score"
+			android:layout_toLeftOf="@+id/notification_layout"
+			android:id="@+id/area_name_text"
+			android:textColor="@color/textIcon"
+			android:textSize="18sp" 
+			android:textAlignment="viewStart"
+			local:MvxBind="Text Title"/>	
+	</RelativeLayout>
+</android.support.v7.widget.Toolbar>

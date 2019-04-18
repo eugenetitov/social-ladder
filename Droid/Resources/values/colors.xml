@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--Get colors from: http://www.materialpalette.com/-->
+  <color name="primary">#03A9F4</color>
+  <color name="primaryDark">#0288D1</color>
+  <color name="primaryRipple">#E8E8E8</color>
+  <color name="accent">#FFC107</color>
+  <color name="lightPrimary">#B3E5FC</color>
+  <color name="textIcon">#FFFFFF</color>
+  <color name="primaryText">#212121</color>
+  <color name="secondaryText">#727272</color>
+  <color name="divider">#B6B6B6</color>
+  <color name="activated_color">#E8E8E8</color>
+  <color name="Black">#000000</color>
+  <color name="areas_section_background">#55888888</color>
+  <color name="areas_invite_button">#24D1B4</color>
+  <color name="areas_description_tex_color">#ADADAD</color>
+  <color name="tab_selected_color">#007AC2</color>
+  <color name="custom_triangle_line_color">#979797</color>
+  <color name="custom_triangle_background_color">#e5e5e5</color>
+  <color name="custom_triangle_body_color">#33ab97</color>
+  <color name="leaderbord_progress_color">#E81F8A</color>
+  
+  <color name="feed_cell_gray">#ADADAD</color>
+  <color name="feed_cell_silver">#C0C0C0</color>
+  <color name="reward_font_color">#FFFFFF</color>
+  <color name="reward_red_font_color">#FF0000 </color>
+  <color name="reward_black_font_color">#000000 </color>
+  <color name="reward_font_gray">#ADADAD</color>
+
+  <color name="main_toolbar_background">#F7F7F7</color>
+  <color name="pink_revards_text_color">#D7458B</color>
+  <color name="color_refresh_loader">#DDDDE4</color>
+  <color name="color_transparent">#00ffffff</color>
+
+  <color name="mc_button_color">#BD4CD9</color>
+  <color name="rewardClaimeSucesfuly">#CC24D1B4</color>
+  <color name="rewardClaimeFailed">#CCF07275</color>
+  <color name="collectButtonBackground">#007AC2</color>
+  <color name="challenges_details_background">#d2d2d2</color>
+  <color name="rewards_details_circle_background">#f17275</color>
+  <color name="postering_error_location_text_color">#ff4646</color>
+</resources>

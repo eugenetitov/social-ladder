@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:background="@color/textIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/> 
+
+	<ImageView
+        android:id="@+id/parallax_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="1:0.6"
+		android:adjustViewBounds="true"
+		android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:MvxBind="Bitmap BytesToBitmapConverter(ChallengeImage)"
+		android:src="@drawable/Challenges_Parallax_Background"/>
+
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		android:alpha="0.5"
+		android:background="@color/Black"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<ScrollView
+			android:id="@+id/parallax_scroll_view"
+			android:overScrollMode="never"
+			android:scrollbars="none"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/content_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="@+id/parallax_scroll_view"
+				app:layout_constraintEnd_toEndOf="@+id/parallax_scroll_view"
+				app:layout_constraintStart_toStartOf="@+id/parallax_scroll_view"
+				app:layout_constraintTop_toTopOf="@+id/parallax_scroll_view">
+				<LinearLayout
+					android:id="@+id/top_linearLayout"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/nullDp"
+					android:orientation="horizontal"
+					android:background="@android:color/transparent"
+					app:layout_constraintDimensionRatio="1:0.6"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toTopOf="@+id/content_view"/>
+				<LinearLayout
+					android:id="@+id/collection_view"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/nullDp"
+					android:orientation="horizontal"
+					android:background="#118822"
+					android:visibility="gone"
+					app:layout_constraintDimensionRatio="3:1"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/top_linearLayout"/>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:id="@+id/title_view"
+					android:background="@color/textIcon"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"				
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/collection_view"
+					android:layout_height="wrap_content">
+					<TextView
+						android:text="Selfie with your tickets"					
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="15dp"
+						android:layout_marginLeft="8dp"
+						android:gravity="left"
+						android:id="@+id/title"
+						app:MvxBind="Text Challenge.Name"
+						android:textColor="@color/Black"
+						android:textSize="25sp" />
+					<RelativeLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/hash_layout">
+						<TextView
+							android:text="expires in 10h : 42m"					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="5dp"
+							android:layout_marginLeft="8dp"
+							android:gravity="left"
+							android:id="@+id/time"
+							android:layout_alignParentTop="true"
+							android:layout_alignParentLeft="true"
+							android:textColor="@color/areas_description_tex_color"
+							app:MvxBind="Text Challenge.NextEventCountDown"
+							android:textSize="20sp" />
+						<android.webkit.WebView
+							android:id="@+id/web_view"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="25dp"
+							android:layout_below="@+id/time"
+							app:MvxBind="Data WebViewData"/> 
+						<TextView
+							android:text="Select an answer below!"					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center"	
+							android:layout_below="@+id/web_view"
+							android:layout_alignParentLeft="true"
+							android:layout_marginTop="15dp"
+							android:layout_marginBottom="10dp"
+							android:id="@+id/select_title"
+							android:textColor="@color/Black"
+							android:textSize="15sp"/>				
+
+					</RelativeLayout>
+				</LinearLayout>
+				<MvxListView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/title_view"
+					android:scrollbars="none"
+					android:id="@+id/mc_list"
+					android:layout_below="@+id/select_title"
+					android:minHeight="25px"
+					android:background="@drawable/Quiz_border"
+					app:MvxItemTemplate="@layout/mc_item_template"
+					app:MvxBind="ItemsSource MultipleChoiceSource; ItemClick MultipleChoiceItemClick"
+					android:divider="@android:color/transparent"
+					android:dividerHeight="@dimen/nullDp"/>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/challenge_bottom_margin"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/mc_list"
+					android:background="@color/textIcon"
+					android:id="@+id/bottom_layout"/>
+			</android.support.constraint.ConstraintLayout>
+		</ScrollView>
+	</RelativeLayout>
+
+	<include
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		layout="@layout/toolbar_child" />
+
+	<ImageButton
+		android:id="@+id/photo_button"
+		android:background="@android:color/transparent"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_margin="15dp"
+		android:scaleType="fitXY"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintWidth_percent="0.25"
+		app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+		app:MvxBind="Click SubmitButtonCommand; Visibility InverseVisibilityConverter(SubmitButtonHidden)"
+		android:src="@drawable/challenge_submit_btn"/>
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/loader" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/ChallengeCompleteView" />
+	</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

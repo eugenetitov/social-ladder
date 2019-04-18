@@ -1,0 +1,21 @@
+﻿{
+  "dependencies": {
+    "Mobilist.AdvancedTimer.Forms.Plugin": "1.0.1",
+    "MvvmCross": "5.7.0",
+    "MvvmCross.Plugin.Color": "5.7.0",
+    "MvvmCross.Plugin.Messenger": "5.7.0",
+    "Newtonsoft.Json": "11.0.2",
+    "NuGet.CommandLine": "4.7.1",
+    "sameerIOTApps.Plugin.SecureStorage": "2.5.0",
+    "sqlite-net-pcl": "1.4.118",
+    "SQLiteNetExtensions": "2.0.0",
+    "SQLitePCLRaw.bundle_green": "1.1.11",
+    "SQLitePCLRaw.core": "1.1.11",
+    "Xam.Plugin.Connectivity": "3.2.0",
+    "Xam.Plugins.Settings": "3.1.1",
+    "Xamarin.Auth": "1.6.0.2"
+  },
+  "frameworks": {
+    ".NETPortable,Version=v4.5,Profile=Profile7": {}
+  }
+}

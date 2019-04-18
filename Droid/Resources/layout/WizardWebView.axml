@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+		android:id="@+id/wizard_view"
+		android:layout_width="@dimen/nullDp"
+		android:layout_height="@dimen/nullDp"
+		android:background="@drawable/wizard_parrent_view"
+		android:orientation="vertical"
+		android:weightSum="1"
+		android:clipChildren="true"
+		app:layout_constraintWidth_percent="0.9"
+		app:layout_constraintHeight_percent="0.9"
+		app:layout_constraintVertical_bias="0.5"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+		<RelativeLayout			
+			android:background="@drawable/wizard_parrent_view"
+			android:clipChildren="true"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/nullDp"
+			android:layout_weight="0.895">
+			<android.webkit.WebView
+				android:id="@+id/wizard_web_view"				
+				android:background="@android:color/transparent"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				app:MvxBind="Data WizardWebViewData"/>
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:src="@drawable/ic_loadingIndicator"
+				android:id="@+id/wizard_loading_indicator"
+				android:layout_centerInParent="true" />
+		</RelativeLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/nullDp"
+			android:layout_weight="0.005"
+			android:orientation="vertical"
+			android:background="@color/areas_description_tex_color"/>
+		<RelativeLayout			
+			android:background="@drawable/wizard_bottom_child_view"
+			android:clipChildren="true"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/nullDp"
+			android:layout_weight="0.1"
+			app:MvxBind="Click CloseWizardViewCommand"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/btn_SwitchArea"
+				android:layout_width="wrap_content"
+				android:textColor="#1446b4"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:textAllCaps="false"				
+				android:background="@android:color/transparent"
+				android:text="Switch Area" />
+		</RelativeLayout>
+	</LinearLayout>
+</android.support.constraint.ConstraintLayout >

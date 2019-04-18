@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+  <string name="app_name">SocialLadder</string>
+  <string name="com.crashlytics.android.build_id">build_id</string>
+  <string name="facebook_app_id">185276514842901</string>
+  <string name="fragment_feed">This is the feed tab.</string>
+  <string name="fragment_points">This is the points tab.</string>
+  <string name="fragment_rewards">This is the rewards tab.</string>
+  <string name="fragment_challenges">This is the challenges tab.</string>
+  <string name="fragment_more">This is the more tab.</string>
+  <string name="tab_feed_title">Feed</string>
+  <string name="tab_points_title">Points</string>
+  <string name="tab_rewards_title">Rewards</string>
+  <string name="tab_challenges_title">Challenges</string>
+  <string name="tab_more_title">More</string>
+  <string name="login">Login</string>
+  <string name="logout">Logout</string>
+  <string name="next">Next</string>
+  <string name="done">Done</string>
+  <string name="add_invite_code">Add Invite Code</string>
+  <string name="facebookLogin">Login with Facebook</string>
+  <string name="intro2.Left">Use your points to unlock stellar rewards</string>
+  <string name="intro2.Right">Being an “influencer” gets you more points</string>
+  <string name="intro3.Bottom">The more challenges you do, the more points you earn</string>
+  <string name="intro4.Bottom">Challenge your friends and earn your way to the top</string>
+  <string name="networkTextTop">Tell us about yourself</string>
+  <string name="networkTextBottom">Don’t worry! We’ll never post without your consent. See our Privacy Policy &amp; Terms of Service for details.</string>
+  <string name="areas_invite_button">Add Invite Code</string>
+  <string name="areas_join_text">Join areas that have been curated for you.</string>
+  <string name="areas_subscribed_already_text">You are subscribed to this area</string>
+  <string name="read_all_comments">Read all comments</string>
+  <string name="leaderboard_earn_text">Earn more points</string>
+  <string name="overall_leaderboard">Overall Leaderboard</string>
+  <string name="leaderboard">Leaderboard</string>
+  <string name="transaction_history">Transaction History</string>
+  <string name="unit_sold_title">SOLD</string>
+  <string name="privacy_and_policy">Please take a second to read over and accept</string>
+
+  <string name="reward_unlock_header">Unlocks in</string>
+  <string name="reward_ready_header">Get Ready</string>
+  <string name="collect_button_title">Collect Your Claim Info</string>
+  <string name="twitter_details_top_text">Enter a message to share with your Twitter folowers!</string>
+  <string name="twitter_details_middle_text">The following link will be shared on your Twitter:</string>
+  <string name="postering_image_has_not_location_text">This image does not contain location data, therefore it can not be submitted.</string>
+</resources>

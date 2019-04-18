@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+	<ImageView  
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:scaleType="center"
+		android:src="@drawable/reward_bg" />
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<RelativeLayout
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/userInfo">
+			<ffimageloading.cross.MvxCachedImageView
+				android:id="@+id/area_image"
+				android:layout_margin="15dp"
+				android:layout_width="64dp"
+				android:layout_height="64dp"
+				local:MvxBind="ImagePath Image" />
+			<include
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginLeft="-25dp"
+				android:background="#999"
+				android:layout_alignBottom="@+id/area_image"
+				android:layout_toRightOf="@+id/area_image"
+				layout="@layout/score_white_image_layout"/>
+			<android.support.text.emoji.widget.EmojiAppCompatTextView
+				android:text="Philip T."
+				local:MvxBind="Text UserName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/area_image"
+				android:id="@+id/txtUserName"
+				android:textColor="@android:color/background_dark"
+				android:layout_marginLeft="35dip"
+				android:layout_marginTop="15dip" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/area_image"
+				android:layout_below="@id/txtUserName"
+				android:id="@+id/txtCity"
+				android:textColor="#ACACAC"
+				android:layout_marginTop="5dip"
+				android:layout_marginLeft="35dip"/>
+			<ImageView
+				android:id="@+id/imgLocation"
+				android:layout_width="8dip"
+				android:layout_height="12dip"
+				android:layout_toRightOf="@id/area_image"
+				android:layout_below="@id/txtCity"
+				android:layout_marginLeft="35dip"
+				android:layout_marginTop="10dip"
+				android:src="@drawable/Icons_pin_icon_off"/>
+			<TextView
+				android:text="Philadelphia"
+				local:MvxBind="Text City"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/imgLocation"
+				android:layout_below="@id/txtCity"
+				android:id="@+id/txtLocation"
+				android:textColor="#ACACAC"
+				android:layout_marginTop="10dip"
+				android:layout_marginLeft="5dip"/>
+			<TextView
+				android:text="1,489 Friends"
+				local:MvxBind="Text FriendsCount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dip"
+				android:layout_marginLeft="10dp"
+				android:textColor="#ADADAD"
+				android:layout_below="@id/area_image"
+				android:id="@+id/txtCountFriends"
+				android:textSize="12dip" />
+		</RelativeLayout>
+		<View
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@color/color_transparent"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:layout_marginTop="5dp"
+			android:alpha="0.2"/>
+		<RelativeLayout
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="135dp"
+			android:id="@+id/networksConnected">
+			<TextView
+				android:text="1 of 3 Networks Connected"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/textNetworksConnected"
+				local:MvxBind="Text CountConnected"
+				android:textColor="#ADADAD"
+				android:padding="5dip"
+				android:gravity="center" />
+			<TextView
+				android:text="Add more for more points"
+				android:id="@+id/textAddMore"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#ADADAD"
+				android:padding="20dip"
+				android:textSize="11.5dip"
+				android:gravity="center"
+				local:MvxBind="Visibility LabelItemVisibilityValueConverter(CountOfNetworks)"/>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:weightSum="1"
+				android:layout_below="@+id/textAddMore"
+				android:layout_width="match_parent"
+				android:layout_height="70dp">
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_weight="0.14"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"/>
+				<LinearLayout
+					android:layout_width="0dp"
+					local:MvxBind="Click FbConnectCommand"
+					android:layout_height="match_parent"
+					android:layout_weight="0.24">
+					<include
+						android:id="@+id/fb_view" 
+						layout="@layout/NetworkView" />
+				</LinearLayout>
+				<LinearLayout
+					android:layout_width="0dp"
+					local:MvxBind="Click TwitterConnectCommand"
+					android:layout_height="match_parent"
+					android:layout_weight="0.24">
+					<include
+						android:id="@+id/twitter_view" 
+						layout="@layout/NetworkView" />
+				</LinearLayout>
+				<LinearLayout
+					android:layout_width="0dp"
+					local:MvxBind="Click InstaConnectCommand"
+					android:layout_height="match_parent"
+					android:layout_weight="0.24">
+					<include
+						android:id="@+id/insta_view" 
+						layout="@layout/NetworkView" />
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_weight="0.14"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"/>
+			</LinearLayout>
+		</RelativeLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#ffffff">
+			<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+				android:id="@+id/more_recycler_view"
+				android:overScrollMode="never"
+				android:layout_marginTop="15dip"
+				android:scrollbars="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="#ffffff"
+				local:MvxItemTemplate="@layout/more_list_cell"
+				local:MvxBind="ItemsSource MoreItems; ItemClick OnItemClickCommand"/>
+		</LinearLayout>
+	</LinearLayout>
+</FrameLayout>

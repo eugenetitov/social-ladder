@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="cxk-wN-pdQ" customClass="TransactionsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="191975">
+                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="191975" secondAttribute="height" multiplier="1/1" id="191976"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Now" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="641">
+                        <rect key="frame" x="8" y="15.5" width="63" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="948">
+                        <rect key="frame" x="99" y="9" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="948" secondAttribute="height" multiplier="1:1" id="105321"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1" text="Which Artist was featured last year?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="143986">
+                        <rect key="frame" x="140" y="33" width="274" height="18.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+200 pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1561">
+                        <rect key="frame" x="140" y="9.5" width="66" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="191975" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="201667"/>
+                    <constraint firstItem="191975" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="202081"/>
+                    <constraint firstItem="191975" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="20/414" id="202495"/>
+                    <constraint firstItem="641" firstAttribute="trailing" secondItem="191975" secondAttribute="trailing" multiplier="71/20" id="206629"/>
+                    <constraint firstItem="641" firstAttribute="centerY" secondItem="191975" secondAttribute="bottom" multiplier="24/20" id="207043"/>
+                    <constraint firstItem="641" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="209522"/>
+                    <constraint firstItem="948" firstAttribute="centerX" secondItem="191975" secondAttribute="trailing" multiplier="114/20" id="213240"/>
+                    <constraint firstItem="948" firstAttribute="centerY" secondItem="191975" secondAttribute="bottom" multiplier="24/20" id="219027"/>
+                    <constraint firstItem="948" firstAttribute="width" secondItem="191975" secondAttribute="width" multiplier="24/16" id="220267"/>
+                    <constraint firstItem="1561" firstAttribute="leading" secondItem="191975" secondAttribute="trailing" multiplier="140/20" id="222746"/>
+                    <constraint firstItem="1561" firstAttribute="centerY" secondItem="191975" secondAttribute="bottom" multiplier="19/20" id="224400"/>
+                    <constraint firstItem="143986" firstAttribute="leading" secondItem="191975" secondAttribute="trailing" multiplier="140/20" id="227292"/>
+                    <constraint firstItem="143986" firstAttribute="top" secondItem="191975" secondAttribute="bottom" multiplier="33/20" id="241241"/>
+                    <constraint firstAttribute="trailing" secondItem="143986" secondAttribute="trailing" id="242914"/>
+                    <constraint firstAttribute="bottom" secondItem="143986" secondAttribute="bottom" id="243751"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="PointsText" destination="1561" id="name-outlet-1561"/>
+                <outlet property="TimeText" destination="641" id="name-outlet-641"/>
+                <outlet property="TransactionImage" destination="948" id="name-outlet-948"/>
+                <outlet property="lblTransactionText" destination="143986" id="name-outlet-143986"/>
+                <outlet property="vBasis" destination="191975" id="name-outlet-191975"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

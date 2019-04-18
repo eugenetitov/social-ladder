@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="cxk-wN-pdQ" customClass="LeaderboardTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="407" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51651">
+                        <rect key="frame" x="6" y="12" width="349" height="40"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="106846">
+                                <rect key="frame" x="85.5" y="0.0" width="16" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98671">
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="26.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89498">
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="13"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80674">
+                                <rect key="frame" x="0.0" y="16.5" width="8" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="80674" secondAttribute="height" multiplier="1:1" id="87807"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="624">
+                                <rect key="frame" x="16.5" y="12" width="6.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SLCircleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="778">
+                                <rect key="frame" x="45" y="0.0" width="40.5" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="778" secondAttribute="height" multiplier="1:1" id="105493"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="LebronJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2003">
+                                <rect key="frame" x="101.5" y="16.5" width="247.5" height="20.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="2157">
+                                <rect key="frame" x="101.5" y="9" width="176" height="8.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="142344"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.90980392156862744" green="0.12156862745098039" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="51651" secondAttribute="height" multiplier="865/100" id="77293"/>
+                            <constraint firstItem="80674" firstAttribute="leading" secondItem="51651" secondAttribute="leading" id="86452"/>
+                            <constraint firstAttribute="centerY" secondItem="80674" secondAttribute="centerY" id="87129"/>
+                            <constraint firstItem="80674" firstAttribute="width" secondItem="51651" secondAttribute="width" multiplier="20/865" id="87468"/>
+                            <constraint firstItem="89498" firstAttribute="leading" secondItem="51651" secondAttribute="leading" id="93933"/>
+                            <constraint firstItem="89498" firstAttribute="top" secondItem="51651" secondAttribute="top" id="94272"/>
+                            <constraint firstItem="89498" firstAttribute="width" secondItem="80674" secondAttribute="width" multiplier="2" id="95287"/>
+                            <constraint firstItem="89498" firstAttribute="height" secondItem="51651" secondAttribute="height" multiplier="1/3" id="95964"/>
+                            <constraint firstItem="624" firstAttribute="leading" secondItem="89498" secondAttribute="trailing" id="97317"/>
+                            <constraint firstAttribute="centerY" secondItem="624" secondAttribute="centerY" id="97656"/>
+                            <constraint firstItem="98671" firstAttribute="leading" secondItem="51651" secondAttribute="leading" id="101430"/>
+                            <constraint firstItem="98671" firstAttribute="top" secondItem="51651" secondAttribute="top" id="101769"/>
+                            <constraint firstItem="98671" firstAttribute="width" secondItem="51651" secondAttribute="width" multiplier="112/865" id="102108"/>
+                            <constraint firstItem="98671" firstAttribute="height" secondItem="51651" secondAttribute="height" multiplier="2/3" id="102785"/>
+                            <constraint firstItem="778" firstAttribute="leading" secondItem="98671" secondAttribute="trailing" id="104476"/>
+                            <constraint firstAttribute="centerY" secondItem="778" secondAttribute="centerY" id="104815"/>
+                            <constraint firstItem="778" firstAttribute="height" secondItem="51651" secondAttribute="height" id="105154"/>
+                            <constraint firstItem="106846" firstAttribute="leading" secondItem="778" secondAttribute="trailing" id="109961"/>
+                            <constraint firstAttribute="top" secondItem="106846" secondAttribute="top" id="110300"/>
+                            <constraint firstItem="106846" firstAttribute="width" secondItem="778" secondAttribute="width" multiplier="0.4" id="110639"/>
+                            <constraint firstItem="106846" firstAttribute="height" secondItem="51651" secondAttribute="height" id="111316"/>
+                            <constraint firstItem="2157" firstAttribute="leading" secondItem="106846" secondAttribute="trailing" id="113345"/>
+                            <constraint firstItem="89498" firstAttribute="bottom" secondItem="2157" secondAttribute="centerY" id="113684"/>
+                            <constraint firstItem="2157" firstAttribute="height" secondItem="51651" secondAttribute="height" multiplier="22/100" id="115038"/>
+                            <constraint firstItem="2003" firstAttribute="leading" secondItem="106846" secondAttribute="trailing" id="118082"/>
+                            <constraint firstItem="98671" firstAttribute="bottom" secondItem="2003" secondAttribute="centerY" id="118421"/>
+                            <constraint firstItem="2003" firstAttribute="trailing" secondItem="51651" secondAttribute="trailing" id="118760"/>
+                            <constraint firstItem="2003" firstAttribute="height" secondItem="51651" secondAttribute="height" multiplier="0.5" id="119099"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69155">
+                        <rect key="frame" x="0.0" y="0.0" width="6" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="69155" secondAttribute="height" multiplier="15/30" id="73909"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="167407">
+                        <rect key="frame" x="6" y="3" width="16" height="6"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="169989"/>
+                        </constraints>
+                    </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="147981">
+                        <rect key="frame" x="22" y="5.5" width="333" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="152149"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="69155" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="71878"/>
+                    <constraint firstItem="69155" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="72217"/>
+                    <constraint firstItem="69155" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="6/414" id="73232"/>
+                    <constraint firstItem="51651" firstAttribute="leading" secondItem="69155" secondAttribute="trailing" id="74924"/>
+                    <constraint firstItem="51651" firstAttribute="top" secondItem="69155" secondAttribute="bottom" id="75601"/>
+                    <constraint firstItem="51651" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="355/414" id="75940"/>
+                    <constraint firstItem="51651" firstAttribute="trailing" secondItem="147981" secondAttribute="trailing" id="150064"/>
+                    <constraint firstItem="147981" firstAttribute="centerY" secondItem="69155" secondAttribute="centerY" id="160650"/>
+                    <constraint firstItem="167407" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.04" id="168956"/>
+                    <constraint firstItem="167407" firstAttribute="centerY" secondItem="69155" secondAttribute="centerY" id="170506"/>
+                    <constraint firstItem="167407" firstAttribute="leading" secondItem="69155" secondAttribute="trailing" id="171539"/>
+                    <constraint firstItem="147981" firstAttribute="leading" secondItem="167407" secondAttribute="trailing" id="173604"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="NameText" destination="2003" id="name-outlet-2003"/>
+                <outlet property="ProfileImage" destination="778" id="name-outlet-778"/>
+                <outlet property="ProgressBar" destination="2157" id="name-outlet-2157"/>
+                <outlet property="ProgressBarWidthConstraint" destination="142344" id="name-outlet-142344"/>
+                <outlet property="RankText" destination="624" id="name-outlet-624"/>
+                <outlet property="TopSeparator" destination="147981" id="name-outlet-147981"/>
+                <outlet property="ivMarker" destination="80674" id="name-outlet-80674"/>
+                <outlet property="vContentInset" destination="51651" id="name-outlet-51651"/>
+                <outlet property="vInsetProportion" destination="69155" id="name-outlet-69155"/>
+                <outlet property="vProfileImageInset" destination="98671" id="name-outlet-98671"/>
+                <outlet property="vProgressNameInset" destination="106846" id="name-outlet-106846"/>
+                <outlet property="vRankTextInset" destination="89498" id="name-outlet-89498"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

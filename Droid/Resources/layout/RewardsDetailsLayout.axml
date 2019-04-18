@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:background="@color/textIcon"
+		android:id="@+id/white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/> 
+	<ffimageloading.cross.MvxCachedImageView
+		android:id="@+id/parallax_image"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="1:0.6"
+		android:adjustViewBounds="true"
+		android:scaleType="fitXY"
+		android:background="@color/feed_cell_gray"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:MvxBind="ImagePath RewardImageUrl"/> 
+	<ImageView 
+		android:id="@+id/overlay_image"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintDimensionRatio="1:0.6"
+		android:adjustViewBounds="true"
+		android:scaleType="fitXY"
+		android:background="#40000000"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/toolbar" />					
+	<include
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		layout="@layout/toolbar_child" />
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:id="@+id/scroll_layour"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<ScrollView
+			android:id="@+id/parallax_scroll_view"
+			android:overScrollMode="never"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/content_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/parallax_scroll_view">
+				<LinearLayout
+					android:id="@+id/top_linearLayout"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/nullDp"
+					android:orientation="horizontal"
+					app:layout_constraintDimensionRatio="1:0.6"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toTopOf="@+id/content_view"/>
+				<ImageView 
+						android:id="@+id/overlay_image_gradient"
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						app:layout_constraintDimensionRatio="1:0.6"
+						android:adjustViewBounds="true"
+						android:scaleType="fitXY"
+						android:src="@drawable/feed_gray_overlay"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/toolbar"
+						app:MvxBind="Visibility InverseBoolVisibility(IsRewardBlocked)"/>
+				<RelativeLayout
+					android:id="@+id/reward_header_block"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:layout_marginBottom="8dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintBottom_toBottomOf="@+id/overlay_image_gradient"
+					app:MvxBind="Visibility InverseBoolVisibility(IsRewardBlocked)">
+					<TextView
+						android:id="@+id/reward_ready_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#ffffff"
+						app:MvxBind="Text RewardOfferTime"
+						android:text="GO"/>
+				</RelativeLayout>
+				<RelativeLayout
+					android:id="@+id/reward_header_block"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:layout_marginBottom="8dp"
+					app:layout_constraintEnd_toEndOf="@+id/top_linearLayout"
+					app:layout_constraintStart_toStartOf="@+id/top_linearLayout"
+					app:layout_constraintBottom_toBottomOf="@+id/top_linearLayout"
+					app:layout_constraintTop_toTopOf="@+id/top_linearLayout"
+					app:MvxBind="Visibility Visibility(IsRewardBlocked)">
+
+					<ImageView
+						android:id="@+id/lockIcon"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_alignParentLeft="true"
+						android:layout_marginBottom="10dp"
+						android:layout_alignBottom="@+id/unlock_time_text"
+						android:src="@drawable/ic_lock_icon"/>
+
+					 <TextView
+						android:id="@+id/unlock_header_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:layout_marginLeft="10dp"
+						android:layout_toRightOf="@+id/lockIcon" 
+						android:textColor="@color/reward_font_color"
+						android:text="@string/reward_unlock_header"/>
+
+					<TextView
+						android:id="@+id/unlock_time_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:textColor="@color/reward_font_color"
+						android:layout_toRightOf="@+id/lockIcon"
+						android:layout_below="@+id/unlock_header_text"
+						app:MvxBind="Text RewardUnlockTime"
+						android:text="0h:0m:15s"/>
+				</RelativeLayout>
+				<LinearLayout
+					android:id="@+id/collection_view"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/nullDp"
+					android:orientation="horizontal"
+					android:background="#fff"
+					android:visibility="gone"
+					app:layout_constraintDimensionRatio="3:1"
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/top_linearLayout"/>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:id="@+id/title_view"
+					android:background="@color/textIcon"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"				
+					app:layout_constraintEnd_toEndOf="@+id/content_view"
+					app:layout_constraintStart_toStartOf="@+id/content_view"
+					app:layout_constraintTop_toBottomOf="@+id/collection_view"
+					android:layout_height="wrap_content">
+					<TextView
+						android:text="Reward Name"					
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="15dp"
+						android:layout_marginLeft="8dp"
+						android:gravity="left"
+						android:id="@+id/reward_name_text"
+						app:MvxBind="Text RewardName"
+						android:textColor="@color/reward_black_font_color"
+						android:textSize="25sp" />
+					<RelativeLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<TextView					
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="left"
+							android:layout_marginTop="5dp"
+							android:layout_marginLeft="8dp"
+							android:id="@+id/category_name_text"
+							android:layout_alignParentTop="true"
+							android:layout_alignParentLeft="true"
+							android:textColor="@color/areas_description_tex_color"
+							android:text="category name"
+							app:MvxBind="Text CategoryName"
+							android:textSize="20sp" />
+						<android.webkit.WebView
+							android:id="@+id/description_webView"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="15dp"
+							android:layout_below="@+id/category_name_text"
+							app:MvxBind="Data WebViewData"/>
+					</RelativeLayout>
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="250dp"
+						android:background="@color/textIcon"
+						android:id="@+id/bottom_layout"/>
+				</LinearLayout>
+			</android.support.constraint.ConstraintLayout>
+		</ScrollView>
+	</RelativeLayout>	
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:id="@+id/circle_view_container"
+		app:layout_constraintTop_toTopOf="parent" 
+		app:layout_constraintBottom_toBottomOf="parent" 
+		app:layout_constraintStart_toStartOf="parent" 
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:id="@+id/tap_counter_view"
+		app:layout_constraintWidth_percent="0.3"
+		android:layout_margin="@dimen/challenges_collection_selected"
+		app:layout_constraintBottom_toTopOf="@+id/submit_button"
+		app:layout_constraintEnd_toEndOf="parent">
+		<TextView
+            android:id="@+id/tap_counter_text"
+            android:text="5 Taps" 
+			android:layout_height="wrap_content" 
+            android:layout_width="match_parent"
+			app:MvxBind="Visibility Visibility(IsSubmitionEnabled); Text TapCounterText"
+			android:textColor="@color/textIcon"
+			android:gravity="bottom|center_horizontal"/> 
+	</RelativeLayout>
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/submit_button"
+        android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_margin="@dimen/challenges_collection_selected"		
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintWidth_percent="0.3"
+		app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+		app:MvxBind="Visibility Visibility(IsSubmitionEnabled)"> 
+
+		<ffimageloading.cross.MvxCachedImageView
+			android:id="@+id/imageView"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:background="@android:color/transparent"
+            app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintVertical_bias="0.5"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+		    app:MvxBind = "ImagePath RewardScoreToStatusImage(RewardScore)"/>
+
+		 <TextView
+            android:id="@+id/more_text"
+            android:text="MORE NEEDED" 
+            android:layout_width="match_parent"
+			app:MvxBind="Visibility InverseBoolVisibility(IsEnoughtPoints)"
+			android:textColor="@color/reward_black_font_color"
+            android:layout_height="0dp" 
+			android:gravity="bottom|center_horizontal"
+            app:layout_constraintStart_toStartOf="parent" 
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent=".55"/> 
+
+         <TextView
+			android:id="@+id/points_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/more_points_text"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+			android:textColor="@color/reward_red_font_color"
+            android:text="8200"
+			app:MvxBind="Text RewardScore; Visibility InverseBoolVisibility(IsEnoughtPoints)"
+            app:layout_constraintTop_toBottomOf="@+id/more_text"  />
+
+		 <TextView
+			android:id="@+id/price_text"
+            android:layout_width="match_parent" 
+            android:layout_centerHorizontal="true"
+			android:textColor="#ffffff" 
+            app:MvxBind="Visibility Visibility(IsEnoughtPoints); Text Format('{0} pts',RewardScore)" 
+            android:layout_height="0dp" 
+			android:gravity="bottom|center_horizontal"
+            app:layout_constraintStart_toStartOf="parent" 
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent=".5" />
+
+		
+         <TextView
+			android:id="@+id/claim_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+			android:textColor="#ffffff"
+            android:text="Claim It"
+			app:MvxBind="Visibility Visibility(IsEnoughtPoints)"
+            app:layout_constraintTop_toBottomOf="@+id/price_text"  />
+
+		 <ImageView 
+            android:layout_width="match_parent" 
+            android:layout_centerHorizontal="true" 
+            android:layout_marginBottom="10dp"
+            android:layout_height="0dp"
+			android:src="@drawable/ic_lock_icon"
+			android:gravity="bottom|center_horizontal"
+            app:layout_constraintStart_toStartOf="parent" 
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintBottom_toBottomOf="@+id/price_text"
+			app:layout_constraintHeight_percent=".25"
+			app:MvxBind="Visibility Visibility(IsRewardBlocked)" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0dp"  
+            app:layout_constraintDimensionRatio="1:1"
+			android:background="#ffffff"
+			android:alpha="0.5"
+			app:MvxBind="Visibility Visibility(IsRewardBlocked)"/>
+	</android.support.constraint.ConstraintLayout> 
+	<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/RewardCompleteView" />
+</android.support.constraint.ConstraintLayout>

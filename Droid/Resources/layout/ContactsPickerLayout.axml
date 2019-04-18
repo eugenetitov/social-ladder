@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:background="@color/textIcon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<include
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_alignParentTop="true"
+		layout="@layout/toolbar_back" />
+	<TextView				
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:id="@+id/count_text"
+		android:textColor="@color/Black"
+		android:layout_below="@+id/toolbar"
+		android:textSize="20sp"
+		local:MvxBind="Text PickerCountText"
+		android:text="Pick 0 people"/>	
+	<android.support.v7.widget.SearchView
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content" 
+		android:id="@+id/search_view"
+		android:layout_below="@+id/count_text"
+		android:focusable="false"
+		local:iconifiedByDefault="false"
+		local:queryHint="Enter search text" 
+		local:MvxBind="Query SearchString" />
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_below="@+id/search_view"
+		android:layout_alignParentBottom="true"
+		android:layout_height="@dimen/nullDp">
+		<MvxListView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/contacts_list"
+			local:MvxItemTemplate="@layout/contact_picker_template"
+			local:MvxBind="ItemsSource Contacts; ItemClick ContactSelectedCommand"
+			android:dividerHeight="1dp"
+			android:divider="#999"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:background="#fff"
+    android:layout_width="match_parent"
+	android:id="@+id/MainLayout"
+    android:layout_height="match_parent">
+	<include
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		layout="@layout/toolbar_child" />
+	<ScrollView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:overScrollMode="never"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="40dip"
+				android:minWidth="50px"
+				android:minHeight="50px"
+				android:background="#fff5f5f5">
+				<TextView
+					android:id="@+id/Profile"
+					android:text="Profile"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ffadadad"
+					android:textSize="12dip"
+					android:layout_marginLeft="15dip"
+					android:layout_marginTop="15dip" />
+			</LinearLayout>
+			<TextView
+					android:id="@+id/txtDisplayName"
+					android:text="Display Name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ffadadad"
+					android:textSize="10dip"
+					android:layout_marginLeft="15dip"
+					android:layout_marginTop="15dip" />
+			<android.support.text.emoji.widget.EmojiAppCompatEditText
+				android:layout_width="match_parent"
+				android:layout_height="45dip"
+				android:inputType ="text"
+				android:imeOptions= "actionDone"
+				local:MvxBind="Text DisplayName"
+				android:id="@+id/txbDisplayName"
+				android:layout_marginLeft="15dip"
+				android:textSize="14dip"
+				android:textColorHint="@color/feed_cell_gray"
+				android:background="@android:color/transparent"/>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@color/reward_font_gray"
+				android:layout_marginLeft="15dip"
+				android:alpha="0.5"/>
+			<TextView
+					android:id="@+id/txtCity"
+					android:text="City"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ffadadad"
+					android:textSize="10dip"
+					android:layout_marginLeft="15dip"
+					android:layout_marginTop="10dip" />
+			<Spinner
+				android:layout_width="match_parent"
+				android:layout_height="45dip"
+				local:MvxBind="Text City"
+				android:id="@+id/txbCity"
+				android:layout_marginLeft="15dip"
+				android:textSize="14dip"
+				android:focusable="false"
+				android:textColorHint="@color/feed_cell_gray"
+				android:background="@android:color/transparent"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="30dip"
+				app:hintTextAppearance="@style/HintText"
+				android:background="#fff5f5f5">
+				<TextView
+					android:id="@+id/AccountSettings"
+					android:background="#fff5f5f5"
+					android:text="Account Settings"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ffadadad"
+					android:textSize="12dip"
+					android:layout_marginLeft="15dip"
+					android:layout_marginTop="10dip" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="25dip"
+				android:background="#fff5f5f5">
+				<TextView
+					android:id="@+id/Info"
+					android:text="This info is not visible on your profile"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@color/feed_cell_gray"
+					android:textSize="12dip"
+					android:layout_marginLeft="15dip"/>
+			</LinearLayout>
+			<TextView
+					android:id="@+id/txtEmail"
+					android:text="Email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#ffadadad"
+					android:textSize="10dip"
+					android:layout_marginLeft="15dip"
+					android:layout_marginTop="10dip" />
+			<EditText
+				android:layout_width="match_parent"
+				android:layout_height="45dip"
+				local:MvxBind="Text Email"
+				android:id="@+id/txbEmail"
+				android:layout_marginLeft="15dip"
+				android:textSize="14dip"
+				android:textColorHint="@color/feed_cell_gray"
+				android:background="@android:color/transparent"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="40dip"
+				android:background="#fff5f5f5">
+				<TextView
+					android:id="@+id/Notifications"
+					android:text="Notifications"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@color/feed_cell_gray"
+					android:textSize="12dip"
+					android:layout_marginTop="15dip"
+					android:layout_marginLeft="15dip"/>
+			</LinearLayout>
+			<RelativeLayout
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_marginTop="10dip"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/txtNotification"
+					android:text="Notifications"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dip"
+					android:layout_marginLeft="15dip"
+					android:textColor="@android:color/background_dark"  />
+				<Switch
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginTop="5dip"
+					android:layout_marginRight="15dip"
+					android:thumb="@drawable/switch_selector_custom"
+					android:track="@drawable/switch_track_custom"
+					android:id="@+id/Switch"
+					local:MvxBind="Checked IsNotifEnabled"/>
+			</RelativeLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="40dip"
+				android:layout_marginTop="10dip"
+				android:background="#fff5f5f5">
+				<TextView
+					android:id="@+id/Location"
+					android:text="Location"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@color/feed_cell_gray"
+					android:textSize="12dip"
+					android:layout_marginTop="15dip"
+					android:layout_marginLeft="15dip"/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/LocationLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:clickable="true"
+				local:MvxBind="Click LocationCommand">
+			<TextView
+					android:id="@+id/txtLocationSettings"
+					android:text="Location Settings"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:layout_marginLeft="15dip"
+					android:textColor="@android:color/background_dark"  />
+				</LinearLayout>
+			<LinearLayout
+				android:layout_marginTop="10dip"
+				android:layout_width="match_parent"
+				android:layout_height="30dip"
+				android:background="#fff5f5f5">
+				<TextView
+					android:id="@+id/txtVersion"
+					android:text="v"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textColor="#ffadadad" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

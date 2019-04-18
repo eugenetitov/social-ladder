@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<android.support.constraint.ConstraintLayout 
+            android:gravity="center" 
+			android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+			android:layout_margin="5dp"
+            android:layout_weight="0.15">
+		    <ffimageloading.cross.MvxCachedImageView
+				android:layout_height="0dp"
+				android:layout_width="0dp"
+				app:layout_constraintVertical_bias="0.5"
+				app:layout_constraintHorizontal_bias="0.5"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintWidth_percent="0.9"
+				app:layout_constraintDimensionRatio="1:1"
+				app:MvxBind="ImagePath AreaImage"/>
+		</android.support.constraint.ConstraintLayout>
+        <TextView
+			android:id="@+id/area_name_text"
+            android:text="Festival ABC"
+			android:textColor="@color/Black"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            app:MvxBind="Text AreaTitle"/>
+        <android.support.constraint.ConstraintLayout 
+            android:layout_width="0dp"
+            android:gravity="center" 
+			android:layout_gravity="center_vertical"
+			android:layout_marginRight="8dp"
+			android:layout_height="wrap_content"
+            android:layout_weight="0.06"> 
+
+		    <ImageView
+				android:id="@+id/background_image"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_gravity="center"
+				android:background="@drawable/notififcation_counter_background"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintDimensionRatio="1:1"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+			    android:id="@+id/notification_count_text"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content" 
+				android:gravity="center"
+				app:MvxBind="Text NotificationCount"
+				android:text="1"
+				android:textColor="@color/textIcon"
+				app:layout_constraintBottom_toBottomOf="@+id/background_image"
+				app:layout_constraintEnd_toEndOf="@+id/background_image"
+				app:layout_constraintStart_toStartOf="@+id/background_image"
+				app:layout_constraintTop_toTopOf="@+id/background_image" />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+		android:visibility="gone"
+        android:background="#ADADAD"/>
+</LinearLayout>

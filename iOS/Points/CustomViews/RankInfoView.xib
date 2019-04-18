@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankInfoView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="RankInfoView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4694">
+                    <rect key="frame" x="0.0" y="0.0" width="11" height="20"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11739">
+                    <rect key="frame" x="363" y="23.5" width="54.5" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="11739" secondAttribute="height" multiplier="1/1" id="37322"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="tintColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SocialLadder Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20235">
+                    <rect key="frame" x="110.5" y="115" width="193.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27829" customClass="SLScoreView">
+                    <rect key="frame" x="28" y="188" width="336" height="128"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="27829" secondAttribute="height" multiplier="310/118" id="34969"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76637">
+                    <rect key="frame" x="26" y="477" width="362" height="104"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="76637" secondAttribute="height" multiplier="334/96" id="80503"/>
+                    </constraints>
+                    <string key="text">As you gain points for completing challenges across all of your ‘Teams’ your rank within SocialLadder will increase. Prove yourself as the ultimate SocialLadder champion.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4694" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="6571"/>
+                <constraint firstItem="4694" firstAttribute="top" secondItem="1" secondAttribute="top" id="7042"/>
+                <constraint firstItem="4694" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="10/382" id="8450"/>
+                <constraint firstItem="4694" firstAttribute="height" secondItem="1" secondAttribute="height" multiplier="10/364" id="8919"/>
+                <constraint firstItem="11739" firstAttribute="centerX" secondItem="4694" secondAttribute="trailing" multiplier="36" id="16924"/>
+                <constraint firstItem="11739" firstAttribute="centerY" secondItem="4694" secondAttribute="bottom" multiplier="2.5" id="17393"/>
+                <constraint firstItem="20235" firstAttribute="centerX" secondItem="4694" secondAttribute="trailing" multiplier="191/10" id="23114"/>
+                <constraint firstItem="20235" firstAttribute="centerY" secondItem="4694" secondAttribute="bottom" multiplier="64/10" id="24519"/>
+                <constraint firstItem="27829" firstAttribute="leading" secondItem="4694" secondAttribute="trailing" multiplier="26/10" id="31200"/>
+                <constraint firstItem="27829" firstAttribute="top" secondItem="4694" secondAttribute="bottom" multiplier="93/10" id="31669"/>
+                <constraint firstItem="27829" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="310/382" id="34021"/>
+                <constraint firstItem="11739" firstAttribute="width" secondItem="4694" secondAttribute="width" id="36385" multiplier="5"/>
+                <constraint firstItem="76637" firstAttribute="leading" secondItem="4694" secondAttribute="trailing" multiplier="24/10" id="78548"/>
+                <constraint firstItem="76637" firstAttribute="top" secondItem="4694" secondAttribute="bottom" multiplier="236/10" id="79565"/>
+                <constraint firstItem="76637" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="334/382" id="80034"/>
+            </constraints>
+            <connections>
+                <outlet property="btnClose" destination="11739" id="name-outlet-11739"/>
+                <outlet property="lblRankInfoTitle" destination="20235" id="name-outlet-20235"/>
+                <outlet property="txtvRankInfoDescription" destination="76637" id="name-outlet-76637"/>
+                <outlet property="vBasis" destination="4694" id="name-outlet-4694"/>
+                <outlet property="vScoreInfo" destination="27829" id="name-outlet-27829"/>
+            </connections>
+        </view>
+    </objects>
+</document>

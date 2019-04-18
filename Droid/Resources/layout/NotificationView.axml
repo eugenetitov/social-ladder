@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RewardsCompleteLayout"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+	<android.support.v4.widget.SwipeRefreshLayout 
+		android:id="@+id/swipe_refresh_layout"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/header_layout">
+		<Mvx.MvxExpandableListView
+			android:id="@+id/mvxExpandableListView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingLeft="5dp"
+			android:groupIndicator="@null"
+			app:MvxBind="ItemsSource Notifications; GroupClick SelectGroupCommand; ItemClick SelectedItemCommand"
+			app:MvxGroupItemTemplate="@layout/notification_group_cell"
+			app:MvxItemTemplate="@layout/notification_item_cell" />
+	</android.support.v4.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/textIcon"
+        app:layout_constraintDimensionRatio="1:0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_bell_off"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.5:1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Alerts"
+				android:textColor="@color/custom_triangle_line_color"
+                app:layout_constraintStart_toEndOf="@+id/imageView"  />
+
+        </android.support.constraint.ConstraintLayout>
+
+  <!--      <Button
+            android:id="@+id/close_button"
+            android:text="Close"
+            android:gravity="center"
+            android:textAllCaps="false"
+			android:textColor="@color/custom_triangle_line_color"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:MvxBind="Click BackCommand"/> -->
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+			android:background="@android:color/transparent"
+			app:MvxBind="Click BackCommand"
+			android:layout_alignParentRight="true">
+		    <TextView
+                android:id="@+id/close_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Close"
+				android:layout_marginLeft="@dimen/challenge_complete_text_margin"
+				android:layout_marginRight="@dimen/challenge_complete_text_margin"
+				android:textColor="@color/custom_triangle_line_color"/>
+		</LinearLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

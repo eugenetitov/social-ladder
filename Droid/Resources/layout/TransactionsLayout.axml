@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:scaleType="fitXY"
+		android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/pointsBg_3" />
+
+	<View
+		android:alpha="0.6"
+		android:background="@color/Black"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+	<View
+		android:background="#fff"
+		android:id="@+id/collection_background_view"
+		app:layout_constraintDimensionRatio="2.4:1"
+		app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/nullDp" />
+
+    <socialLadder.droid.views.LockableScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/top_linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nullDp"
+                android:orientation="horizontal"
+                app:layout_constraintDimensionRatio="12:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+			 <LinearLayout
+                android:id="@+id/score_Layout"
+                android:layout_width="@dimen/nullDp"
+                android:layout_height="@dimen/nullDp"
+				android:weightSum="1"
+                android:orientation="horizontal"
+				app:layout_constraintDimensionRatio="2.82:1"
+                app:layout_constraintEnd_toEndOf="@+id/content_view"
+                app:layout_constraintStart_toStartOf="@+id/content_view"
+                app:layout_constraintTop_toBottomOf="@+id/top_linearLayout"
+                app:layout_constraintWidth_percent="1">
+				<include 
+					android:layout_width="@dimen/nullDp"
+					android:layout_weight="0.4"
+					android:layout_height="match_parent"
+					layout="@layout/score_image_layout"/>
+			</LinearLayout>
+
+			<LinearLayout
+                android:id="@+id/right_top_view"
+                android:layout_width="@dimen/nullDp"
+                android:layout_height="@dimen/nullDp"
+				android:weightSum="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/content_view"
+                app:layout_constraintTop_toBottomOf="@+id/top_linearLayout"
+				app:layout_constraintBottom_toTopOf="@+id/pointsTriangle_image"
+                app:layout_constraintWidth_percent="0.57">		
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_weight="0.3"
+					android:layout_height="@dimen/nullDp">
+					<TextView
+						android:text="@string/transaction_history"					
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:layout_marginLeft="3dp"
+						android:id="@+id/tv_superfan"
+						android:textColor="@color/textIcon"
+						android:textSize="15sp" />
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_weight="0.35"
+					android:weightSum="1"
+					android:layout_height="@dimen/nullDp">
+					<ImageView
+						android:layout_width="@dimen/nullDp"
+						android:layout_height="match_parent"
+						android:layout_weight="0.15"
+						android:paddingTop="13dp"
+						android:paddingBottom="11dp"
+						android:src="@drawable/rewards_icon"/>
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="@dimen/nullDp"
+						android:layout_weight="0.05"
+						android:layout_height="match_parent"/>
+					<TextView
+						android:text="4 of 12 Rewards"					
+						android:layout_width="@dimen/nullDp"
+						android:layout_weight="0.28"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:id="@+id/rewards_count"
+						android:textColor="@color/textIcon"
+						android:textSize="11sp"
+						local:MvxBind="Text RewardsCount"/>
+					<RelativeLayout
+						android:orientation="horizontal"
+						android:layout_width="@dimen/nullDp"
+						android:layout_weight="0.52"
+						android:layout_height="match_parent">
+						<Button
+							android:id="@+id/see_em_button"
+							android:text="See ‘em"
+							android:textSize="12sp"
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:paddingLeft="@dimen/points_margin"
+							android:paddingRight="@dimen/points_margin"
+							android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="11dp"
+							android:layout_marginBottom="12dp"
+							android:layout_centerInParent="true"
+							android:textAllCaps="false"
+							android:background="@drawable/points_earnMore_button"
+							android:textColor="@android:color/white"		
+							android:src="@drawable/PointsLeaderboardTriangle"/>
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_weight="0.35"
+					android:weightSum="1"
+					android:layout_height="@dimen/nullDp">
+					<ImageView
+						android:layout_width="@dimen/nullDp"
+						android:layout_height="match_parent"
+						android:layout_weight="0.15"
+						android:paddingTop="5dp"
+						android:paddingBottom="5dp"
+						android:src="@drawable/challenges_icon"/>
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="@dimen/nullDp"
+						android:layout_weight="0.05"
+						android:layout_height="match_parent"/>
+					<TextView
+						android:text="40 of 84 Challenges"					
+						android:layout_width="@dimen/nullDp"
+						android:layout_weight="0.28"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:id="@+id/challenges_count"
+						android:textColor="@color/textIcon"
+						android:textSize="11sp"
+						local:MvxBind="Text ChallengesCount"/>
+					<RelativeLayout
+						android:orientation="horizontal"
+						android:layout_width="@dimen/nullDp"
+						android:layout_weight="0.52"
+						android:layout_height="match_parent">
+						<Button
+							android:id="@+id/do_more_button"
+							android:text="Do more"
+							android:textSize="12sp"
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:paddingLeft="@dimen/points_margin"
+							android:paddingRight="@dimen/points_margin"
+							android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="11dp"
+							android:layout_marginBottom="12dp"
+							android:layout_centerInParent="true"
+							android:textAllCaps="false"
+							android:background="@drawable/points_earnMore_button"
+							android:textColor="@android:color/white"		
+							android:src="@drawable/PointsLeaderboardTriangle"/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+            <ImageView
+                android:id="@+id/pointsTriangle_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nullDp"
+                android:layout_marginTop="@dimen/points_margin"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/PointsTransactionsTriangle"
+                app:layout_constraintEnd_toEndOf="@+id/content_view"
+                app:layout_constraintDimensionRatio="3.4:1"
+                app:layout_constraintStart_toStartOf="@+id/content_view"
+                app:layout_constraintTop_toBottomOf="@+id/score_Layout" />
+
+            <LinearLayout
+                android:id="@+id/undertable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nullDp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/content_view"
+                app:layout_constraintDimensionRatio="5:1"
+                app:layout_constraintStart_toStartOf="@+id/content_view"
+                app:layout_constraintTop_toTopOf="@+id/pointsTriangle_image" />
+
+            <LinearLayout
+                android:id="@+id/bottom_white_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/points_background_height"
+                android:background="@color/textIcon"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/content_view"
+                app:layout_constraintStart_toStartOf="@+id/content_view"
+                app:layout_constraintTop_toBottomOf="@+id/pointsTriangle_image" />
+
+			<RelativeLayout
+				android:id="@+id/chart_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintEnd_toEndOf="@+id/content_view"
+				app:layout_constraintStart_toStartOf="@+id/content_view"
+				app:layout_constraintTop_toBottomOf="@+id/undertable_layout">
+			</RelativeLayout>
+
+            <LinearLayout
+				android:orientation="vertical"
+                android:id="@+id/list_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/points_margin"       
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chart_view"
+                app:layout_constraintVertical_bias="0.0">
+				<MvxListView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:scrollbars="none"	
+					android:id="@+id/transactions_list"
+					android:minHeight="@dimen/points_background_height"
+					local:MvxItemTemplate="@layout/transaction_template"
+					local:MvxBind="ItemsSource TransactionsItems"
+					android:divider="@null"
+					android:dividerHeight="0dp"/>	
+			</LinearLayout>
+
+
+			<LinearLayout
+                android:id="@+id/vertical_line_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nullDp"
+				android:weightSum="1"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/content_view"
+                app:layout_constraintStart_toStartOf="@+id/content_view"
+                app:layout_constraintBottom_toTopOf="@+id/list_Layout"
+				app:layout_constraintTop_toBottomOf="@+id/score_Layout">		
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="@dimen/nullDp"
+					android:layout_weight="0.18"
+					android:layout_height="match_parent"/>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="@dimen/nullDp"
+					android:layout_weight="0.04"
+					android:layout_height="match_parent">
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="@dimen/leaderboard_image_margin"
+						android:background="@color/custom_triangle_background_color"
+						android:layout_gravity="center_horizontal"
+						android:layout_height="match_parent"/>
+				</LinearLayout>
+			</LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </socialLadder.droid.views.LockableScrollView>
+</android.support.constraint.ConstraintLayout>
+

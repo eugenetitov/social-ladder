@@ -1,0 +1,61 @@
+{
+  "images": [
+    {
+      "idiom": "universal",
+      "filename": "people-pink.pdf"
+    },
+    {
+      "scale": "1x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "2x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "3x",
+      "idiom": "universal"
+    },
+    {
+      "idiom": "iphone"
+    },
+    {
+      "scale": "1x",
+      "idiom": "iphone",
+      "filename": "people-icon.png"
+    },
+    {
+      "scale": "2x",
+      "idiom": "iphone",
+      "filename": "people-icon@2x.png"
+    },
+    {
+      "scale": "2x",
+      "idiom": "iphone",
+      "subtype": "retina4"
+    },
+    {
+      "scale": "3x",
+      "idiom": "iphone",
+      "filename": "people-icon@3x.png"
+    },
+    {
+      "idiom": "ipad"
+    },
+    {
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "scale": "2x",
+      "idiom": "ipad"
+    }
+  ],
+  "properties": {
+    "template-rendering-intent": ""
+  },
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

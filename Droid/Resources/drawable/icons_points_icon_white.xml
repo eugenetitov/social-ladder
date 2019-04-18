@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+  <path
+      android:fillColor="@android:color/transparent"
+      android:pathData="M 0 0 H 96 V 96 H 0 V 0 Z" />
+  <path
+      android:fillColor="@android:color/transparent"
+      android:strokeWidth="1"
+      android:strokeLineJoin="round"
+      android:strokeMiterLimit="10"
+      android:strokeLineCap="round"
+      android:pathData="M 48 0 C 74.5096679919 0 96 21.4903320081 96 48 C 96 74.5096679919 74.5096679919 96 48 96 C 21.4903320081 96 0 74.5096679919 0 48 C 0 21.4903320081 21.4903320081 0 48 0 Z" />
+  <path
+      android:strokeColor="#fff"
+      android:strokeWidth="1"
+      android:strokeLineJoin="round"
+      android:strokeMiterLimit="10"
+      android:strokeLineCap="round"
+      android:pathData="M 48 0.5 C 74.233525617 0.5 95.5 21.766474383 95.5 48 C 95.5 74.233525617 74.233525617 95.5 48 95.5 C 21.766474383 95.5 0.5 74.233525617 0.5 48 C 0.5 21.766474383 21.766474383 0.5 48 0.5 Z" />
+  <group
+          android:translateX="16"
+          android:translateY="48">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:pathData="M32,32A32,32,0,0,0,64,0H0A32,32,0,0,0,32,32Z" />
+    <path
+        android:fillColor="#fff"
+        android:strokeWidth="1"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:pathData="M 32 31 C 36.18540954589844 31 40.24509811401367 30.18050003051758 44.06628799438477 28.56427764892578 C 47.75763320922852 27.00296592712402 51.07300186157227 24.76762199401855 53.92031097412109 21.92031097412109 C 56.76762390136719 19.07299995422363 59.00296783447266 15.75763320922852 60.56427764892578 12.06628894805908 C 62.05147171020508 8.55016040802002 62.86407089233398 4.832140445709229 62.98434066772461 1 L 32 1 L 1.01565957069397 1 C 1.135927796363831 4.832140445709229 1.948529481887817 8.55016040802002 3.43572211265564 12.06628894805908 C 4.99703311920166 15.75763320922852 7.232378005981445 19.07299995422363 10.07968902587891 21.92031097412109 C 12.92700004577637 24.76762199401855 16.24236679077148 27.00296592712402 19.93371200561523 28.56427764892578 C 23.7548999786377 30.18050003051758 27.81458854675293 31 32 31 M 32 32 C 14.32688903808594 32 0 17.67311096191406 0 0 C 16 0 14.32688903808594 0 32 0 C 49.67311096191406 0 48 0 64 0 C 64 17.67311096191406 49.67311096191406 32 32 32 Z" />
+  </group>
+</vector>

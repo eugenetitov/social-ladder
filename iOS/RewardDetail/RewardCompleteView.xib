@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="RewardCompleteView">
+            <rect key="frame" x="0.0" y="0.0" width="226" height="412"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24708">
+                    <rect key="frame" x="9" y="34.5" width="208" height="350.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6162">
+                            <rect key="frame" x="181.5" y="8.5" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="6165"/>
+                                <constraint firstAttribute="height" constant="16" id="6166"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="8Sf-iq-ZVf"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="Ndk-eI-lCh"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="close-icon"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="191548">
+                            <rect key="frame" x="197.5" y="0.0" width="10.5" height="350.5"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="192458">
+                            <rect key="frame" x="0.0" y="0.0" width="208" height="8.5"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="192458" secondAttribute="height" multiplier="42:1.7" id="192805"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="191548" secondAttribute="trailing" id="191673"/>
+                        <constraint firstItem="191548" firstAttribute="top" secondItem="24708" secondAttribute="top" id="191705"/>
+                        <constraint firstItem="191548" firstAttribute="width" secondItem="24708" secondAttribute="width" multiplier="0.05" id="191737"/>
+                        <constraint firstAttribute="bottom" secondItem="191548" secondAttribute="bottom" id="191769"/>
+                        <constraint firstItem="192458" firstAttribute="top" secondItem="24708" secondAttribute="top" id="192521"/>
+                        <constraint firstItem="192458" firstAttribute="leading" secondItem="24708" secondAttribute="leading" id="192585"/>
+                        <constraint firstItem="191548" firstAttribute="trailing" secondItem="192458" secondAttribute="trailing" id="192648"/>
+                        <constraint firstItem="192458" firstAttribute="width" secondItem="24708" secondAttribute="width" id="192773"/>
+                        <constraint firstItem="6162" firstAttribute="top" secondItem="192458" secondAttribute="bottom" id="192965"/>
+                        <constraint firstItem="191548" firstAttribute="leading" secondItem="6162" secondAttribute="trailing" id="192997"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27833" hidden="YES">
+                    <rect key="frame" x="9" y="385" width="208" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.47843137254901963" blue="0.76078431372549016" alpha="1"/>
+                    <state key="normal" title="Collect Your Claim Info ">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="38686">
+                    <rect key="frame" x="83" y="0.0" width="60" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="38686" secondAttribute="height" multiplier="1:1.15" id="41187"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh No, we're sorry! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55513">
+                    <rect key="frame" x="32" y="83" width="162" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                    <color key="highlightedColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You did not get this reward..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64253">
+                    <rect key="frame" x="19.5" y="109.5" width="187" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76177">
+                    <rect key="frame" x="19.5" y="141" width="187" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="223278" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES">
+                    <rect key="frame" x="0.0" y="160.5" width="226" height="19"/>
+                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint id="223283" firstAttribute="width" secondItem="223278" secondAttribute="height" multiplier="12:1"/>
+                    </constraints>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91722">
+                    <rect key="frame" x="9" y="69" width="208" height="14"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="108678">
+                    <rect key="frame" x="9" y="104.5" width="208" height="5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="142035">
+                    <rect key="frame" x="9" y="376" width="208" height="9"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="177632" customClass="FeedTableView">
+                    <rect key="frame" x="4" y="385" width="219" height="0.0"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="198320"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="24708" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="0.92" id="26167"/>
+                <constraint firstItem="24708" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="26584"/>
+                <constraint firstAttribute="bottom" secondItem="27833" secondAttribute="bottom" id="28042"/>
+                <constraint firstItem="27833" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="0.92" id="28251"/>
+                <constraint firstItem="27833" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="28668"/>
+                <constraint firstItem="27833" firstAttribute="top" secondItem="24708" secondAttribute="bottom" id="29501"/>
+                <constraint firstItem="38686" firstAttribute="top" secondItem="1" secondAttribute="top" id="39311"/>
+                <constraint firstItem="38686" firstAttribute="centerX" secondItem="24708" secondAttribute="centerX" id="40353"/>
+                <constraint firstItem="38686" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="0.265" id="40770"/>
+                <constraint firstItem="24708" firstAttribute="top" secondItem="38686" secondAttribute="centerY" id="44518"/>
+                <constraint firstItem="24708" firstAttribute="centerX" secondItem="55513" secondAttribute="centerX" id="57596"/>
+                <constraint firstItem="24708" firstAttribute="centerX" secondItem="64253" secondAttribute="centerX" id="64462"/>
+                <constraint firstItem="64253" firstAttribute="bottom" secondItem="76177" secondAttribute="top" id="76386" constant="-10"/>
+                <constraint firstItem="24708" firstAttribute="centerX" secondItem="76177" secondAttribute="centerX" id="76595"/>
+                <constraint firstItem="38686" firstAttribute="bottom" secondItem="91722" secondAttribute="top" id="92139"/>
+                <constraint firstItem="91722" firstAttribute="centerX" secondItem="24708" secondAttribute="centerX" id="92348"/>
+                <constraint firstItem="91722" firstAttribute="width" secondItem="24708" secondAttribute="width" id="92557"/>
+                <constraint firstItem="91722" firstAttribute="height" secondItem="24708" secondAttribute="height" multiplier="0.04" id="93598"/>
+                <constraint firstItem="91722" firstAttribute="bottom" secondItem="55513" secondAttribute="top" id="95472"/>
+                <constraint firstItem="24708" firstAttribute="trailing" secondItem="108678" secondAttribute="trailing" id="109303"/>
+                <constraint firstItem="108678" firstAttribute="leading" secondItem="24708" secondAttribute="leading" id="109512"/>
+                <constraint firstItem="55513" firstAttribute="bottom" secondItem="108678" secondAttribute="top" id="109721"/>
+                <constraint firstItem="108678" firstAttribute="height" secondItem="24708" secondAttribute="height" multiplier="0.015" id="110347"/>
+                <constraint firstItem="64253" firstAttribute="top" secondItem="108678" secondAttribute="bottom" id="111180"/>
+                <constraint firstItem="142035" firstAttribute="leading" secondItem="24708" secondAttribute="leading" id="142868"/>
+                <constraint firstItem="24708" firstAttribute="trailing" secondItem="142035" secondAttribute="trailing" id="143286"/>
+                <constraint firstItem="142035" firstAttribute="height" secondItem="24708" secondAttribute="height" multiplier="0.025" id="143495"/>
+                <constraint firstItem="177632" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="0.97" id="177635"/>
+                <constraint firstItem="177632" firstAttribute="centerX" secondItem="24708" secondAttribute="centerX" constant="0.5" id="177636"/>
+                <constraint firstItem="177632" firstAttribute="top" secondItem="142035" secondAttribute="bottom" id="182808" priority="500"/>
+                <constraint firstItem="27833" firstAttribute="top" secondItem="177632" secondAttribute="bottom" id="183610"/>
+                <constraint id="208009" firstItem="55513" firstAttribute="centerX" secondItem="24708" secondAttribute="centerX"/>
+                <constraint id="208010" firstItem="55513" firstAttribute="width" secondItem="24708" secondAttribute="width" multiplier="0.78"/>
+                <constraint id="212858" firstItem="64253" firstAttribute="width" secondItem="24708" secondAttribute="width" multiplier="0.9"/>
+                <constraint id="217970" firstItem="76177" firstAttribute="width" secondItem="24708" secondAttribute="width" multiplier="0.9"/>
+                <constraint id="223279" firstItem="223278" firstAttribute="top" secondItem="76177" secondAttribute="bottom"/>
+                <constraint id="223280" firstItem="223278" firstAttribute="centerX" secondItem="24708" secondAttribute="centerX"/>
+                <constraint id="223281" firstItem="223278" firstAttribute="width" secondItem="1" secondAttribute="width"/>
+                <constraint id="223686" firstItem="27833" firstAttribute="top" secondItem="223278" secondAttribute="bottom" relation="greaterThanOrEqual"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="CloseButton" destination="6162" id="name-outlet-6162"/>
+                <outlet property="EventImage" destination="38686" id="name-outlet-38686"/>
+                <outlet property="MainView" destination="24708" id="name-outlet-24708"/>
+                <outlet property="MessageText" destination="76177" id="name-outlet-76177"/>
+                <outlet property="TableView" destination="177632" id="name-outlet-177632"/>
+                <outlet property="apologizeLabel" destination="55513" id="name-outlet-55513"/>
+                <outlet property="collectButton" destination="27833" id="name-outlet-27833"/>
+                <outlet property="reasonLabel" destination="64253" id="name-outlet-64253"/>
+                <outlet property="btnSeeOtherRewards" destination="223278" id="name-outlet-223278"/>
+            </connections>
+            <point key="canvasLocation" x="88" y="-140"/>
+        </view>
+    </objects>
+</document>

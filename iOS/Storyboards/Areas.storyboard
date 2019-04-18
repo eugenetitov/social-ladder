@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1232">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Areas View Controller-->
+        <scene sceneID="1231">
+            <objects>
+                <viewController storyboardIdentifier="Areas" id="1232" customClass="AreasViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1229"/>
+                        <viewControllerLayoutGuide type="bottom" id="1230"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1233">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1612" customClass="AreasTableView">
+                                <rect key="frame" x="0.0" y="78.5" width="414" height="593.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04E-sk-C4X">
+                                <rect key="frame" x="0.0" y="672" width="414" height="64"/>
+                                <subviews>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAo-UG-qb3">
+                                        <rect key="frame" x="351.5" y="16" width="39" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="E3J-w9-eIu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="DoneButton_TouchUpInside:" destination="1232" eventType="touchUpInside" id="148941"/>
+                                        </connections>
+                                    </button>
+                                    <progressView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="H4G-g0-GSx">
+                                        <rect key="frame" x="25" y="25" width="306.5" height="14.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="H4G-g0-GSx" firstAttribute="height" secondItem="04E-sk-C4X" secondAttribute="height" multiplier="0.226562" id="259824"/>
+                                    <constraint firstItem="H4G-g0-GSx" firstAttribute="centerY" secondItem="04E-sk-C4X" secondAttribute="centerY" id="259825"/>
+                                    <constraint firstItem="H4G-g0-GSx" firstAttribute="leading" secondItem="04E-sk-C4X" secondAttribute="trailing" multiplier="0.06" id="1Ec-Vn-kTV"/>
+                                    <constraint firstItem="hAo-UG-qb3" firstAttribute="leading" secondItem="H4G-g0-GSx" secondAttribute="trailing" multiplier="1.06" id="2wl-ME-8g5"/>
+                                    <constraint firstAttribute="height" constant="64" id="5bq-IF-l4Z"/>
+                                    <constraint firstItem="hAo-UG-qb3" firstAttribute="centerY" secondItem="H4G-g0-GSx" secondAttribute="centerY" id="FOV-Mo-TwQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="hAo-UG-qb3" secondAttribute="trailing" multiplier="1.06" id="Szy-uF-lga"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="152275">
+                                <rect key="frame" x="24" y="24" width="366" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join areas that have been curated for you" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1270">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1537">
+                                        <rect key="frame" x="172" y="17" width="20" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="center" placeholderIntrinsicWidth="124" placeholderIntrinsicHeight="30" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1574">
+                                        <rect key="frame" x="242" y="10.5" width="124" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="124" id="154398"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Add Invite Code">
+                                            <color key="titleColor" red="0.12941176470588234" green="0.95294117647058818" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="AddInviteCodeButton_TouchUpInside:" destination="1232" eventType="touchUpInside" id="148906"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                            </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="169888">
+                                <rect key="frame" x="0.0" y="672" width="414" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="169889">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="169890">
+                                                <rect key="frame" x="32" y="4" width="350" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="DoneButton_TouchUpInside:" destination="1232" eventType="touchUpInside" id="173593"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="169890" firstAttribute="top" secondItem="169889" secondAttribute="top" constant="4" id="169893"/>
+                                            <constraint firstItem="169890" firstAttribute="leading" secondItem="169889" secondAttribute="leading" constant="32" id="169894"/>
+                                            <constraint firstAttribute="trailing" secondItem="169890" secondAttribute="trailing" constant="32" id="169895"/>
+                                            <constraint firstAttribute="bottom" secondItem="169890" secondAttribute="bottom" constant="4" id="169896"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="169889" secondAttribute="bottom" id="169897"/>
+                                    <constraint firstItem="169889" firstAttribute="leading" secondItem="169888" secondAttribute="leading" id="169898"/>
+                                    <constraint firstItem="169889" firstAttribute="top" secondItem="169888" secondAttribute="top" id="169899"/>
+                                    <constraint firstAttribute="trailing" secondItem="169889" secondAttribute="trailing" id="169900"/>
+                                    <constraint firstAttribute="height" constant="64" id="169901"/>
+                                    <constraint firstAttribute="trailing" secondItem="169889" secondAttribute="trailing" id="169902"/>
+                                    <constraint firstItem="169889" firstAttribute="top" secondItem="169888" secondAttribute="top" id="169903"/>
+                                    <constraint firstItem="169889" firstAttribute="leading" secondItem="169888" secondAttribute="leading" id="169904"/>
+                                    <constraint firstAttribute="bottom" secondItem="169889" secondAttribute="bottom" id="169905"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="183329">
+                                <rect key="frame" x="0.0" y="20" width="414" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="253973"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="152275" firstAttribute="leading" secondItem="1233" secondAttribute="leadingMargin" constant="4" id="152277"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="152275" secondAttribute="trailing" constant="4" id="152278"/>
+                            <constraint firstItem="1612" firstAttribute="top" secondItem="152275" secondAttribute="bottom" constant="4" id="152368"/>
+                            <constraint firstItem="1612" firstAttribute="bottom" secondItem="04E-sk-C4X" secondAttribute="top" id="162317"/>
+                            <constraint firstAttribute="bottom" secondItem="169888" secondAttribute="bottom" id="170109"/>
+                            <constraint firstItem="169888" firstAttribute="width" secondItem="1233" secondAttribute="width" id="170205" priority="500"/>
+                            <constraint firstItem="169888" firstAttribute="centerX" secondItem="1233" secondAttribute="centerX" id="170301"/>
+                            <constraint firstItem="183329" firstAttribute="top" secondItem="1229" secondAttribute="bottom" id="187186"/>
+                            <constraint firstItem="183329" firstAttribute="width" secondItem="1233" secondAttribute="width" id="191038"/>
+                            <constraint firstAttribute="centerX" secondItem="183329" secondAttribute="centerX" id="191809"/>
+                            <constraint firstItem="152275" firstAttribute="top" secondItem="183329" secondAttribute="bottom" constant="4" id="199512"/>
+                            <constraint firstItem="1612" firstAttribute="leading" secondItem="1233" secondAttribute="leading" id="C1Y-qs-ubx"/>
+                            <constraint firstAttribute="bottom" secondItem="04E-sk-C4X" secondAttribute="bottom" id="U9m-CW-Sve"/>
+                            <constraint firstAttribute="trailing" secondItem="04E-sk-C4X" secondAttribute="trailing" id="Yes-wx-EhK"/>
+                            <constraint firstItem="04E-sk-C4X" firstAttribute="leading" secondItem="1233" secondAttribute="leading" id="iIX-n9-JFC"/>
+                            <constraint firstAttribute="trailing" secondItem="1612" secondAttribute="trailing" id="w4G-FW-mQF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AddInviteCodeButton" destination="1574" id="name-outlet-1574"/>
+                        <outlet property="DoneButton" destination="169890" id="name-outlet-169890"/>
+                        <outlet property="DoneButtonStackView" destination="169888" id="name-outlet-169888"/>
+                        <outlet property="DoneButtonView" destination="169889" id="name-outlet-169889"/>
+                        <outlet property="HeightToolBarConstraint" destination="253973" id="name-outlet-253973"/>
+                        <outlet property="ProgressBar" destination="H4G-g0-GSx" id="name-outlet-H4G-g0-GSx"/>
+                        <outlet property="ProgressBarDoneButtonView" destination="04E-sk-C4X" id="name-outlet-04E-sk-C4X"/>
+                        <outlet property="TableView" destination="1612" id="name-outlet-1612"/>
+                        <outlet property="cnDoneButtonStackViewHeight" destination="169901" id="name-outlet-169901"/>
+                        <outlet property="cnProgressBarDoneButtonViewHeight" destination="5bq-IF-l4Z" id="name-outlet-5bq-IF-l4Z"/>
+                        <outlet property="toolBarContainer" destination="183329" id="name-outlet-183329"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1234" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.55073" y="-179.3478"/>
+        </scene>
+    </scenes>
+</document>

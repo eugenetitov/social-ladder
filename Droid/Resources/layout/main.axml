@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+		<include
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentRight="true"
+			layout="@layout/toolbar" />
+		<include
+			android:layout_width="match_parent"
+			android:layout_below="@+id/toolbar"
+			android:id="@+id/areas"
+			android:layout_height="@dimen/areas_view_height"		
+			layout="@layout/AreasCollectionLayout" />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabbar_height"
+            local:tabMaxWidth="0dp"
+            local:tabGravity="fill"
+            local:tabMode="fixed"
+			android:background="#fff"
+            local:tabIndicatorHeight="0dp"
+			local:tabBackground="@android:color/transparent"
+            local:tabSelectedTextColor="#FFFFFF"
+            android:layout_alignParentBottom="true" />
+		<LinearLayout
+			android:id="@+id/divider"
+			android:layout_above="@+id/bottom_navigation"
+			android:layout_width="match_parent"
+			android:background="#F6F6F6"
+			android:layout_height="@dimen/divider_height" />
+		<socialLadder.droid.views.UnscrollingViewPager
+			android:id="@+id/view_pager_frame"
+			android:layout_below="@+id/areas"
+			android:layout_above="@+id/divider"
+			android:overScrollMode="never"
+			android:layout_width="match_parent"					
+			android:layout_height="match_parent" />
+		<FrameLayout
+			android:id="@+id/content_frame"
+			android:layout_below="@+id/areas"
+			android:layout_above="@+id/divider"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerInParent="true" />
+		<FrameLayout
+			android:id="@+id/content_frame_bottom"
+			android:layout_below="@+id/areas"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentBottom="true" />
+		<FrameLayout
+			android:id="@+id/content_frame_full"
+			android:layout_alignParentTop="true"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentBottom="true" />
+		<LinearLayout
+			android:id="@+id/main_bottom_shield"
+			android:alpha="0.4"
+			android:background="@color/Black"
+			android:layout_alignParentBottom="true"
+			android:layout_width="match_parent"
+			android:visibility="gone"
+			local:MvxBind="Click FakeClick"
+			android:layout_height="@dimen/main_tabs_shield" />
+		<LinearLayout
+			android:id="@+id/main_top_shield"
+			android:alpha="0.4"
+			android:background="@color/Black"
+			android:layout_alignParentTop="true"
+			android:layout_width="match_parent"
+			android:visibility="gone"
+			local:MvxBind="Click FakeClick"
+			android:layout_height="@dimen/toolbar_height" />
+
+		<RelativeLayout
+			android:id="@+id/internet_connection_layout"
+			android:layout_above="@+id/bottom_navigation"
+			android:layout_width="match_parent"
+			local:MvxBind="Visibility InverseVisibilityConverter(InternetConnectionViewHidden)"
+			android:background="@color/activated_color"
+			android:layout_height="wrap_content">
+			<TextView
+				android:id="@+id/internet_connection_text"
+				android:layout_width="wrap_content"
+				android:textColor="@color/Black"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:layout_margin="@dimen/points_chart_margin"
+				android:textAllCaps="false"				
+				android:background="@android:color/transparent"
+				android:text="No Internet Connection" />
+		</RelativeLayout>
+     </RelativeLayout>	
+	<RelativeLayout
+		android:id="@+id/wizard_layout"
+		android:layout_alignParentTop="true"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		local:MvxBind="Visibility InverseVisibilityConverter(WizardViewHidden)"
+		android:layout_alignParentBottom="true">
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/Black"
+			android:alpha="0.4"/>
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerInParent="true"
+			layout="@layout/WizardWebView" />
+	</RelativeLayout>
+		
+</RelativeLayout>

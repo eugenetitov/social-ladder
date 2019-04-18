@@ -1,0 +1,140 @@
+<android.support.constraint.ConstraintLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="@color/challenges_details_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<include
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		layout="@layout/toolbar_child" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/toolbar"
+		app:layout_constraintDimensionRatio="7:1"
+		android:id="@+id/top_layout">		
+		<TextView
+			android:text="@string/twitter_details_top_text"					
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"	
+			android:layout_centerInParent="true"
+			android:layout_margin="10dp"
+			android:id="@+id/top_lable"
+			android:textColor="@color/primaryText"
+			android:textSize="14sp"/>	
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="@color/textIcon"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/top_layout"
+		app:layout_constraintDimensionRatio="2.5:1"
+		android:id="@+id/input_layout">	
+		<EditText
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_above="@+id/count_lable"
+			android:textAlignment="viewStart"
+			android:padding="5dp"
+			android:gravity="top" 
+			android:id="@+id/input_text"
+			android:background="@null"
+			android:textColor="@color/Black"
+			app:MvxBind="Text EnteredText, Mode=TwoWay"
+			android:textSize="16sp"/>
+		<TextView
+			android:text="280"					
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="bottom"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_margin="10dp"
+			android:id="@+id/count_lable"
+			android:textColor="@color/areas_description_tex_color"
+			app:MvxBind="Text SymbolsCount"
+			android:textSize="14sp"/>	
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/input_layout"
+		app:layout_constraintDimensionRatio="7:1"
+		android:id="@+id/middle_layout">		
+		<TextView
+			android:text="@string/twitter_details_middle_text"					
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="bottom"	
+			android:layout_centerInParent="true"
+			android:layout_margin="10dp"
+			android:id="@+id/middle_lable"
+			android:textColor="@color/primaryText"
+			android:textSize="14sp"/>	
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="@color/textIcon"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/middle_layout"
+		app:layout_constraintBottom_toBottomOf="parent"
+		android:id="@+id/link_layout">	
+		<TextView				
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="top"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/input_text"
+			android:layout_margin="10dp"
+			android:id="@+id/link_lable"
+			android:textColor="@color/Black"
+			app:MvxBind="Text LinkText"
+			android:textSize="14sp"/>	
+	</RelativeLayout>
+
+	<ImageButton
+		android:id="@+id/submit_button"
+		android:background="@android:color/transparent"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:layout_margin="15dp"
+		android:scaleType="fitXY"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintWidth_percent="0.25"
+		app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+		app:MvxBind="Click SubmitButtonCommand; Drawable StringDrawableConverter(SubmitButtonImage)"
+		android:src="@drawable/challenge_share_btn"/>
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent">
+		<include
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			layout="@layout/ChallengeCompleteView" />
+	</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

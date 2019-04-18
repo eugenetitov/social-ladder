@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_number": "232588444560",
+    "firebase_url": "https://socialladder-172700.firebaseio.com",
+    "project_id": "socialladder-172700",
+    "storage_bucket": "socialladder-172700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232588444560:android:f37808a1e1c78155",
+        "android_client_info": {
+          "package_name": "com.SocialLadder.SocialLadder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232588444560-g9dgegjbh0e77b2pl8tj1thacuec0cei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkWP3fQTwPUWVoAakMEvDTVEFsw14_br0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+

@@ -1,0 +1,53 @@
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:background="@color/challenges_details_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<include
+		android:layout_alignParentTop="true"
+		layout="@layout/toolbar_child" />
+	<android.support.v4.widget.SwipeRefreshLayout 
+		android:background="@drawable/reward_bg"
+		android:id="@+id/swipe_refresh_layout"
+		android:layout_alignParentBottom="true"
+		android:layout_below="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"> 
+		<LinearLayout 
+			android:orientation="vertical"
+			android:background="@drawable/reward_bg"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:id="@+id/text_layout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:MvxBind="Visibility Visibility(CategoryName)">
+				<TextView
+					android:id="@+id/category_text"
+					android:background="#ffffff"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft="15dp" 
+					android:paddingTop="7dp"
+					android:paddingBottom="7dp"
+					android:textColor="@color/reward_font_gray"
+					android:text="Category | Subcategory"
+					app:MvxBind="Text CategoryName"/>
+			</LinearLayout>
+			<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+				android:id="@+id/reward_collection"
+				android:background="#80ffffff"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:overScrollMode="never"
+				android:drawSelectorOnTop="false"  
+				app:MvxItemTemplate="@layout/reward_category_cell" 
+				app:MvxTemplateSelector="SocialLadder.Droid.TemplateSelectors.RewardsTemplateSelector,SocialLadder.Droid"
+				app:MvxBind="ItemsSource RewardItems; ItemClick OnRewardClickCommand"/>
+	</LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

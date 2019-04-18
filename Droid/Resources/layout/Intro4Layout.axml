@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"	
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:weightSum="1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.18"
+			android:layout_width="match_parent"
+			android:layout_height="0dp" />
+	    <LinearLayout
+			android:orientation="horizontal"
+			android:layout_weight="0.38"
+			android:weightSum="1"
+			android:layout_width="match_parent"
+			android:layout_height="0dp" >
+		
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.08"
+				android:layout_width="0dp"
+				android:layout_height="match_parent" />
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.82"
+				android:layout_width="0dp"
+				android:weightSum="1"
+				android:layout_height="match_parent">
+			
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.2"
+					android:weightSum="1"
+					android:layout_width="match_parent"
+					android:layout_height="0dp">				
+					<android.support.v7.widget.AppCompatImageView
+						android:layout_weight="0.16"
+						android:layout_marginLeft="8dip"
+						style="@style/Intro4.Image"
+						app:srcCompat="@drawable/avatar_outline1" />
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_weight="0.03"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"/>
+					<ProgressBar
+						android:layout_weight="0.79"
+						android:progressDrawable="@drawable/intro_progress"
+						style="@style/Intro4.Progress"/> 
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.2"
+					android:weightSum="1"
+					android:layout_width="match_parent"
+					android:layout_height="0dp">				
+					<android.support.v7.widget.AppCompatImageView
+						style="@style/Intro4.Image"
+						android:layout_weight="0.2"
+						app:srcCompat="@drawable/avatar_outline2" />
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_weight="0.02"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"/>
+					<ProgressBar
+						style="@style/Intro4.Progress"
+						android:layout_weight="0.72"
+						android:progressDrawable="@drawable/intro_progress"/> 
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.2"
+					android:weightSum="1"
+					android:layout_width="match_parent"
+					android:layout_height="0dp">				
+					<android.support.v7.widget.AppCompatImageView
+						style="@style/Intro4.Image"
+						android:layout_weight="0.2"
+						app:srcCompat="@drawable/avatar_outline3" />
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_weight="0.02"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"/>
+					<ProgressBar
+						style="@style/Intro4.Progress"
+						android:layout_weight="0.66"
+						android:progressDrawable="@drawable/intro_progress"/> 
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.2"
+					android:weightSum="1"
+					android:layout_width="match_parent"
+					android:layout_height="0dp">				
+					<android.support.v7.widget.AppCompatImageView
+						style="@style/Intro4.Image"
+						android:layout_weight="0.2"
+						app:srcCompat="@drawable/avatar_outline4" />
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_weight="0.02"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"/>
+					<ProgressBar
+						style="@style/Intro4.Progress"
+						android:layout_weight="0.6"
+						android:progressDrawable="@drawable/intro_progress"/> 
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.2"
+					android:weightSum="1"
+					android:layout_width="match_parent"
+					android:layout_height="0dp">				
+					<android.support.v7.widget.AppCompatImageView
+						style="@style/Intro4.Image"
+						android:layout_weight="0.2"
+						app:srcCompat="@drawable/you" />
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_weight="0.02"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"/>
+					<ProgressBar
+						style="@style/Intro4.Progress"
+						android:layout_weight="0.54"
+						android:progressDrawable="@drawable/intro_progress"/> 
+				</LinearLayout>
+
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.1"
+				android:layout_width="0dp"
+				android:layout_height="match_parent" />	
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.16"
+			android:layout_width="match_parent"
+			android:layout_height="0dp" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_weight="0.09"
+			android:weightSum="1"
+			android:layout_width="match_parent"
+			android:layout_height="0dp">
+		    <LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.15"
+				android:layout_width="0dp"
+				android:layout_height="match_parent" />
+			<TextView
+                 android:text="@string/intro4.Bottom"
+				 android:layout_weight="0.7"
+                 android:id="@+id/textViewBottom"
+				 style="@style/Intro.BottomText"/>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.15"
+				android:layout_width="0dp"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.19"
+			android:layout_width="match_parent"
+			android:layout_height="0dp" />
+	</LinearLayout>
+</android.support.constraint.ConstraintLayout>

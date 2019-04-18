@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"	
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/leaderboard_item_height">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:weightSum="1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.005"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"/>
+		<ImageView  
+			android:id="@+id/imageView"
+			local:MvxBind="Drawable StringDrawableConverter(ImageName)"
+			android:layout_gravity="center"
+			android:scaleType="center"
+			android:layout_width="@dimen/nullDp"
+			android:layout_height="match_parent"
+			android:layout_weight="0.15"
+			android:src="@drawable/rewards_icon"/> 
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.005"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"/>
+		<LinearLayout
+			android:orientation="vertical"
+			android:weightSum="1"
+			android:layout_weight="0.77"
+			android:layout_width="0dp"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_weight="0.7"
+				android:layout_width="match_parent"
+				android:layout_height="0dp">
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.02"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"/>
+				<LinearLayout
+					android:orientation="vertical"
+					android:weightSum="1"
+					android:layout_weight="0.96"
+					android:layout_width="0dp"
+					android:layout_height="match_parent">
+					<TextView
+						android:text="4 of 12 Rewards unlocked"					
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/top_text"
+						android:layout_marginTop="5dp"
+						local:MvxBind="Text UnlockedText"
+						android:textColor="@color/custom_triangle_line_color"
+						android:textSize="14sp" />
+					<TextView
+						android:text="1 Reward purchased"					
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/bottom_text"
+						local:MvxBind="Text PurchasedText"
+						android:textColor="@color/custom_triangle_line_color"
+						android:textSize="14sp" />
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_weight="0.02"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"/>
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_weight="0.3"
+				android:layout_width="match_parent"
+				android:layout_height="0dp">
+				<ProgressBar
+					android:id="@+id/progress"	
+					style="@style/IntroActivity.Progress"
+					android:progressDrawable="@drawable/points_progress_bar"
+					android:layout_margin="5dp"
+					local:MvxBind="Progress Progress"
+					android:layout_width="match_parent"
+					android:layout_height="10dp"/> 
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.07"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"/>
+	</LinearLayout>
+</LinearLayout>

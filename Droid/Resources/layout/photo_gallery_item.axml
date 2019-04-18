@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	android:padding="10dip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/txtNumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="10dip"
+		android:text="1 of 5"
+		app:MvxBind="Text Position"
+		android:textColor="@color/feed_cell_gray"
+		android:gravity="left" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.8">
+
+		<SocialLadder.Droid.CustomControls.GalleryImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"
+			android:background="#adadad"
+			app:MvxBind="RawImage Image" />
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:alpha="0.6"
+			app:MvxBind="Visibility InverseVisibilityConverter(HasLocation)"
+			android:background="@color/textIcon"/>
+		<ImageButton
+			android:id="@+id/btnDelete"
+			android:layout_width="25dip"
+			android:layout_height="28dip"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:background="@drawable/trash_white"
+			android:layout_marginTop="10dip"
+			android:layout_marginRight="15dip" />
+
+	</RelativeLayout>
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.2">
+		<TextView
+			android:id="@+id/txtCaption"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dip"
+			android:text="Caption"
+			android:textColor="@color/Black"
+			android:gravity="center_horizontal"
+			app:MvxBind="Text TextWithQuoteConverter(Title); Visibility DescriptionTextItemVisibilityConverter(Title)" />
+
+		<Button
+			android:id="@+id/btnEditCaption"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtCaption"
+			android:text="Tap to Edit"
+			android:textAllCaps="false"
+			android:textSize="10dip"
+			android:textColor="#888888"
+			style="?android:attr/borderlessButtonStyle"
+			android:background="@android:color/transparent"
+			app:MvxBind="Visibility DescriptionTextItemVisibilityConverter(Title)"/>
+
+		<Button
+			android:visibility="gone"
+			android:id="@+id/btnAddCaption"
+			android:layout_width="match_parent"
+			android:layout_height="28dip"
+			android:layout_marginTop="10dip"
+			android:text="Add Caption"
+			android:textAllCaps="false"
+			android:textColor="@color/feed_cell_gray"
+			style="?android:attr/borderlessButtonStyle"
+			android:background="@drawable/button_add_caption"
+			app:MvxBind="Visibility DescriptionButtonItemVisibilityConverter(Title)"/>
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:MvxBind="Visibility InverseVisibilityConverter(HasLocation)"
+			android:background="@color/textIcon">
+			<TextView
+				android:id="@+id/error_location_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="15dp"
+				android:text="@string/postering_image_has_not_location_text"
+				android:textColor="@color/postering_error_location_text_color"
+				android:gravity="center_horizontal" />
+		</RelativeLayout>
+	
+	</RelativeLayout>
+
+</LinearLayout>

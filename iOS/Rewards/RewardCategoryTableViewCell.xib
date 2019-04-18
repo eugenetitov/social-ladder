@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RewardCategoryTableViewCell" rowHeight="349" id="cxk-wN-pdQ" customClass="RewardCategoryTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="349"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="348"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="791" clipsSubviews="YES">
+                        <rect key="frame" x="32.5" y="15.5" width="317" height="317.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="791" secondAttribute="height" multiplier="1:1" id="5558"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="20741" translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES">
+                        <rect key="frame" x="32.5" y="15.5" width="317" height="317.5"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="0.6"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1325">
+                        <rect key="frame" x="51.5" y="287.5" width="279" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5771">
+                        <rect key="frame" x="294" y="31.5" width="7.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward-icon_white" translatesAutoresizingMaskIntoConstraints="NO" id="5785">
+                        <rect key="frame" x="309.5" y="31.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="5838"/>
+                            <constraint firstAttribute="width" constant="24" id="5852"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="15679" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="333.5" y="15.5" width="16" height="16"/>
+                        <constraints>
+                            <constraint id="15683" firstAttribute="width" secondItem="15679" secondAttribute="height" multiplier="1:1"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" id="15687" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="32.5" y="316.5" width="317" height="16.5"/>
+                        <constraints>
+                            <constraint id="15691" firstAttribute="width" secondItem="15687" secondAttribute="height" multiplier="414:21"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="5771" firstAttribute="centerY" secondItem="5785" secondAttribute="centerY" id="5972"/>
+                    <constraint firstItem="5785" firstAttribute="leading" secondItem="5771" secondAttribute="trailing" constant="8" id="5999"/>
+                    <constraint firstItem="791" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.83" id="10210"/>
+                    <constraint firstAttribute="bottom" secondItem="791" secondAttribute="bottom" priority="999" constant="32" id="10627"/>
+                    <constraint id="15677" firstItem="791" firstAttribute="centerX" secondItem="YTl-1W-gDM" secondAttribute="centerX"/>
+                    <constraint id="15678" firstItem="791" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY"/>
+                    <constraint id="15680" firstItem="15679" firstAttribute="top" secondItem="791" secondAttribute="top"/>
+                    <constraint id="15681" firstItem="791" firstAttribute="trailing" secondItem="15679" secondAttribute="trailing"/>
+                    <constraint id="15682" firstItem="15679" firstAttribute="width" secondItem="791" secondAttribute="width" multiplier="0.05"/>
+                    <constraint id="15684" firstItem="5785" firstAttribute="top" secondItem="15679" secondAttribute="bottom"/>
+                    <constraint id="15685" firstItem="5785" firstAttribute="trailing" secondItem="15679" secondAttribute="leading"/>
+                    <constraint id="15686" firstItem="5771" firstAttribute="height" secondItem="5785" secondAttribute="height"/>
+                    <constraint id="15688" firstItem="791" firstAttribute="bottom" secondItem="15687" secondAttribute="bottom"/>
+                    <constraint id="15690" firstItem="15687" firstAttribute="width" secondItem="791" secondAttribute="width"/>
+                    <constraint id="15692" firstItem="15687" firstAttribute="centerX" secondItem="791" secondAttribute="centerX"/>
+                    <constraint id="15693" firstItem="791" firstAttribute="centerX" secondItem="1325" secondAttribute="centerX"/>
+                    <constraint id="15694" firstItem="1325" firstAttribute="width" secondItem="791" secondAttribute="width" multiplier="0.88"/>
+                    <constraint id="15695" firstItem="15687" firstAttribute="top" secondItem="1325" secondAttribute="bottom"/>
+                    <constraint id="20939" firstItem="791" firstAttribute="centerY" secondItem="20741" secondAttribute="centerY"/>
+                    <constraint id="21005" firstItem="20741" firstAttribute="centerX" secondItem="791" secondAttribute="centerX"/>
+                    <constraint id="21398" firstItem="20741" firstAttribute="width" secondItem="791" secondAttribute="width"/>
+                    <constraint id="27001" firstItem="20741" firstAttribute="height" secondItem="791" secondAttribute="height"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="CategoryImage" destination="791" id="name-outlet-791"/>
+                <outlet property="CategoryName" destination="1325" id="name-outlet-1325"/>
+                <outlet property="CategoryImageOverlay" destination="20741" id="name-outlet-20741"/>
+                <outlet property="CategoryCountLabel" destination="5771" id="name-outlet-5771"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

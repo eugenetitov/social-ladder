@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>SocialLadder</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.rkiapps.SOCIALLADDER</string>
+	<key>CFBundleVersion</key>
+	<string>5.7.3.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb185276514842901</string>
+				<string>socialladder</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>185276514842901</string>
+	<key>FacebookDisplayName</key>
+	<string>SocialLadder</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>db1cb53915ac61b4e0ce00ea84ff3722bc08678b</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
+	<key>MinimumOSVersion</key>
+	<string>11.1</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>This app requires contacts access to function properly.</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Intro</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Take pictures to complete challenges</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Upload photos to compete challenges</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Use location to complete challenges</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SocialLadder uses your location to make sure you get offers relevant to your location</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>whatsapp</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/app-icon.appiconset</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/Horatio/HoratioD-Medi.ttf</string>
+		<string>Fonts/ProximaNova/ProximaNova-Bold.ttf</string>
+		<string>Fonts/ProximaNova/ProximaNova-Regular.ttf</string>
+		<string>Fonts/SanFrancisco/SFProText-Regular.ttf</string>
+		<string>Fonts/SanFrancisco/SFProText-Heavy.ttf</string>
+		<string>Fonts/SanFrancisco/SFProText-Medium.ttf</string>
+		<string>Fonts/SanFrancisco/SFProText-Semibold.ttf</string>
+		<string>Fonts/SanFrancisco/SFProText-Bold.ttf</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>voip</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app needs access to the photo gallery.</string>
+	<key>CFBundleShortVersionString</key>
+	<string>5.5.0</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This feature requires access to contacts.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This feature requires access to Bluetooth.</string>
+</dict>
+</plist>

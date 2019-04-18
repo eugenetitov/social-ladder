@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <item name="rewards_circle_1" type="id"/>
+  <item name="rewards_circle_2" type="id"/>
+  <item name="rewards_circle_3" type="id"/>
+  <item name="rewards_circle_4" type="id"/>
+  <item name="rewards_circle_5" type="id"/>
+  <item name="rewards_circle_6" type="id"/>
+  <item name="rewards_circle_7" type="id"/>
+  <item name="rewards_circle_8" type="id"/>
+  <item name="rewards_circle_9" type="id"/>
+  <item name="rewards_circle_10" type="id"/>
+</resources>

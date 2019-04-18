@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" customClass="AvailableRewardsTableCell" id="cxk-wN-pdQ" rowHeight="326">
+            <rect key="frame" x="0.0" y="0.0" width="784" height="326"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="784" height="325"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2656" translatesAutoresizingMaskIntoConstraints="NO" image="Fonts/Horatio/HoratioD-Medi.ttf">
+                        <rect key="frame" x="470" y="0.0" width="306" height="306"/>
+                        <constraints>
+                            <constraint id="3010" firstAttribute="width" secondItem="2656" secondAttribute="height"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="3856" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="0.0" y="15.5" width="470" height="275"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4351" translatesAutoresizingMaskIntoConstraints="NO" editable="NO" selectable="NO" text="1 Day Parking Pass and Locker Access" scrollEnabled="NO">
+                                <rect key="frame" x="17" y="113" width="448" height="137.5"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18" weight="medium"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80 Unit Aviable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4950" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="367" y="250.5" width="86" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="4563" firstItem="3856" firstAttribute="trailing" secondItem="4351" secondAttribute="trailing" constant="5"/>
+                            <constraint id="4634" firstItem="4351" firstAttribute="leading" secondItem="3856" secondAttribute="leading" constant="17"/>
+                            <constraint id="5021" firstItem="4351" firstAttribute="height" secondItem="3856" secondAttribute="height" multiplier="0.5"/>
+                            <constraint id="5163" firstItem="3856" firstAttribute="trailing" secondItem="4950" secondAttribute="trailing" constant="17"/>
+                            <constraint id="95462" firstItem="3856" firstAttribute="bottom" secondItem="4950" secondAttribute="bottom" constant="10"/>
+                            <constraint id="97235" firstItem="4950" firstAttribute="top" secondItem="4351" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6310" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="546.5" y="76.5" width="153" height="153"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint id="2797" firstItem="YTl-1W-gDM" firstAttribute="trailing" secondItem="2656" secondAttribute="trailing" constant="8"/>
+                    <constraint id="3962" firstItem="2656" firstAttribute="leading" secondItem="3856" secondAttribute="trailing"/>
+                    <constraint id="3998" firstItem="3856" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading"/>
+                    <constraint id="4104" firstItem="3856" firstAttribute="height" secondItem="2656" secondAttribute="height" multiplier="0.9"/>
+                    <constraint id="4175" firstItem="3856" firstAttribute="centerY" secondItem="2656" secondAttribute="centerY"/>
+                    <constraint id="6523" firstItem="6310" firstAttribute="centerX" secondItem="2656" secondAttribute="centerX"/>
+                    <constraint id="6665" firstItem="6310" firstAttribute="centerY" secondItem="2656" secondAttribute="centerY"/>
+                    <constraint id="6771" firstItem="6310" firstAttribute="height" secondItem="2656" secondAttribute="height" multiplier="0.5"/>
+                    <constraint id="6842" firstItem="6310" firstAttribute="width" secondItem="2656" secondAttribute="width" multiplier="0.5"/>
+                    <constraint id="62607" firstItem="2656" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top"/>
+                    <constraint id="69837" firstItem="2656" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.39"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="RewardImage" destination="2656" id="name-outlet-2656"/>
+                <outlet property="RewardName" destination="4351" id="name-outlet-4351"/>
+                <outlet property="RewardTime" destination="4950" id="name-outlet-4950"/>
+                <outlet property="IconStatus" destination="6310" id="name-outlet-6310"/>
+            </connections>
+            <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AreaScore" width="60" height="60"/>
+        <image name="AreaStatus" width="12" height="12"/>
+        <image name="Background" width="414" height="650"/>
+        <image name="gift_icon" width="56" height="65"/>
+        <image name="IconDelete" width="32" height="32"/>
+        <image name="IconScoreTransactions" width="128" height="128"/>
+        <image name="ImagePlaceholder" width="88" height="88"/>
+        <image name="Images" width="414" height="651"/>
+        <image name="LaunchScreen" width="1248" height="704"/>
+        <image name="more-bg" width="1824" height="2736"/>
+        <image name="points-bg_1" width="801" height="1600"/>
+        <image name="points-bg_2" width="801" height="1600"/>
+        <image name="points-bg_3" width="801" height="1600"/>
+        <image name="ProfilePlaceholder" width="48" height="48"/>
+        <image name="rewards-Background" width="414" height="651"/>
+        <image name="ScoreBackground" width="414" height="311"/>
+        <image name="SelectedMC" width="48" height="53"/>
+        <image name="SLCircleLogo" width="142" height="142"/>
+        <image name="icon-score" width="60" height="60"/>
+        <image name="lock-icon" width="33" height="37"/>
+        <image name="CellImagePlaceholder" width="160" height="160"/>
+        <image name="people_pink" width="20" height="21"/>
+        <image name="Polygon-1" width="108" height="124"/>
+        <image name="Polygon-mask1" width="108" height="124"/>
+        <image name="post-icon" width="56" height="64"/>
+        <image name="RewardCompletedMessageBackground" width="398" height="183"/>
+        <image name="rewardsDetails-placeholder" width="414" height="300"/>
+        <image name="scoreButtonBackground" width="120" height="112"/>
+    </resources>
+</document>

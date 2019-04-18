@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	local:MvxBind="Visibility DetailsViewHidden"
+	android:background="@drawable/layout_bg">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="0.1">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_weight="0.1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="0.4">
+				<TextView
+					android:text="Before we continue ..."
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:textColor="@android:color/background_dark"
+					android:textStyle="bold"
+					android:textSize="23dip"
+					android:paddingTop="5dip"/>
+				<RelativeLayout
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/userInfo">
+					<TextView
+						android:text="@string/privacy_and_policy"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:linksClickable="true"
+						android:textColor="@android:color/background_dark"
+						android:paddingTop="10dip"
+						android:textColorLink="#ff2f90f7"
+						android:layout_marginLeft="25dip"
+						android:id="@+id/txtLinks"/>
+					<TextView
+						android:id="@+id/txtOur"
+						android:text="our "
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@android:color/background_dark"
+						android:textSize="14dip"
+						android:layout_marginLeft="25dip"
+						android:layout_below="@id/txtLinks"/>
+					<TextView
+						android:text="Terms"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txtTerms"
+						android:textColor="#ff2f90f7"
+						android:textSize="14dip"
+						android:layout_toRightOf="@id/txtOur"
+						android:layout_below="@id/txtLinks"
+						android:clickable="true"
+						local:MvxBind="Click LoadTermsService"/>
+					<TextView
+						android:id="@+id/txtAnd"
+						android:text="and"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@android:color/background_dark"
+						android:textSize="14dip"
+						android:layout_marginLeft="5dip"
+						android:layout_below="@id/txtLinks"
+						android:layout_toRightOf="@id/txtTerms"/>
+					<TextView
+						android:text="Privacy Policy"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txtPrivacy"
+						android:textColor="#ff2f90f7"
+						android:textSize="14dip"
+						android:layout_marginLeft="5dip"
+						android:layout_below="@id/txtLinks"
+						android:layout_toRightOf="@id/txtAnd"
+						android:clickable="true"
+						local:MvxBind="Click LoadPrivacyPolicy"/>
+					<TextView
+						android:text="."
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@android:color/background_dark"
+						android:textSize="14dip"
+						android:layout_below="@id/txtLinks"
+						android:layout_toRightOf="@id/txtPrivacy"/>
+				</RelativeLayout>
+			</LinearLayout>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@color/feed_cell_gray"
+				android:alpha="0.5"
+				android:layout_marginLeft="25dip" />
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="0.1">
+				<android.webkit.WebView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:id="@+id/webPrivacy" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="@color/feed_cell_gray"
+		android:alpha="0.5"/>
+	<RelativeLayout
+		android:layout_weight="0.91"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+		<TextView
+			android:text="Cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/btnCancel"
+			android:layout_marginTop="23dip"
+			android:layout_marginLeft="15dip"
+			android:clickable="true"
+			local:MvxBind="Click ClosePrivacyPolicyViewCommand"/>
+		<TextView
+			android:text="Agree and Continue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/btnAgreeAndContinue"
+			android:layout_marginTop="23dip"
+			android:textColor="#ff459cf7"
+			android:clickable="true"
+			android:textAlignment="textEnd"
+			local:MvxBind="Click AgreePrivacyPolicyViewCommand"
+			android:layout_marginRight="15dip"
+			android:layout_alignParentRight="true" />
+	</RelativeLayout>
+</LinearLayout>

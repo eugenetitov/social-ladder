@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="256" id="cxk-wN-pdQ" customClass="MonthRewardsTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="255"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4165">
+                        <rect key="frame" x="36" y="36" width="380" height="219.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Van Duke @ Webster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26586">
+                        <rect key="frame" x="59" y="212" width="197.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="34051">
+                        <rect key="frame" x="370" y="52" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="34051" secondAttribute="height" multiplier="1:1" id="38074"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39510">
+                        <rect key="frame" x="355.5" y="57.5" width="10.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42384">
+                        <rect key="frame" x="366" y="52" width="4" height="27"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49663">
+                        <rect key="frame" x="0.0" y="0.0" width="36" height="255.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50749">
+                        <rect key="frame" x="416" y="0.0" width="36" height="255.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52198">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="36"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="52198" secondAttribute="height" multiplier="1:0.08" id="52924"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53890">
+                        <rect key="frame" x="36" y="35" width="380" height="17"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="53890" secondAttribute="height" multiplier="1:0.045" id="54617"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55100">
+                        <rect key="frame" x="397" y="36" width="19" height="219.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57440">
+                        <rect key="frame" x="36" y="36" width="23" height="219.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58647">
+                        <rect key="frame" x="36" y="232.5" width="380" height="23"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="58647" secondAttribute="height" multiplier="1:0.06" id="59071"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4165" secondAttribute="bottom" id="6178"/>
+                    <constraint firstItem="34051" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.059" id="37212"/>
+                    <constraint firstItem="39510" firstAttribute="centerY" secondItem="34051" secondAttribute="centerY" constant="2" id="40086"/>
+                    <constraint firstItem="34051" firstAttribute="leading" secondItem="42384" secondAttribute="trailing" id="42672"/>
+                    <constraint firstItem="42384" firstAttribute="centerY" secondItem="34051" secondAttribute="centerY" id="42960"/>
+                    <constraint firstItem="42384" firstAttribute="height" secondItem="34051" secondAttribute="height" id="43248"/>
+                    <constraint firstItem="42384" firstAttribute="width" secondItem="4165" secondAttribute="width" multiplier="0.013" id="44110"/>
+                    <constraint firstItem="42384" firstAttribute="leading" secondItem="39510" secondAttribute="trailing" id="45834"/>
+                    <constraint firstItem="49663" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="49724"/>
+                    <constraint firstItem="49663" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" id="49845"/>
+                    <constraint firstAttribute="centerY" secondItem="49663" secondAttribute="centerY" id="49966"/>
+                    <constraint firstItem="49663" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.08" id="50147"/>
+                    <constraint firstItem="4165" firstAttribute="leading" secondItem="49663" secondAttribute="trailing" id="50448"/>
+                    <constraint firstItem="50749" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" id="51052"/>
+                    <constraint firstItem="50749" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="51113"/>
+                    <constraint firstAttribute="trailing" secondItem="50749" secondAttribute="trailing" id="51234"/>
+                    <constraint firstItem="50749" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" multiplier="0.08" id="51355"/>
+                    <constraint firstItem="50749" firstAttribute="leading" secondItem="4165" secondAttribute="trailing" id="51596"/>
+                    <constraint firstAttribute="centerX" secondItem="52198" secondAttribute="centerX" id="52742"/>
+                    <constraint firstItem="52198" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" id="52863"/>
+                    <constraint firstItem="52198" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="53466"/>
+                    <constraint firstItem="4165" firstAttribute="top" secondItem="52198" secondAttribute="bottom" id="53587"/>
+                    <constraint firstItem="50749" firstAttribute="leading" secondItem="53890" secondAttribute="trailing" id="53951"/>
+                    <constraint firstItem="52198" firstAttribute="bottom" secondItem="53890" secondAttribute="top" constant="1" id="54012"/>
+                    <constraint firstItem="4165" firstAttribute="centerX" secondItem="53890" secondAttribute="centerX" id="54314"/>
+                    <constraint firstItem="53890" firstAttribute="width" secondItem="4165" secondAttribute="width" id="54556"/>
+                    <constraint firstItem="50749" firstAttribute="leading" secondItem="55100" secondAttribute="trailing" id="55161"/>
+                    <constraint firstItem="55100" firstAttribute="width" secondItem="4165" secondAttribute="width" multiplier="0.05" id="55584"/>
+                    <constraint firstItem="4165" firstAttribute="centerY" secondItem="55100" secondAttribute="centerY" id="55705"/>
+                    <constraint firstItem="55100" firstAttribute="height" secondItem="4165" secondAttribute="height" id="55946"/>
+                    <constraint firstItem="55100" firstAttribute="leading" secondItem="34051" secondAttribute="trailing" id="56127"/>
+                    <constraint firstItem="34051" firstAttribute="top" secondItem="53890" secondAttribute="bottom" id="56188"/>
+                    <constraint firstItem="57440" firstAttribute="leading" secondItem="49663" secondAttribute="trailing" id="57561"/>
+                    <constraint firstItem="57440" firstAttribute="width" secondItem="4165" secondAttribute="width" multiplier="0.06" id="57804"/>
+                    <constraint firstItem="57440" firstAttribute="height" secondItem="4165" secondAttribute="height" id="57865"/>
+                    <constraint firstItem="4165" firstAttribute="centerY" secondItem="57440" secondAttribute="centerY" id="58346"/>
+                    <constraint firstItem="4165" firstAttribute="bottom" secondItem="58647" secondAttribute="bottom" id="58768"/>
+                    <constraint firstItem="4165" firstAttribute="centerX" secondItem="58647" secondAttribute="centerX" id="58889"/>
+                    <constraint firstItem="58647" firstAttribute="width" secondItem="4165" secondAttribute="width" id="59010"/>
+                    <constraint firstItem="26586" firstAttribute="leading" secondItem="57440" secondAttribute="trailing" id="59372"/>
+                    <constraint firstItem="58647" firstAttribute="top" secondItem="26586" secondAttribute="bottom" id="59433"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="RewardCategoryName" destination="26586" id="name-outlet-26586"/>
+                <outlet property="RewardIcon" destination="34051" id="name-outlet-34051"/>
+                <outlet property="RewardItemBackground" destination="4165" id="name-outlet-4165"/>
+                <outlet property="RewardsCountLabel" destination="39510" id="name-outlet-39510"/>
+            </connections>
+            <point key="canvasLocation" x="-1" y="1"/>
+        </tableViewCell>
+    </objects>
+</document>

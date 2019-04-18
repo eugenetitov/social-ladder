@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+	android:weightSum="1"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.18"
+		android:weightSum="1"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_weight="0.15"
+			android:layout_height="0dp"/>
+		<TextView
+			android:text="Just Now"					
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.85"
+			android:gravity="right"
+			android:layout_marginLeft="3dp"
+			android:id="@+id/tv_date"
+			android:maxLines="1"
+			android:textColor="@color/custom_triangle_line_color"
+			local:MvxBind="Text TimeText"
+			android:textSize="12sp" />
+	</LinearLayout>
+	<RelativeLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.04"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="2dp"
+			android:background="#E5E5E5"
+			android:layout_centerHorizontal="true"
+			android:layout_height="match_parent"/>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_centerHorizontal="true"
+			android:weightSum="1"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_weight="0.3"
+				android:layout_height="0dp"/>
+			<ImageView
+				android:id="@+id/round_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:src="@drawable/transaction_round_icon"/>
+		</LinearLayout>
+
+	
+	</RelativeLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.03"
+		android:layout_height="match_parent"/>
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="0dp"
+		android:layout_weight="0.12"
+		android:id="@+id/icon_constraint_layout"
+		android:layout_height="match_parent">
+		<ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/nullDp"
+            android:layout_height="@dimen/nullDp"
+			local:layout_constraintEnd_toEndOf="@+id/icon_constraint_layout"
+			local:layout_constraintStart_toStartOf="@+id/icon_constraint_layout"
+			local:layout_constraintBottom_toBottomOf="@+id/icon_constraint_layout"
+			local:layout_constraintTop_toTopOf="@+id/icon_constraint_layout"
+			local:layout_constraintDimensionRatio="1:1"
+			local:layout_constraintWidth_percent="0.65"
+			local:layout_constraintVertical_bias="0.5"
+			local:layout_constraintHorizontal_bias="0.5"
+			local:MvxBind="Drawable StringDrawableConverter(TransactionImage)"
+            android:src="@drawable/rewards_icon"/>
+	</android.support.constraint.ConstraintLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.03"
+		android:layout_height="match_parent"/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.54"
+		android:weightSum="1"
+		android:layout_height="match_parent">
+		<TextView
+			android:text="Just Now"					
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.5"
+			android:gravity="bottom|left"
+			android:id="@+id/points_text"
+			android:textColor="@color/Black"
+			local:MvxBind="Text PointsText"
+			android:textSize="15sp" />
+		<TextView
+			android:text="Just Now"					
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.5"
+			android:gravity="center|left"
+			android:id="@+id/transaction_text"
+			android:textColor="@color/custom_triangle_line_color"
+			local:MvxBind="Text TransactionText"
+			android:textSize="15sp" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_weight="0.05"
+		android:layout_height="match_parent"/>
+</LinearLayout>

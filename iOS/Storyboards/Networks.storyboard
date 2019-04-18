@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="213">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Networks View Controller-->
+        <scene sceneID="212">
+            <objects>
+                <viewController storyboardIdentifier="Networks" id="213" customClass="NetworksViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="210"/>
+                        <viewControllerLayoutGuide type="bottom" id="211"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="214">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="133773">
+                                <rect key="frame" x="20" y="54" width="374" height="111.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-yF-yGf">
+                                        <rect key="frame" x="78.5" y="0.0" width="217" height="29"/>
+                                        <accessibility key="accessibilityConfiguration" label="Tell"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t worry! we’ll never post without your consent. See our Privacy Policy &amp; Terms of Service for details." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32286">
+                                        <rect key="frame" x="7" y="39" width="360.5" height="33.5"/>
+                                        <accessibility key="accessibilityConfiguration" label="Tell"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="42983">
+                                        <rect key="frame" x="73" y="82.5" width="228" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="178605">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Privacy Policy">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="BtnPrivacyPolicy_TouchUpInside:" destination="213" eventType="touchUpInside" id="178874"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="178606">
+                                                <rect key="frame" x="119" y="0.0" width="109" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Terms of Service">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="BtnTermsService_TouchUpInside:" destination="213" eventType="touchUpInside" id="178765"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ob-score-bg" translatesAutoresizingMaskIntoConstraints="NO" id="46453">
+                                <rect key="frame" x="143.5" y="304.5" width="127" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="46453" secondAttribute="height" multiplier="1:1" id="169366"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12t-Y8-7Re">
+                                <rect key="frame" x="143.5" y="304.5" width="127" height="127"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11279">
+                                <rect key="frame" x="20" y="522" width="113" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="11279" secondAttribute="height" multiplier="1:1" id="171618"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="social-connect_fb-unconnected">
+                                    <color key="titleColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="FacebookLoginButton_TouchUpInside:" destination="213" eventType="touchUpInside" id="20699"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11580">
+                                <rect key="frame" x="150.5" y="522" width="113" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="11580" secondAttribute="height" multiplier="1:1" id="171684"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="social-connect_twitter-unconnected">
+                                    <color key="titleColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TwitterLoginButton_TouchUpInside:" destination="213" eventType="touchUpInside" id="20775"/>
+                                </connections>
+                            </button>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12256">
+                                <rect key="frame" x="281" y="522" width="113" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="12256" secondAttribute="height" multiplier="1:1" id="171679"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="social-connect_insta-unconnected"/>
+                                <connections>
+                                    <action selector="InstagramLoginButton_TouchUpInside:" destination="213" eventType="touchUpInside" id="20851"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9057">
+                                <rect key="frame" x="183" y="643" width="48" height="30"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9170">
+                                <rect key="frame" x="303" y="643" width="69" height="30"/>
+                                <state key="normal" title="Instagram">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="133241">
+                                <rect key="frame" x="43" y="643" width="67" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="133242">
+                                <rect key="frame" x="114" y="653" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="133243"/>
+                                    <constraint firstAttribute="height" constant="10" id="133244"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="175422">
+                                <rect key="frame" x="239" y="654" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="175423"/>
+                                    <constraint firstAttribute="height" constant="10" id="175424"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="175431">
+                                <rect key="frame" x="380" y="654" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="175432"/>
+                                    <constraint firstAttribute="height" constant="10" id="175433"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="184190">
+                                <rect key="frame" x="0.0" y="672" width="414" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="184191">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="184194">
+                                                <rect key="frame" x="32" y="4" width="350" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="DoneButton_TouchUpInside:" destination="213" eventType="touchUpInside" id="189020"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="184194" firstAttribute="top" secondItem="184191" secondAttribute="top" constant="4" id="6r1-K1-cqE"/>
+                                            <constraint firstItem="184194" firstAttribute="leading" secondItem="184191" secondAttribute="leading" constant="32" id="FBs-KG-7y6"/>
+                                            <constraint firstAttribute="trailing" secondItem="184194" secondAttribute="trailing" constant="32" id="bLv-Tl-jl3"/>
+                                            <constraint firstAttribute="bottom" secondItem="184194" secondAttribute="bottom" constant="4" id="jzY-ZW-xgZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="184191" secondAttribute="bottom" id="184203"/>
+                                    <constraint firstItem="184191" firstAttribute="leading" secondItem="184190" secondAttribute="leading" id="184204"/>
+                                    <constraint firstItem="184191" firstAttribute="top" secondItem="184190" secondAttribute="top" id="184205"/>
+                                    <constraint firstAttribute="trailing" secondItem="184191" secondAttribute="trailing" id="184206"/>
+                                    <constraint firstAttribute="height" constant="64" id="191102"/>
+                                    <constraint firstAttribute="trailing" secondItem="184191" secondAttribute="trailing" id="5fo-cZ-Z2Z"/>
+                                    <constraint firstItem="184191" firstAttribute="top" secondItem="184190" secondAttribute="top" id="EuU-WY-JcT"/>
+                                    <constraint firstItem="184191" firstAttribute="leading" secondItem="184190" secondAttribute="leading" id="gbQ-87-SxN"/>
+                                    <constraint firstAttribute="bottom" secondItem="184191" secondAttribute="bottom" id="pYM-Rf-MJ8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3nj-IG-xti">
+                                <rect key="frame" x="0.0" y="672" width="414" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="181459">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                        <subviews>
+                                            <progressView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21904">
+                                                <rect key="frame" x="16" y="24" width="334" height="16"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="21908"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7615">
+                                                <rect key="frame" x="366" y="17" width="32" height="30"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="NextButton_TouchUpInside:" destination="213" eventType="touchUpInside" id="212163"/>
+                                                </connections>
+                                            </button>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="218740">
+                                                <rect key="frame" x="18" y="26" width="330" height="12"/>
+                                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="221910"/>
+                                                </constraints>
+                                                <color key="progressTintColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </progressView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="21904" firstAttribute="centerY" secondItem="218740" secondAttribute="centerY" id="219533"/>
+                                            <constraint firstItem="218740" firstAttribute="leading" secondItem="21904" secondAttribute="leading" constant="2" id="222703"/>
+                                            <constraint firstItem="21904" firstAttribute="trailing" secondItem="218740" secondAttribute="trailing" constant="2" id="223496"/>
+                                            <constraint firstItem="21904" firstAttribute="centerY" secondItem="218740" secondAttribute="centerY" id="242764"/>
+                                            <constraint firstItem="218740" firstAttribute="centerY" secondItem="181459" secondAttribute="centerY" id="242765"/>
+                                            <constraint firstAttribute="trailing" secondItem="7615" secondAttribute="trailing" constant="16" id="gdB-mh-hqI"/>
+                                            <constraint firstItem="21904" firstAttribute="leading" secondItem="181459" secondAttribute="leading" constant="16" id="p3a-As-9dV"/>
+                                            <constraint firstItem="7615" firstAttribute="centerY" secondItem="21904" secondAttribute="centerY" id="wBX-zI-TYo"/>
+                                            <constraint firstItem="7615" firstAttribute="leading" secondItem="21904" secondAttribute="trailing" constant="16" id="ykS-BU-28l"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="191103"/>
+                                    <constraint firstAttribute="bottom" secondItem="181459" secondAttribute="bottom" id="A4C-qs-ftk"/>
+                                    <constraint firstItem="181459" firstAttribute="leading" secondItem="3nj-IG-xti" secondAttribute="leading" id="CRK-19-6pO"/>
+                                    <constraint firstItem="181459" firstAttribute="top" secondItem="3nj-IG-xti" secondAttribute="top" id="dwI-h4-Uz6"/>
+                                    <constraint firstAttribute="trailing" secondItem="181459" secondAttribute="trailing" id="oaB-wJ-v3D"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="248197">
+                                <rect key="frame" x="20" y="27" width="48" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogoutButton_TouchUpInside:" destination="213" eventType="touchUpInside" id="252172"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="133773" firstAttribute="top" secondItem="210" secondAttribute="bottom" constant="34" id="134928"/>
+                            <constraint firstItem="133773" firstAttribute="leading" secondItem="214" secondAttribute="leadingMargin" id="162982"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="133773" secondAttribute="trailing" id="163311"/>
+                            <constraint firstItem="46453" firstAttribute="width" secondItem="214" secondAttribute="width" multiplier="0.304" constant="1" id="166368"/>
+                            <constraint firstItem="11279" firstAttribute="width" secondItem="214" secondAttribute="width" multiplier="0.27" constant="1" id="171615"/>
+                            <constraint firstItem="46453" firstAttribute="centerX" secondItem="214" secondAttribute="centerX" id="171622"/>
+                            <constraint firstItem="11580" firstAttribute="centerY" secondItem="11279" secondAttribute="centerY" id="171673"/>
+                            <constraint firstItem="12256" firstAttribute="centerY" secondItem="11279" secondAttribute="centerY" id="171674"/>
+                            <constraint firstAttribute="trailing" secondItem="12256" secondAttribute="trailing" constant="20" id="171677"/>
+                            <constraint firstItem="12256" firstAttribute="width" secondItem="214" secondAttribute="width" multiplier="0.27" constant="1" id="171678"/>
+                            <constraint firstItem="11279" firstAttribute="leading" secondItem="214" secondAttribute="leading" constant="20" id="171680"/>
+                            <constraint firstItem="11580" firstAttribute="width" secondItem="214" secondAttribute="width" multiplier="0.27" constant="1" id="171683"/>
+                            <constraint firstItem="133241" firstAttribute="top" secondItem="11279" secondAttribute="bottom" constant="8" id="171723"/>
+                            <constraint firstItem="133241" firstAttribute="centerY" secondItem="133242" secondAttribute="centerY" id="171725"/>
+                            <constraint firstItem="11279" firstAttribute="centerX" secondItem="133241" secondAttribute="centerX" id="171727"/>
+                            <constraint firstItem="133242" firstAttribute="leading" secondItem="133241" secondAttribute="trailing" constant="4" id="171728"/>
+                            <constraint firstItem="9057" firstAttribute="top" secondItem="11580" secondAttribute="bottom" constant="8" id="171768"/>
+                            <constraint firstItem="11580" firstAttribute="centerX" secondItem="9057" secondAttribute="centerX" id="171769"/>
+                            <constraint firstItem="9170" firstAttribute="top" secondItem="12256" secondAttribute="bottom" constant="8" id="171811"/>
+                            <constraint firstItem="12256" firstAttribute="centerX" secondItem="9170" secondAttribute="centerX" id="171812"/>
+                            <constraint firstItem="11580" firstAttribute="centerX" secondItem="214" secondAttribute="centerX" id="171856"/>
+                            <constraint firstAttribute="centerY" secondItem="46453" secondAttribute="centerY" id="172943"/>
+                            <constraint firstItem="175431" firstAttribute="leading" secondItem="9170" secondAttribute="trailing" constant="8" id="176710"/>
+                            <constraint firstItem="175431" firstAttribute="top" secondItem="9170" secondAttribute="top" constant="11" id="176711"/>
+                            <constraint firstItem="175422" firstAttribute="leading" secondItem="9057" secondAttribute="trailing" constant="8" id="176712"/>
+                            <constraint firstItem="175422" firstAttribute="top" secondItem="9057" secondAttribute="top" constant="11" id="176713"/>
+                            <constraint firstItem="248197" firstAttribute="top" secondItem="210" secondAttribute="bottom" constant="7" id="257631"/>
+                            <constraint firstItem="248197" firstAttribute="leading" secondItem="214" secondAttribute="leadingMargin" id="264703"/>
+                            <constraint firstAttribute="trailing" secondItem="184190" secondAttribute="trailing" id="793-xG-pRL"/>
+                            <constraint firstItem="184190" firstAttribute="top" secondItem="175422" secondAttribute="bottom" constant="8" id="Es6-FL-5tG"/>
+                            <constraint firstItem="184190" firstAttribute="leading" secondItem="214" secondAttribute="leading" id="NZG-92-G8N"/>
+                            <constraint firstItem="12t-Y8-7Re" firstAttribute="centerY" secondItem="46453" secondAttribute="centerY" id="V5F-WI-hwG"/>
+                            <constraint firstItem="12t-Y8-7Re" firstAttribute="centerX" secondItem="46453" secondAttribute="centerX" id="XC7-Kc-jC7"/>
+                            <constraint firstAttribute="trailing" secondItem="3nj-IG-xti" secondAttribute="trailing" id="Ypu-Ew-r1F"/>
+                            <constraint firstItem="12t-Y8-7Re" firstAttribute="height" secondItem="46453" secondAttribute="height" id="d5y-5U-oTy"/>
+                            <constraint firstItem="12t-Y8-7Re" firstAttribute="width" secondItem="46453" secondAttribute="width" id="etO-bA-Lhd"/>
+                            <constraint firstItem="3nj-IG-xti" firstAttribute="top" secondItem="175422" secondAttribute="bottom" id="gXs-6m-Zef" constant="8" priority="500"/>
+                            <constraint firstAttribute="bottom" secondItem="3nj-IG-xti" secondAttribute="bottom" id="iPK-bg-8jp"/>
+                            <constraint firstItem="3nj-IG-xti" firstAttribute="leading" secondItem="214" secondAttribute="leading" id="jsT-SG-QZZ"/>
+                            <constraint firstItem="211" firstAttribute="top" secondItem="184190" secondAttribute="bottom" id="wtH-fT-3a4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BtnPrivacyPolicy" destination="178605" id="name-outlet-178605"/>
+                        <outlet property="BtnTermsService" destination="178606" id="name-outlet-178606"/>
+                        <outlet property="DoneButton" destination="184194" id="name-outlet-184194"/>
+                        <outlet property="DoneButtonStackView" destination="184190" id="name-outlet-184190"/>
+                        <outlet property="DoneButtonView" destination="184191" id="name-outlet-184191"/>
+                        <outlet property="FacebookConnectedImage" destination="133242" id="name-outlet-133242"/>
+                        <outlet property="FacebookLoginButton" destination="11279" id="name-outlet-11279"/>
+                        <outlet property="InstagramConnectedImage" destination="175431" id="name-outlet-175431"/>
+                        <outlet property="InstagramLoginButton" destination="12256" id="name-outlet-12256"/>
+                        <outlet property="LogoutButton" destination="248197" id="name-outlet-248197"/>
+                        <outlet property="NextButton" destination="7615" id="name-outlet-7615"/>
+                        <outlet property="ProgressBar" destination="21904" id="name-outlet-21904"/>
+                        <outlet property="ProgressBarNextButtonStackView" destination="3nj-IG-xti" id="name-outlet-3nj-IG-xti"/>
+                        <outlet property="ProgressBarandNextButtonView" destination="181459" id="name-outlet-181459"/>
+                        <outlet property="ScoreFill" destination="12t-Y8-7Re" id="name-outlet-12t-Y8-7Re"/>
+                        <outlet property="ScoreImage" destination="46453" id="name-outlet-46453"/>
+                        <outlet property="TwitterConnectedImage" destination="175422" id="name-outlet-175422"/>
+                        <outlet property="TwitterLoginButton" destination="11580" id="name-outlet-11580"/>
+                        <outlet property="prb_Value" destination="218740" id="name-outlet-218740"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="215" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608.6957" y="7.336957"/>
+        </scene>
+    </scenes>
+</document>
