@@ -1,4 +1,5 @@
-#SocialLadder
+## Social ladder
+## SocialLadder
 A complete brand ambassador solution, create you own social clone app. Nodejs server with basic fucntionality + multitenancy is comming.
 
 https://socialladder.rkiapps.com/
