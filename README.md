@@ -1,4 +1,4 @@
-SocialLadder
+#SocialLadder
 A complete brand ambassador solution, create you own social clone app. Nodejs server with basic fucntionality + multitenancy is comming.
 
 https://socialladder.rkiapps.com/
@@ -6,7 +6,7 @@ Amsterdam Dance Event. Top Social Media Tools 2017. avatar. Eventbrite. Best Dig
 
 Urban Dictionary: social ladder
 https://www.urbandictionary.com/define.php?term=social%20ladder
-social ladder – n. Metaphorical ladder that nonlosers are continuously trying to climb. analogy The social ladder is like Mount Everest: Lots of people try to climb ...
+social ladder â€“ n. Metaphorical ladder that nonlosers are continuously trying to climb. analogy The social ladder is like Mount Everest: Lots of people try to climb ...
 SocialLadder | LinkedIn
 https://www.linkedin.com/company/socialladder
 Learn about working at SocialLadder. Join LinkedIn today for free. See who you know at SocialLadder, leverage your professional network, and get hired.
