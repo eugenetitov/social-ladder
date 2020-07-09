@@ -1,6 +1,6 @@
 ## Social ladder
 ## SocialLadder
-A complete brand ambassador solution, create you own social clone app. Nodejs server with basic fucntionality + multitenancy is comming.
+A complete brand ambassador solution, create you own social clone app.
 
 https://socialladder.rkiapps.com/
 Amsterdam Dance Event. Top Social Media Tools 2017. avatar. Eventbrite. Best Digital Music Marketing Campaign 2016. avatar. Musically. Get your fans and ...
